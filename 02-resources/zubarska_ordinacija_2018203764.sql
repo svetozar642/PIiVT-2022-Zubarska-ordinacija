@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `usluga` (
 DROP TABLE IF EXISTS `zub`;
 CREATE TABLE IF NOT EXISTS `zub` (
   `zub_id` int unsigned NOT NULL AUTO_INCREMENT,
-  `broj` enum('1','2','3','4','5','6','7','8') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `broj` int NOT NULL,
   `vilica` enum('gornja','donja') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `tip` enum('sekutic','ocnjak','kutnjak') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `strana` enum('leva','desna') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
