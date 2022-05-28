@@ -4,10 +4,9 @@ import IConfig from './common/IConfig.interface';
 import { DevConfig } from "./configs";
 import * as fs from "fs";
 import * as morgan from "morgan";
-import ZubRouter from './components/tooth/ZubRouter.router';
 import IApplicationResources from './common/IApplicationResources.interface';
 import * as mysql2 from 'mysql2/promise';
-import { mainModule } from "process";
+
 
 async function main(){
     const config: IConfig = DevConfig;
@@ -56,7 +55,14 @@ async function main(){
         maxAge: config.server.static.maxAge
     }));
 
-    ZubRouter.setupRoutes(application, applicationResources);
+    //Izmena jer smo promenili da u ZubRouter metoda setupRoutes vise ne bude staticka jer implementira interfejs IRouter
+    //ZubRouter.setupRoutes(application, applicationResources);
+
+    // new ZubRouter().setupRoutes(application, applicationResources);
+    // Posto smo dodali ZubRouter u nas routes.ts fajl koji predstavalja niz [] svih ruta, vise ne moramo da pisemo kao u liniji iznad , vec :
+    for(const router of config.routers){
+        router.setupRoutes(application, applicationResources);
+    }
 
     application.use( (req,res) => {
         res.status(404).send("Fajl nije pronadjen na zadatoj putanji");

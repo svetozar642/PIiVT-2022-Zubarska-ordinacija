@@ -1,4 +1,5 @@
 import IConfig from './common/IConfig.interface';
+import ZubRouter from './components/tooth/ZubRouter.router';
 
 const DevConfig: IConfig = {
     server: {
@@ -27,7 +28,10 @@ const DevConfig: IConfig = {
         charset: 'utf8',
         timezone: '+01:00',
         //supportBigNumbers: true,
-    }
+    },
+    routers: [
+        new ZubRouter(),
+    ]
 }
 
 /*

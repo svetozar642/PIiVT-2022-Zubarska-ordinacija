@@ -2,9 +2,10 @@ import * as express from 'express';
 import ZubController from './ZubController.controller';
 import ZubService from './ZubService.service';
 import IApplicationResources from '../../common/IApplicationResources.interface';
+import IRouter from '../../common/IRouter.interface';
 
-class ZubRouter{
-    public static setupRoutes(application: express.Application, resources: IApplicationResources){
+class ZubRouter implements IRouter{
+    public setupRoutes(application: express.Application, resources: IApplicationResources){
         const zubService: ZubService = new ZubService(resources.databaseConnection);
         const zubController: ZubController = new ZubController(zubService);
 
