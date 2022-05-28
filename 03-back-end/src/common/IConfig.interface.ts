@@ -11,7 +11,22 @@ interface IConfig{
             route: string;
             path: string;
         }
-    }
+    },
+    logging:{
+        path: string,
+        filename: string,
+        format: string
+    },
+    database:{
+        host: string,
+        port: number,
+        user:string,
+        password: string,
+        database: string,
+        charset: string,
+        timezone: string,
+        //supportBigNumbers: boolean,
+    },
     
 }
 
