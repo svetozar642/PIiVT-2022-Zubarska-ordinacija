@@ -67,6 +67,9 @@ CREATE TABLE IF NOT EXISTS `korisnik` (
   `korisnik_id` int unsigned NOT NULL AUTO_INCREMENT,
   `korisnicko_ime` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `lozinka_hash` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `ime` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `prezime` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_active` tinyint unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`korisnik_id`),
@@ -84,6 +87,7 @@ CREATE TABLE IF NOT EXISTS `pacijent` (
   `jmbg` int unsigned NOT NULL,
   `adresa` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `telefon` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `status` enum('aktivan','neaktivan') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'aktivan',
   `karton_id` int unsigned NOT NULL,
   `korisnik_id` int unsigned NOT NULL,
@@ -162,8 +166,8 @@ CREATE TABLE IF NOT EXISTS `zub` (
   UNIQUE KEY `uq_zub_sifra_zuba` (`sifra_zuba`)
 ) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table zubarska_ordinacija_2018203764.zub: ~0 rows (approximately)
-INSERT INTO `zub` (`zub_id`, `broj`, `vilica`, `tip`, `strana`, `sifra_zuba`) VALUES
+-- Dumping data for table zubarska_ordinacija_2018203764.zub: ~32 rows (approximately)
+INSERT IGNORE INTO `zub` (`zub_id`, `broj`, `vilica`, `tip`, `strana`, `sifra_zuba`) VALUES
 	(1, 1, 'gornja', 'sekutic', 'leva', 'GLS1'),
 	(2, 2, 'gornja', 'sekutic', 'leva', 'GLS2'),
 	(3, 3, 'gornja', 'ocnjak', 'leva', 'GLO3'),
