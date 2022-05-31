@@ -1,5 +1,5 @@
 import IConfig from './common/IConfig.interface';
-import ZubRouter from './components/tooth/ZubRouter.router';
+import ZubRouter from './components/zub/ZubRouter.router';
 
 const DevConfig: IConfig = {
     server: {

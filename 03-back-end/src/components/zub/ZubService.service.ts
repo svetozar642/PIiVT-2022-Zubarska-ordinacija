@@ -2,6 +2,19 @@ import ZubModel, { Strana, Tip, Vilica } from "./ZubModel.model";
 import * as mysql2 from 'mysql2/promise';
 import { resolve } from "path";
 import { rejects } from "assert";
+import IAdapterOptions from '../../common/IAdapterOptions.interface';
+import Intervencija_logService from '../intervencija_log/Intervencija_logService.service'; 
+
+
+//Definisali smo opsti interfejs sa opcijama adaptera (IAdapterOptions)
+//Sada pravimo konkretan interfejs opcija adaptera za konkretno ovaj servis (ZubService)
+interface IZubAdapterOptions extends IAdapterOptions {
+    loadIntervencije_log : boolean;
+}
+
+const DefaultZubAdapterOptions: IZubAdapterOptions = {
+    loadIntervencije_log: false,
+}
 
 
 class ZubService{
@@ -11,7 +24,7 @@ class ZubService{
         this.db = databaseConnection;
     }
 
-    private async adaptToModel(data: any): Promise<ZubModel>{
+    private async adaptToModel(data: any , options: IZubAdapterOptions = DefaultZubAdapterOptions): Promise<ZubModel>{
         const zub: ZubModel = new ZubModel();
 
         zub.zubId       = +data?.zub_id;
@@ -20,6 +33,14 @@ class ZubService{
         zub.tip         = data?.tip;
         zub.strana      = data?.strana;
         zub.sifra_zuba  = data?.sifra_zuba;
+
+       /* if (options.loadIntervencije_log){
+            const intervencija_logService: Intervencija_logService = new Intervencija_logService(this.db);
+
+            //Async / await pristup:
+            // "await" smo dodali ispred intervencija_logService jer levo intervencije_log ocekuje da dobije Intervencije_logModel[] , a ne Promise<Intervencija_logModel[]>
+            zub.intervencije_log = await intervencija_logService.getByZubId(zub.zubId);
+        } */
 
         return zub;
     }
@@ -44,7 +65,12 @@ class ZubService{
                             }); */
 
                             // (transformisacemo row podatke u pojedanacne ZubModel-e) pomocu adaptera:
-                            zubi.push( await this.adaptToModel(row) );
+                            zubi.push( await this.adaptToModel(
+                                row,
+                               /* {
+                                    loadIntervencije_log: true,
+                                } */
+                            ) );
                         }
                         resolve(zubi);
                     })
@@ -72,10 +98,15 @@ class ZubService{
                             resolve(null);
                         }
 
-                        resolve(await this.adaptToModel(rows[0]));
+                        resolve(await this.adaptToModel(
+                            rows[0],
+                           /* {
+                                loadIntervencije_log:true,
+                            }   */ 
+                        ));
                     })
                     .catch(error => {
-
+                        reject(error);
                     });
             }
         );

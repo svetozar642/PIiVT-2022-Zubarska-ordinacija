@@ -1,4 +1,4 @@
-import ZubRouter from './components/tooth/ZubRouter.router';
+import ZubRouter from './components/zub/ZubRouter.router';
 
 const ApplicationRouters = [
     new ZubRouter(),

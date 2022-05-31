@@ -59,7 +59,7 @@ async function main(){
     //ZubRouter.setupRoutes(application, applicationResources);
 
     // new ZubRouter().setupRoutes(application, applicationResources);
-    // Posto smo dodali ZubRouter u nas routes.ts fajl koji predstavalja niz [] svih ruta, vise ne moramo da pisemo kao u liniji iznad , vec :
+    // Posto smo dodali ZubRouter u nas routers.ts fajl koji predstavalja niz [] svih ruta, vise ne moramo da pisemo kao u liniji iznad , vec :
     for(const router of config.routers){
         router.setupRoutes(application, applicationResources);
     }
@@ -70,5 +70,14 @@ async function main(){
 
     application.listen(config.server.port);
 }
+
+//Zato sto smo dodali ovaj kod ispod, sada i da nastane neka "nehendlovana" greska u toku rada aplikacije
+// Aplikacija nece crash-ovati
+//Dodali smo ovaj deo kao zamenu za WatchDog servis koji bi morao da se implementira kao zasebna aplikacija koja bi nadgledala nasu aplikaciju
+// i usled kresovanja bi je ponovo pokrenula automatski ...
+process.on('uncaughtException', error => {
+    //mail, log file , ...
+    console.error('ERROR: ', error);
+});
 
 main();

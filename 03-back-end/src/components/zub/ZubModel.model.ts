@@ -1,4 +1,5 @@
 import { TimerOptions } from "timers";
+import Intervencija_logModel from "../intervencija_log/Intervencija_logModel.model";
 
 class ZubModel{
     zubId: number;
@@ -7,6 +8,8 @@ class ZubModel{
     tip: Tip;
     strana: Strana;
     sifra_zuba: string;
+
+    intervencije_log ?: Intervencija_logModel[];
 }
 
 enum Vilica{
