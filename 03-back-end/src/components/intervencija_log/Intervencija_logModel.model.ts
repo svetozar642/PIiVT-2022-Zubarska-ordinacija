@@ -7,7 +7,6 @@ class Intervencija_logModel{
     zubId: number;
     uslugaId: number;
     pacijentId: number;
-    kartonId: number;
     racunId: number;
 }
 
