@@ -1,5 +1,6 @@
 import IConfig from './common/IConfig.interface';
 import ZubRouter from './components/zub/ZubRouter.router';
+import Intervencija_logRouter from './components/intervencija_log/Intervencija_logRouter.router';
 
 const DevConfig: IConfig = {
     server: {
@@ -31,6 +32,7 @@ const DevConfig: IConfig = {
     },
     routers: [
         new ZubRouter(),
+        new Intervencija_logRouter(),
     ]
 }
 
