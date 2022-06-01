@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import IAddIntervencija_log, { AddIntervencija_logValidator } from "./dto/IAddIntervencija_log.dto";
-import Intervencija_logService from './Intervencija_logService.service';
+import Intervencija_logService, { DefaultIntervencija_logAdapterOptions } from './Intervencija_logService.service';
 
 class Intervencija_logController{
     private Intervencija_logService: Intervencija_logService;
@@ -56,6 +56,22 @@ class Intervencija_logController{
        */
 
         this.Intervencija_logService.getById(id)
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByZubId(req: Request, res:Response) {
+        const id : number = +req.params?.id;
+
+        this.Intervencija_logService.getAllByZubId(id, DefaultIntervencija_logAdapterOptions )
             .then( result => {
                 if ( result === null){
                     return res.sendStatus(404);

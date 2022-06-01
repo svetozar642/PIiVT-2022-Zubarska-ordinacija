@@ -1,7 +1,8 @@
 import { TimerOptions } from "timers";
 import Intervencija_logModel from "../intervencija_log/Intervencija_logModel.model";
+import IModel from '../../common/IModel.interface';
 
-class ZubModel{
+class ZubModel implements IModel{
     zubId: number;
     broj: number;
     vilica: Vilica;

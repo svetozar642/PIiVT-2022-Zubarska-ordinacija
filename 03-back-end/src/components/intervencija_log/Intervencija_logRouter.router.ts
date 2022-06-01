@@ -11,6 +11,7 @@ class Intervencija_logRouter implements IRouter{
 
         application.get("/api/intervencija_log",     intervencija_logController.getAll.bind(intervencija_logController));
         application.get("/api/intervencija_log/:id", intervencija_logController.getById.bind(intervencija_logController));
+        application.get("/api/intervencija_log/zub/:id", intervencija_logController.getAllByZubId.bind(intervencija_logController));
 
         application.post("/api/intervencija_log", intervencija_logController.add.bind(intervencija_logController));
     }

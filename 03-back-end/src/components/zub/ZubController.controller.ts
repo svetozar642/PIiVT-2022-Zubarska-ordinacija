@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import ZubService from './ZubService.service';
+import ZubService, { DefaultZubAdapterOptions } from './ZubService.service';
 
 class ZubController{
     private ZubService: ZubService;
@@ -18,7 +18,7 @@ class ZubController{
 
         //promena zapisa iznad jer sada ZubModel moze vratiti prazan [] ili ZubModel[] a moze i reject-ovati usled greske
 
-        this.ZubService.getAll()
+        this.ZubService.getAll(DefaultZubAdapterOptions)
             .then( result => {
                 res.send(result);
             })
@@ -28,7 +28,7 @@ class ZubController{
 
         /*
         //Ako bi radili sa Promise-om koji ima i "resolve" i "reject" onda je bolje da pisemo na sledeci nacin :
-        // "zubi" je rezultat dobijen iz poyvane getAll() metode
+        // "zubi" je rezultat dobijen iz pozvane getAll() metode
         this.ZubService.getAll()
             .then(zubi => {
                 res.send(zubi);
@@ -54,7 +54,7 @@ class ZubController{
         res.send(zub);
        */
 
-        this.ZubService.getById(id)
+        this.ZubService.getById(id, DefaultZubAdapterOptions)
             .then( result => {
                 if ( result === null){
                     return res.sendStatus(404);
