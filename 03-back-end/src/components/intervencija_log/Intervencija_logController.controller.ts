@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import IAddIntervencija_log, { AddIntervencija_logValidator } from "./dto/IAddIntervencija_log.dto";
 import Intervencija_logService from './Intervencija_logService.service';
 
 class Intervencija_logController{
@@ -71,10 +72,14 @@ class Intervencija_logController{
         // "body" content ce automatski biti parsiran (Ako je poslat kao JSON bice pretvoren u objekat koji predstavlja to sto je JSON bio)
         //Ovo radi autmatski jer smo na pocetku u main.ts bili ukljicili da aplikacija (application) koristi (use) express.json()
         // To znaci da ako stigne request koji je oblika JSON bice automatski parsiran i mi ne moramo da ga tretiramo kao String i dodatno obradjujemo
-        const data = req.body;
+        const data = req.body as IAddIntervencija_log; 
 
         // TODO : VALIDACIJA
-        
+        if ( !AddIntervencija_logValidator(data) ) {
+            return res.status(400).send(AddIntervencija_logValidator.errors);
+        }
+
+
         //Provera sta smo dobili od klijenta i sta prosledjujemo dalje metodi add()...
         /*console.log(data);*/
 
