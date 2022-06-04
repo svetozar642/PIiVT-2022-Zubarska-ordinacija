@@ -39,12 +39,56 @@ class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions 
 
     //Metode getAll() i getById() nam se sada nalaze u BaseService klasi tako da cemo ih obrisati odavde ...
 
-    public async getAllByRacunId(racunId: number, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
+    public async getAllByIme(ime: string, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
         
-        return this.getAllByFieldNameAnValue('racun_id', racunId, options );
+        return this.getAllByFieldNameAnValue('ime', ime, options );
+
+    }
+    
+    public async getAllByPrezime(prezime: string, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
+        
+        return this.getAllByFieldNameAnValue('prezime', prezime, options );
 
     }
 
+    public async getAllByJmbg(jmbg: string, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
+        
+        return this.getAllByFieldNameAnValue('jmbg', jmbg, options );
+
+    }
+
+    
+    public async getAllByAdresa(adresa: string, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
+        
+        return this.getAllByFieldNameAnValue('adresa', adresa, options );
+
+    }
+
+    
+    public async getAllByTelefon(telefon: string, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
+        
+        return this.getAllByFieldNameAnValue('telefon', telefon, options );
+
+    }
+
+    public async getAllByEmail(email: string, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
+        
+        return this.getAllByFieldNameAnValue('email', email, options );
+
+    }
+
+    public async getAllByStatus(status: string, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
+        
+        return this.getAllByFieldNameAnValue('status', status, options );
+
+    }
+
+    
+    public async getAllByKorisnikId(korisnik_id: number, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
+        
+        return this.getAllByFieldNameAnValue('korisnik_id', korisnik_id, options );
+
+    }
     // Posto smo obecali da cemo dostaviti jedan PacijentModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
     // i moracemo da reject-ujemo (reject od Promise-a) 

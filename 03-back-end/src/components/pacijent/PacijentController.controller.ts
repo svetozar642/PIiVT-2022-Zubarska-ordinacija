@@ -68,6 +68,134 @@ class PacijentController{
             });
     }
 
+    async getAllByIme(req: Request, res:Response) {
+        const ime : string = req.params?.ime;
+
+        this.PacijentService.getAllByIme(ime, DefaultPacijentAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByPrezime(req: Request, res:Response) {
+        const prezime : string = req.params?.prezime;
+
+        this.PacijentService.getAllByPrezime(prezime, DefaultPacijentAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByJmbg(req: Request, res:Response) {
+        const jmbg : string = req.params?.jmbg;
+
+        this.PacijentService.getAllByJmbg(jmbg, DefaultPacijentAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByAdresa(req: Request, res:Response) {
+        const adresa : string = req.params?.adresa;
+
+        this.PacijentService.getAllByAdresa(adresa, DefaultPacijentAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByTelefon(req: Request, res:Response) {
+        const telefon : string = req.params?.telefon;
+
+        this.PacijentService.getAllByTelefon(telefon, DefaultPacijentAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByEmail(req: Request, res:Response) {
+        const email : string = req.params?.email;
+
+        this.PacijentService.getAllByEmail(email, DefaultPacijentAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByStatus(req: Request, res:Response) {
+        const status : string = req.params?.status;
+
+        this.PacijentService.getAllByStatus(status, DefaultPacijentAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByKorisnikId(req: Request, res:Response) {
+        const korisnik_id : number = +req.params?.korisnik_id;
+
+        this.PacijentService.getAllByKorisnikId(korisnik_id, DefaultPacijentAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
     async add(req: Request, res: Response){
         // "body" content ce automatski biti parsiran (Ako je poslat kao JSON bice pretvoren u objekat koji predstavlja to sto je JSON bio)
         //Ovo radi autmatski jer smo na pocetku u main.ts bili ukljicili da aplikacija (application) koristi (use) express.json()
