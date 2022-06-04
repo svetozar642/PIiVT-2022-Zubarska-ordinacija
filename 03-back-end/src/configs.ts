@@ -3,6 +3,7 @@ import ZubRouter from './components/zub/ZubRouter.router';
 import Intervencija_logRouter from './components/intervencija_log/Intervencija_logRouter.router';
 import UslugaRouter from './components/usluga/UslugaRouter.router';
 import PacijentRouter from './components/pacijent/PacijentRouter.router';
+import KorisnikRouter from './components/korisnik/KorisnikRouter.router';
 
 const DevConfig: IConfig = {
     server: {
@@ -37,6 +38,7 @@ const DevConfig: IConfig = {
         new Intervencija_logRouter(),
         new UslugaRouter(),
         new PacijentRouter(),
+        new KorisnikRouter(),
     ]
 }
 
