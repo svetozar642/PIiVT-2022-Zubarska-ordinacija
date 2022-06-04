@@ -69,7 +69,7 @@ class KorisnikController{
             });
     }
 
-    async getAllByRacunId(req: Request, res:Response) {
+    /*async getAllByRacunId(req: Request, res:Response) {
         const id : number = +req.params?.id;
 
         this.KorisnikService.getAllByRacunId(id, DefaultKorisnikAdapterOptions )
@@ -83,7 +83,7 @@ class KorisnikController{
             .catch( error => {
                 res.status(500).send(error?.message);
             });
-    }
+    }*/
 
 
     async add(req: Request, res: Response){

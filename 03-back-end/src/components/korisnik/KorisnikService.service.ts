@@ -39,11 +39,11 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
 
     //Metode getAll() i getById() nam se sada nalaze u BaseService klasi tako da cemo ih obrisati odavde ...
 
-    public async getAllByRacunId(racunId: number, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
+    /*public async getAllByRacunId(racunId: number, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
         
         return this.getAllByFieldNameAnValue('racun_id', racunId, options );
 
-    }
+    }*/
 
     // Posto smo obecali da cemo dostaviti jedan KorisnikModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
