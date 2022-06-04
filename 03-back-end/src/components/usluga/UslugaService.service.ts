@@ -5,6 +5,7 @@ import { rejects } from "assert";
 import IAdapterOptions from '../../common/IAdapterOptions.interface';
 import Intervencija_logService from '../intervencija_log/Intervencija_logService.service'; 
 import BaseService from "../../common/BaseService";
+import IAddUsluga from "./dto/IAddUsluga.dto";
 
 
 //Definisali smo opsti interfejs sa opcijama adaptera (IAdapterOptions)
@@ -58,6 +59,33 @@ class UslugaService extends BaseService<UslugaModel, UslugaAdapterOptions>{
     
     // getAll() i getById() metode nam vise ne trebaju jer se nalaze u BaseService klasi , tako da cemo ih obrisati odavde ...
 
+    // Posto smo obecali da cemo dostaviti jedan Intervencija_logModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
+    // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
+    // i moracemo da reject-ujemo (reject od Promise-a) 
+    public async add(data: IAddUsluga): Promise<UslugaModel> {
+        return new Promise<UslugaModel>( (resolve, reject) => {
+            //const sql : string = "INSERT `usluga` SET `naziv` = ? AND `opis = ? AND `sifra_usluge` = ? AND `kategorija` = ? AND `cena` = ? AND `popust_paket` = ? AND `popust_dete` = ? AND `popust_penzioner` = ? AND `status` = ?;";
+            const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`usluga` (`naziv`, `opis`, `sifra_usluge`, `kategorija`, `cena`, `popust_paket`, `popust_dete`, `popust_penzioner`, `status`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+            this.db.execute(sql, [data.naziv, data.opis, data.sifra_usluge, data.kategorija, data.cena, data.popust_paket, data.popust_dete, data.popust_penzioner, data.status])
+                .then( async result => {
+                    const info: any = result;
+
+                    const newUslugaId = +(info[0]?.insertId);
+
+                    const newUsluga: UslugaModel | null = await this.getById(newUslugaId, UslugaAdapterOptions); 
+
+                    if (newUsluga === null){
+                        return reject({ message: 'Duplicate row ! ', });
+                    }
+
+                    resolve(newUsluga);
+                })
+                .catch(error => {
+                    reject(error);
+                });
+        } );
+    }
 }
 
 export default UslugaService;

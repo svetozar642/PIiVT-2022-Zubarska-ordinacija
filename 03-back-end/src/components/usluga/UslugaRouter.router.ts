@@ -11,6 +11,8 @@ class UslugaRouter implements IRouter{
 
         application.get("/api/usluga",    uslugaController.getAll.bind(uslugaController));
         application.get("/api/usluga/:id", uslugaController.getById.bind(uslugaController));
+
+        application.post("/api/usluga", uslugaController.add.bind(uslugaController));
     }
 }
 

@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import UslugaService, { DefaultUslugaAdapterOptions } from './UslugaService.service';
+import IAddUsluga, { AddUslugaValidator } from './dto/IAddUsluga.dto';
 
 class UslugaController{
     private UslugaService: UslugaService;
@@ -65,6 +66,31 @@ class UslugaController{
             .catch( error => {
                 res.status(500).send(error?.message);
             });
+    }
+
+    async add(req: Request, res: Response){
+        // "body" content ce automatski biti parsiran (Ako je poslat kao JSON bice pretvoren u objekat koji predstavlja to sto je JSON bio)
+        //Ovo radi autmatski jer smo na pocetku u main.ts bili ukljicili da aplikacija (application) koristi (use) express.json()
+        // To znaci da ako stigne request koji je oblika JSON bice automatski parsiran i mi ne moramo da ga tretiramo kao String i dodatno obradjujemo
+        const data = req.body as IAddUsluga; 
+
+        // TODO : VALIDACIJA
+        if ( !AddUslugaValidator(data) ) {
+            return res.status(400).send(AddUslugaValidator.errors);
+        }
+
+
+        //Provera sta smo dobili od klijenta i sta prosledjujemo dalje metodi add()...
+        /*console.log(data);*/
+
+        this.UslugaService.add(data)
+            .then( result => {
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(400).send(error?.message);
+            });
+
     }
 }
 
