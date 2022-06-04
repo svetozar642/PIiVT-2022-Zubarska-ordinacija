@@ -68,6 +68,70 @@ class UslugaController{
             });
     }
 
+    async getAllByNaziv(req: Request, res:Response) {
+        const naziv: string = req.params?.naziv;
+
+        this.UslugaService.getAllByNaziv(naziv, DefaultUslugaAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllBySifra_usluge(req: Request, res:Response) {
+        const sifra_usluge: string = req.params?.sifra_usluge;
+
+        this.UslugaService.getAllBySifra_usluge(sifra_usluge, DefaultUslugaAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByKategorija(req: Request, res:Response) {
+        const kategorija: string = req.params?.kategorija;
+
+        this.UslugaService.getAllByKategorija(kategorija, DefaultUslugaAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByStatus(req: Request, res:Response) {
+        const status: string = req.params?.status;
+
+        this.UslugaService.getAllByStatus(status, DefaultUslugaAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+    
     async add(req: Request, res: Response){
         // "body" content ce automatski biti parsiran (Ako je poslat kao JSON bice pretvoren u objekat koji predstavlja to sto je JSON bio)
         //Ovo radi autmatski jer smo na pocetku u main.ts bili ukljicili da aplikacija (application) koristi (use) express.json()

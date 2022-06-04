@@ -59,7 +59,31 @@ class UslugaService extends BaseService<UslugaModel, UslugaAdapterOptions>{
     
     // getAll() i getById() metode nam vise ne trebaju jer se nalaze u BaseService klasi , tako da cemo ih obrisati odavde ...
 
-    // Posto smo obecali da cemo dostaviti jedan Intervencija_logModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
+    public async getAllByNaziv(naziv: string, options: UslugaAdapterOptions): Promise<UslugaModel[]>{
+        
+        return this.getAllByFieldNameAnValue('naziv', naziv, options );
+
+    }
+
+    public async getAllBySifra_usluge(sifra_usluge: string, options: UslugaAdapterOptions): Promise<UslugaModel[]>{
+        
+        return this.getAllByFieldNameAnValue('sifra_usluge', sifra_usluge, options );
+
+    }
+
+    public async getAllByKategorija(kategorija: string, options: UslugaAdapterOptions): Promise<UslugaModel[]>{
+        
+        return this.getAllByFieldNameAnValue('kategorija', kategorija, options );
+
+    }
+
+    public async getAllByStatus(status: string, options: UslugaAdapterOptions): Promise<UslugaModel[]>{
+        
+        return this.getAllByFieldNameAnValue('status', status, options );
+
+    }
+
+    // Posto smo obecali da cemo dostaviti jedan UslugaModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
     // i moracemo da reject-ujemo (reject od Promise-a) 
     public async add(data: IAddUsluga): Promise<UslugaModel> {
