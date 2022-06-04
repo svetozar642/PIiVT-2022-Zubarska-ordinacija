@@ -69,10 +69,10 @@ class KorisnikController{
             });
     }
 
-    /*async getAllByRacunId(req: Request, res:Response) {
-        const id : number = +req.params?.id;
+    async getAllByKorisnicko_ime(req: Request, res:Response) {
+        const korisnicko_ime : string = req.params?.korisnicko_ime;
 
-        this.KorisnikService.getAllByRacunId(id, DefaultKorisnikAdapterOptions )
+        this.KorisnikService.getAllByKorisnicko_ime(korisnicko_ime, DefaultKorisnikAdapterOptions )
             .then( result => {
                 if ( result === null){
                     return res.sendStatus(404);
@@ -83,7 +83,23 @@ class KorisnikController{
             .catch( error => {
                 res.status(500).send(error?.message);
             });
-    }*/
+    }
+
+    async getAllByIs_active(req: Request, res:Response) {
+        const is_active : number = +req.params?.is_active;
+
+        this.KorisnikService.getAllByIs_active(is_active, DefaultKorisnikAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
 
 
     async add(req: Request, res: Response){
