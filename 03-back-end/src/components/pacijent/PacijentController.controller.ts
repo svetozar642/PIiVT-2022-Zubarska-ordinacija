@@ -81,7 +81,7 @@ class PacijentController{
 
 
         //Provera sta smo dobili od klijenta i sta prosledjujemo dalje metodi add()...
-        console.log(data);
+        /*console.log(data);*/
 
         this.PacijentService.add(data)
             .then( result => {
