@@ -11,8 +11,13 @@ class KorisnikRouter implements IRouter{
 
         application.get("/api/korisnik",     korisnikController.getAll.bind(korisnikController));
         application.get("/api/korisnik/:id", korisnikController.getById.bind(korisnikController));
+
         application.get("/api/korisnik/korisnicko_ime/:korisnicko_ime", korisnikController.getAllByKorisnicko_ime.bind(korisnikController));
         application.get("/api/korisnik/is_active/:is_active", korisnikController.getAllByIs_active.bind(korisnikController));
+        application.get("/api/korisnik/ime/:ime", korisnikController.getAllByIme.bind(korisnikController));
+        application.get("/api/korisnik/prezime/:prezime", korisnikController.getAllByPrezime.bind(korisnikController));
+        application.get("/api/korisnik/email/:email", korisnikController.getAllByEmail.bind(korisnikController));
+        application.get("/api/korisnik/jmbg/:jmbg", korisnikController.getAllByJmbg.bind(korisnikController));
 
         application.post("/api/korisnik", korisnikController.add.bind(korisnikController));
     }

@@ -85,6 +85,70 @@ class KorisnikController{
             });
     }
 
+    async getAllByIme(req: Request, res:Response) {
+        const ime : string = req.params?.ime;
+
+        this.KorisnikService.getAllByIme(ime, DefaultKorisnikAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByPrezime(req: Request, res:Response) {
+        const prezime : string = req.params?.prezime;
+
+        this.KorisnikService.getAllByPrezime(prezime, DefaultKorisnikAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByEmail(req: Request, res:Response) {
+        const email : string = req.params?.email;
+
+        this.KorisnikService.getAllByEmail(email, DefaultKorisnikAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByJmbg(req: Request, res:Response) {
+        const jmbg : string = req.params?.jmbg;
+
+        this.KorisnikService.getAllByJmbg(jmbg, DefaultKorisnikAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
     async getAllByIs_active(req: Request, res:Response) {
         const is_active : number = +req.params?.is_active;
 

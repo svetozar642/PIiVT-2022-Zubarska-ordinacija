@@ -45,6 +45,30 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
 
     }
 
+    public async getAllByIme(ime: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
+        
+        return this.getAllByFieldNameAnValue('ime', ime, options );
+
+    }
+
+    public async getAllByPrezime(prezime: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
+        
+        return this.getAllByFieldNameAnValue('prezime', prezime, options );
+
+    }
+
+    public async getAllByEmail(email: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
+        
+        return this.getAllByFieldNameAnValue('email', email, options );
+
+    }
+
+    public async getAllByJmbg(jmbg: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
+        
+        return this.getAllByFieldNameAnValue('jmbg', jmbg, options );
+
+    }
+
     public async getAllByIs_active(is_active: number, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
         
         return this.getAllByFieldNameAnValue('is_active', is_active, options );
