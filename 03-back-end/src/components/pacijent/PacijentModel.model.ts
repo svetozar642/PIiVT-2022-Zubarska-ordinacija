@@ -8,6 +8,7 @@ class PacijentModel implements IModel{
     adresa: string;
     telefon: string;
     email: string;
+    senioritet: Senioritet;
     status: Status;
 
     //FKs :
@@ -20,6 +21,12 @@ enum Status{
     neaktivan = "neaktivan"
 }
 
+enum Senioritet{
+    dete = "dete",
+    penzioner = "penzioner",
+    ostali = "ostali"
+}
+
 
 export default PacijentModel;
-export  {Status};
+export  {Status, Senioritet};

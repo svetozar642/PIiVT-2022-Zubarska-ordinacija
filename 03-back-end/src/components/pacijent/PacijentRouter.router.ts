@@ -12,6 +12,7 @@ class PacijentRouter implements IRouter{
         application.get("/api/pacijent",    pacijentController.getAll.bind(pacijentController));
         application.get("/api/pacijent/:id", pacijentController.getById.bind(pacijentController));
 
+        application.get("/api/pacijent/senioritet/:senioritet", pacijentController.getAllBySenioritet.bind(pacijentController));
         application.get("/api/pacijent/ime/:ime", pacijentController.getAllByIme.bind(pacijentController));
         application.get("/api/pacijent/prezime/:prezime", pacijentController.getAllByPrezime.bind(pacijentController));
         application.get("/api/pacijent/jmbg/:jmbg", pacijentController.getAllByJmbg.bind(pacijentController));

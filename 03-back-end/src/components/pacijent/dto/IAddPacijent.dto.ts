@@ -1,6 +1,6 @@
 //Validaciju cemo da implementiramo gde je i sam DTO ...
 import Ajv from "ajv";
-import { Status } from "../PacijentModel.model";
+import { Senioritet, Status } from "../PacijentModel.model";
 
 const ajv = new Ajv();
 
@@ -14,6 +14,7 @@ export default interface IAddPacijent {
     adresa: string;
     telefon:string;
     email: string;
+    senioritet: Senioritet;
     status: Status;
 
     //FKs: 
@@ -55,6 +56,9 @@ const AddPacijentSchema = {
             minLength: 5,
             maxLength: 64,
         },
+        senioritet: {
+            enum: ["dete", "penzioner", "ostali"]
+        },
         status: {
             enum: ["aktivan", "neaktivan"]
 
@@ -71,6 +75,7 @@ const AddPacijentSchema = {
         "adresa",
         "telefon",
         "email",
+        "senioritet",
         "status",
         "korisnikId"
     ],

@@ -68,6 +68,22 @@ class PacijentController{
             });
     }
 
+    async getAllBySenioritet(req: Request, res:Response) {
+        const senioritet : string = req.params?.senioritet;
+
+        this.PacijentService.getAllBySenioritet(senioritet, DefaultPacijentAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
     async getAllByIme(req: Request, res:Response) {
         const ime : string = req.params?.ime;
 

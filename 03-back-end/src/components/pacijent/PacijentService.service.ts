@@ -30,6 +30,7 @@ class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions 
         pacijent.adresa     = data?.adresa;
         pacijent.telefon    = data?.telefon;
         pacijent.email      = data?.email;
+        pacijent.senioritet = data?.senioritet;
         pacijent.status     = data?.status;
 
         pacijent.korisnikId = +data?.korisnik_id;
@@ -38,6 +39,12 @@ class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions 
     }
 
     //Metode getAll() i getById() nam se sada nalaze u BaseService klasi tako da cemo ih obrisati odavde ...
+
+    public async getAllBySenioritet(senioritet: string, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
+        
+        return this.getAllByFieldNameAnValue('senioritet', senioritet, options );
+
+    }
 
     public async getAllByIme(ime: string, options: PacijentAdapterOptions): Promise<PacijentModel[]>{
         
