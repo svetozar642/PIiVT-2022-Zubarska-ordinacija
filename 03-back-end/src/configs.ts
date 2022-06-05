@@ -6,6 +6,7 @@ import PacijentRouter from './components/pacijent/PacijentRouter.router';
 import KorisnikRouter from './components/korisnik/KorisnikRouter.router';
 import Prijava_korisnikaRouter from './components/prijava_korisnika/Prijava_korisnikaRouter.router';
 import KartonRouter from './components/karton/KartonRouter.router';
+import RacunRouter from './components/racun/RacunRouter.router';
 
 const DevConfig: IConfig = {
     server: {
@@ -43,6 +44,7 @@ const DevConfig: IConfig = {
         new KorisnikRouter(),
         new Prijava_korisnikaRouter(),
         new KartonRouter(),
+        new RacunRouter(),
     ]
 }
 
