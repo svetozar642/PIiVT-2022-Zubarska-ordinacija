@@ -30,9 +30,9 @@ class KorisnikController{
 
         /*
         //Ako bi radili sa Promise-om koji ima i "resolve" i "reject" onda je bolje da pisemo na sledeci nacin :
-        // "korisnici" je rezultat dobijen iz poyvane getAll() metode
+        // "korisnici" je rezultat dobijen iz pozvane getAll() metode
         this.KorisnikService.getAll()
-            .then(intervencije => {
+            .then(korisnici => {
                 res.send(korisnici);
             })
             .catch(err => {
