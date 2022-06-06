@@ -1,0 +1,1558 @@
+{
+	"info": {
+		"_postman_id": "35ffc8f2-3be9-4746-8639-e55a43b48215",
+		"name": "PIiVT aplikacija (zubarska ordinacija)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21096636"
+	},
+	"item": [
+		{
+			"name": "Intervencija_log",
+			"item": [
+				{
+					"name": "Get All Intervencija_log",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/intervencija_log/",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"intervencija_log",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id {1}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/intervencija_log/1",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"intervencija_log",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id {2}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/intervencija_log/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"intervencija_log",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Intervencija_log",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sifra_zuba\" : \"DLS1\",\r\n    \"sifra_usluge\" : \"PKR\",\r\n    \"zubId\" : 1,\r\n    \"uslugaId\" : 2,\r\n    \"pacijentId\" : 1,\r\n    \"racunId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/intervencija_log",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"intervencija_log"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Intervencija_log Validacija sifre_zuba kada je ispod min duzine",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sifra_zuba\" : \"D\",\r\n    \"sifra_usluge\" : \"PKR\",\r\n    \"zubId\" : 1,\r\n    \"uslugaId\" : 2,\r\n    \"pacijentId\" : 1,\r\n    \"racunId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/intervencija_log",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"intervencija_log"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Intervencija_log Validacija zubId kada je prosledjen string a ne number",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sifra_zuba\" : \"D\",\r\n    \"sifra_usluge\" : \"PKR\",\r\n    \"zubId\" : \"1\",\r\n    \"uslugaId\" : 2,\r\n    \"pacijentId\" : 1,\r\n    \"racunId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/intervencija_log",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"intervencija_log"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all intervencija_log By zub_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/intervencija_log/zub/25",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"intervencija_log",
+								"zub",
+								"25"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zub",
+			"item": [
+				{
+					"name": "Get All Zub",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/zub",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"zub"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id {2}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/zub/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"zub",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usluga",
+			"item": [
+				{
+					"name": "Get All Usluga",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id {2}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/usluga/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Usluga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"naziv\": \"izrada mosta od 3 zuba\",\r\n    \"opis\": \"izrada i montaza mosta duzine 3 zuba koja se kace na 2 obradjena\",\r\n    \"sifra_usluge\": \"IM3\",\r\n    \"kategorija\": \"redovna\",\r\n    \"cena\": 7800,\r\n    \"popust_paket\": 0.3,\r\n    \"popust_dete\": 0.27,\r\n    \"popust_penzioner\": 0.45,\r\n    \"status\": \"aktivna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Usluga Validacija sa unetom nedozvoljenom vrednoscu kategorije",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"naziv\": \"izrada mosta od 3 zuba\",\r\n    \"opis\": \"izrada i montaza mosta duzine 3 zuba koja se kace na 2 obradjena\",\r\n    \"sifra_usluge\": \"IM3\",\r\n    \"kategorija\": \"mehanicka\",\r\n    \"cena\": 7800,\r\n    \"popust_paket\": 0.3,\r\n    \"popust_dete\": 0.27,\r\n    \"popust_penzioner\": 0.45,\r\n    \"status\": \"aktivna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Usluga Validacija statusa sa nedozvoljenom vrednoscu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"naziv\": \"izrada mosta od 3 zuba\",\r\n    \"opis\": \"izrada i montaza mosta duzine 3 zuba koja se kace na 2 obradjena\",\r\n    \"sifra_usluge\": \"IM3\",\r\n    \"kategorija\": \"redovna\",\r\n    \"cena\": 7800,\r\n    \"popust_paket\": 0.3,\r\n    \"popust_dete\": 0.27,\r\n    \"popust_penzioner\": 0.45,\r\n    \"status\": \"zdrav\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Naziv",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/usluga/naziv/plombiranje zuba",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga",
+								"naziv",
+								"plombiranje zuba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Sifra_usluge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/usluga/sifra_usluge/pkr",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga",
+								"sifra_usluge",
+								"pkr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Kategorija",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/usluga/kategorija/hirurska",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga",
+								"kategorija",
+								"hirurska"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/usluga/status/aktivna",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga",
+								"status",
+								"aktivna"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pacijent",
+			"item": [
+				{
+					"name": "Get All Pacijent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id {2}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Pacijent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ime\": \"Milica\",\r\n    \"prezime\": \"Petrovic\",\r\n    \"jmbg\": \"0304955410111\",\r\n    \"adresa\": \"Ustanicka 15\",\r\n    \"telefon\": \"061332211\",\r\n    \"email\": \"mpetrovic@gmail.com\",\r\n    \"senioritet\": \"penzioner\",\r\n    \"status\": \"aktivan\",\r\n    \"korisnikId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/pacijent",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Pacijent Validacija kada je poslata losa duzina JMBG",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ime\": \"Milica\",\r\n    \"prezime\": \"Petrovic\",\r\n    \"jmbg\": \"304955410111\",\r\n    \"adresa\": \"Ustanicka 15\",\r\n    \"telefon\": \"061332211\",\r\n    \"email\": \"mpetrovic@gmail.com\",\r\n    \"status\": \"aktivan\",\r\n    \"korisnikId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/pacijent",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Pacijent Validacija kad je prosledjena losa duzina telefona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ime\": \"Milica\",\r\n    \"prezime\": \"Petrovic\",\r\n    \"jmbg\": \"0304955410111\",\r\n    \"adresa\": \"Ustanicka 15\",\r\n    \"telefon\": \"0613322\",\r\n    \"email\": \"mpetrovic@gmail.com\",\r\n    \"status\": \"aktivan\",\r\n    \"korisnikId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/pacijent",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Ime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/ime/Mika",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"ime",
+								"Mika"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Senioritet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/senioritet/penzioner",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"senioritet",
+								"penzioner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Prezime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/prezime/Petrovic",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"prezime",
+								"Petrovic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Jmbg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/jmbg/0102990510111",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"jmbg",
+								"0102990510111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Adresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/adresa/Cerska 15",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"adresa",
+								"Cerska 15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Telefon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/telefon/061332211",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"telefon",
+								"061332211"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/email/mmikic@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"email",
+								"mmikic@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/status/aktivan",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"status",
+								"aktivan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Korisnik_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/pacijent/korisnik_id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"korisnik_id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Korisnik",
+			"item": [
+				{
+					"name": "Get All Korisnik",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/korisnik",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id {1}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/korisnik/1",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Korisnik",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"korisnicko_ime\": \"tamara123\",\r\n    \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\r\n    \"ime\": \"Tamara\",\r\n    \"prezime\": \"Jovanovic\",\r\n    \"jmbg\": \"2010932410777\",\r\n    \"email\": \"tjovanovic@gmail.com\",\r\n    \"is_active\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/korisnik",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Korisnik Validacija kad je pogresna duzina jmbg prosledjena",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"korisnicko_ime\": \"tamara123\",\r\n    \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\r\n    \"ime\": \"Tamara\",\r\n    \"prezime\": \"Jovanovic\",\r\n    \"jmbg\": \"20932410777\",\r\n    \"email\": \"tjovanovic@gmail.com\",\r\n    \"is_active\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/korisnik",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Korisnicko_ime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/korisnik/korisnicko_ime/tamara123",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik",
+								"korisnicko_ime",
+								"tamara123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Ime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/korisnik/ime/milica",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik",
+								"ime",
+								"milica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Prezime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/korisnik/prezime/jovanovic",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik",
+								"prezime",
+								"jovanovic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/korisnik/email/tjovanovic@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik",
+								"email",
+								"tjovanovic@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Jmbg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/korisnik/jmbg/2505994410888",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik",
+								"jmbg",
+								"2505994410888"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Is_active",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/korisnik/is_active/1",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik",
+								"is_active",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prijava_korisnika",
+			"item": [
+				{
+					"name": "Get All Prijava_korisnika",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/prijava_korisnika",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"prijava_korisnika"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id {3}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/prijava_korisnika/3",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"prijava_korisnika",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Korisnicko_ime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/prijava_korisnika/korisnicko_ime/tamara123",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"prijava_korisnika",
+								"korisnicko_ime",
+								"tamara123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Prijava_korisnika",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"status\": 1,\r\n        \"korisnicko_ime\": \"milica123\",\r\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/prijava_korisnika",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"prijava_korisnika"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Prijava_korisnika Validacija sa pogresnim formatom statusa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"status\": \"1\",\r\n        \"korisnicko_ime\": \"milica123\",\r\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/prijava_korisnika",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"prijava_korisnika"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Prijava_korisnika Validacija sa pogresnom duzinom korisnickog imena",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"status\": \"1\",\r\n        \"korisnicko_ime\": \"m\",\r\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/prijava_korisnika",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"prijava_korisnika"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/prijava_korisnika/status/0",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"prijava_korisnika",
+								"status",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Karton",
+			"item": [
+				{
+					"name": "Get All Karton",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/karton",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"karton"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id {2}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/karton/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"karton",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Karton",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pacijentId\": 5,\r\n    \"intervencija_logId\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/karton",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"karton"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Karton  Validacija sa pogresnim formatom Pacijent_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pacijentId\": \"4\",\r\n    \"intervencija_logId\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/karton",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"karton"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Karton  Validacija sa pogresnim formatom Intervencija_log_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pacijentId\": 5,\r\n    \"intervencija_logId\": \"7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/karton",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"karton"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Pacijent_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/karton/pacijent_id/5",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"karton",
+								"pacijent_id",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Intervencija_log_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/karton/intervencija_log/1",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"karton",
+								"intervencija_log",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Racun",
+			"item": [
+				{
+					"name": "Get All Racun",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id {2}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Racun",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tip_usluge\": \"paket\",\r\n    \"senioritet\": \"penzioner\",\r\n    \"cena\": 800,\r\n    \"pacijentId\": 5,\r\n    \"korisnikId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/racun",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Racun Validacija sa pogresnim tip_usluge",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tip_usluge\": \"dzabe\",\r\n    \"senioritet\": \"penzioner\",\r\n    \"cena\": 800,\r\n    \"pacijentId\": 5,\r\n    \"korisnikId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/racun",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Racun Validacija sa pogresnim senioritet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tip_usluge\": \"paket\",\r\n    \"senioritet\": \"skolarac\",\r\n    \"cena\": 800,\r\n    \"pacijentId\": 5,\r\n    \"korisnikId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/racun",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Tip_usluge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun/tip_usluge/paket",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun",
+								"tip_usluge",
+								"paket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Senioritet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun/senioritet/ostali",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun",
+								"senioritet",
+								"ostali"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Pacijent_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun/pacijent_id/5",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun",
+								"pacijent_id",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Korisnik_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun/korisnik_id/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun",
+								"korisnik_id",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "localhost:10000",
+			"type": "string"
+		}
+	]
+}
