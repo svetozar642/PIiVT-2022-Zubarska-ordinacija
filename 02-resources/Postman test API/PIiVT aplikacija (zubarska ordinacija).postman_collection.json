@@ -217,6 +217,90 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get All By Sifra_zuba",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/zub/sifra_zuba/GLS2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"zub",
+								"sifra_zuba",
+								"GLS2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Vilica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/zub/vilica/donja",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"zub",
+								"vilica",
+								"donja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Tip",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/zub/tip/ocnjak",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"zub",
+								"tip",
+								"ocnjak"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Strana",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/zub/strana/desna",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"zub",
+								"strana",
+								"desna"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
