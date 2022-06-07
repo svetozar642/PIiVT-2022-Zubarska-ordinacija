@@ -66,6 +66,87 @@ class ZubController{
                 res.status(500).send(error?.message);
             });
     }
+
+    async getAllBySifra_zuba(req: Request, res:Response) {
+        const sifra_zuba: string = req.params?.sifra_zuba;
+
+        this.ZubService.getAllBySifra_zuba(sifra_zuba, DefaultZubAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByBroj(req: Request, res:Response) {
+        const broj: string = req.params?.broj;
+
+        this.ZubService.getAllByBroj(broj, DefaultZubAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByVilica(req: Request, res:Response) {
+        const vilica: string = req.params?.vilica;
+
+        this.ZubService.getAllByVilica(vilica, DefaultZubAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByTip(req: Request, res:Response) {
+        const tip: string = req.params?.tip;
+
+        this.ZubService.getAllByTip(tip, DefaultZubAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
+    async getAllByStrana(req: Request, res:Response) {
+        const strana: string = req.params?.strana;
+
+        this.ZubService.getAllByStrana(strana, DefaultZubAdapterOptions )
+            .then( result => {
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                res.send(result);
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
+            });
+    }
+
 }
 
 export default ZubController;

@@ -11,6 +11,12 @@ class ZubRouter implements IRouter{
 
         application.get("/api/zub",     zubController.getAll.bind(zubController));
         application.get("/api/zub/:id", zubController.getById.bind(zubController));
+
+        application.get("/api/zub/sifra_zuba/:sifra_zuba",     zubController.getAllBySifra_zuba.bind(zubController));
+        application.get("/api/zub/broj/:broj",     zubController.getAllByBroj.bind(zubController));
+        application.get("/api/zub/vilica/:vilica",     zubController.getAllByVilica.bind(zubController));
+        application.get("/api/zub/tip/:tip",     zubController.getAllByTip.bind(zubController));
+        application.get("/api/zub/strana/:strana",     zubController.getAllByStrana.bind(zubController));
     }
 }
 

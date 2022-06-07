@@ -51,6 +51,37 @@ class ZubService extends BaseService<ZubModel, ZubAdapterOptions>{
     
     // getAll() i getById() metode nam vise ne trebaju jer se nalaze u BaseService klasi , tako da cemo ih obrisati odavde ...
 
+
+    public async getAllBySifra_zuba(sifra_zuba: string, options: ZubAdapterOptions): Promise<ZubModel[]>{
+        
+        return this.getAllByFieldNameAnValue('sifra_zuba', sifra_zuba, options );
+
+    }
+
+    public async getAllByBroj(broj: string, options: ZubAdapterOptions): Promise<ZubModel[]>{
+        
+        return this.getAllByFieldNameAnValue('broj', broj, options );
+
+    }
+
+    public async getAllByVilica(vilica: string, options: ZubAdapterOptions): Promise<ZubModel[]>{
+        
+        return this.getAllByFieldNameAnValue('vilica', vilica, options );
+
+    }
+
+    public async getAllByTip(tip: string, options: ZubAdapterOptions): Promise<ZubModel[]>{
+        
+        return this.getAllByFieldNameAnValue('tip', tip, options );
+
+    }
+
+    public async getAllByStrana(strana: string, options: ZubAdapterOptions): Promise<ZubModel[]>{
+        
+        return this.getAllByFieldNameAnValue('strana', strana, options );
+
+    }
+
 }
 
 export default ZubService;
