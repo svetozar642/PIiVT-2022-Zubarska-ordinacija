@@ -61,6 +61,7 @@ class RacunService extends BaseService<RacunModel, RacunAdapterOptions >{
         return this.getAllByFieldNameAnValue('tip_usluge', tip_usluge, options );
 
     }
+    
 
     // Posto smo obecali da cemo dostaviti jedan KorisnikModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
