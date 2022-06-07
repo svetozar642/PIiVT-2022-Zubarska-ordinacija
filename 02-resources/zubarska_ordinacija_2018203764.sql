@@ -39,13 +39,14 @@ CREATE TABLE IF NOT EXISTS `intervencija_log` (
   CONSTRAINT `fk_intervencija_log_racun_id` FOREIGN KEY (`racun_id`) REFERENCES `racun` (`racun_id`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `fk_intervencija_log_usluga_id` FOREIGN KEY (`usluga_id`) REFERENCES `usluga` (`usluga_id`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `fk_intervencija_log_zub_id` FOREIGN KEY (`zub_id`) REFERENCES `zub` (`zub_id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.intervencija_log: ~3 rows (approximately)
 INSERT INTO `intervencija_log` (`intervencija_log_id`, `sifra_zuba`, `sifra_usluge`, `zub_id`, `usluga_id`, `pacijent_id`, `racun_id`) VALUES
 	(1, 'GLK5', 'PKR', 5, 2, 1, 1),
 	(2, 'DDS1', 'SKP', 25, 3, 2, 2),
-	(7, 'DLS1', 'PKR', 1, 2, 5, 1);
+	(7, 'DLS1', 'PKR', 1, 2, 5, 1),
+	(8, 'DLO3', 'PKR', 19, 2, 2, 4);
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.karton
 DROP TABLE IF EXISTS `karton`;
@@ -58,13 +59,14 @@ CREATE TABLE IF NOT EXISTS `karton` (
   KEY `fk_karton_intervencija_log_id` (`intervencija_log_id`),
   CONSTRAINT `fk_karton_intervencija_log_id` FOREIGN KEY (`intervencija_log_id`) REFERENCES `intervencija_log` (`intervencija_log_id`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `fk_karton_pacijent` FOREIGN KEY (`pacijent_id`) REFERENCES `pacijent` (`pacijent_id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.karton: ~2 rows (approximately)
 INSERT INTO `karton` (`karton_id`, `pacijent_id`, `intervencija_log_id`) VALUES
 	(1, 1, 1),
 	(2, 2, 2),
-	(3, 5, 7);
+	(3, 5, 7),
+	(4, 2, 8);
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.korisnik
 DROP TABLE IF EXISTS `korisnik`;
@@ -80,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `korisnik` (
   `is_active` tinyint unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`korisnik_id`),
   UNIQUE KEY `uq_korisnik_korisnicko_ime` (`korisnicko_ime`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.korisnik: ~2 rows (approximately)
 INSERT INTO `korisnik` (`korisnik_id`, `korisnicko_ime`, `lozinka_hash`, `ime`, `prezime`, `jmbg`, `email`, `created_at`, `is_active`) VALUES
@@ -104,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `pacijent` (
   UNIQUE KEY `uq_pacijent_jmbg` (`jmbg`),
   KEY `fk_pacijent_korisnik_id` (`korisnik_id`),
   CONSTRAINT `fk_pacijent_korisnik_id` FOREIGN KEY (`korisnik_id`) REFERENCES `korisnik` (`korisnik_id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.pacijent: ~3 rows (approximately)
 INSERT INTO `pacijent` (`pacijent_id`, `ime`, `prezime`, `jmbg`, `adresa`, `telefon`, `email`, `senioritet`, `status`, `korisnik_id`) VALUES
@@ -121,14 +123,15 @@ CREATE TABLE IF NOT EXISTS `prijava_korisnika` (
   `korisnicko_ime` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `lozinka_hash` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`prijava_korisnika_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.prijava_korisnika: ~4 rows (approximately)
 INSERT INTO `prijava_korisnika` (`prijava_korisnika_id`, `logged_at`, `status`, `korisnicko_ime`, `lozinka_hash`) VALUES
 	(1, '2022-06-04 20:41:57', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e'),
 	(2, '2022-06-04 20:42:15', 0, 'tamara123', '504938a121efec5f4fbdbcc64ca5736e'),
 	(3, '2022-06-04 20:42:39', 1, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944'),
-	(4, '2022-06-04 20:47:01', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e');
+	(4, '2022-06-04 20:47:01', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e'),
+	(5, '2022-06-07 16:21:09', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e');
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.racun
 DROP TABLE IF EXISTS `racun`;
@@ -145,13 +148,14 @@ CREATE TABLE IF NOT EXISTS `racun` (
   KEY `fk_racun_korisnik_id` (`korisnik_id`),
   CONSTRAINT `fk_racun_korisnik_id` FOREIGN KEY (`korisnik_id`) REFERENCES `korisnik` (`korisnik_id`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `fk_racun_pacijent_id` FOREIGN KEY (`pacijent_id`) REFERENCES `pacijent` (`pacijent_id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.racun: ~2 rows (approximately)
 INSERT INTO `racun` (`racun_id`, `created_at`, `tip_usluge`, `senioritet`, `cena`, `pacijent_id`, `korisnik_id`) VALUES
 	(1, '2022-05-31 18:21:23', 'pojedinacna', 'ostali', 2000, 1, 1),
 	(2, '2022-05-31 18:22:27', 'pojedinacna', 'ostali', 1000, 2, 1),
-	(3, '2022-06-05 21:18:44', 'paket', 'penzioner', 800, 5, 2);
+	(3, '2022-06-05 21:18:44', 'paket', 'penzioner', 800, 5, 2),
+	(4, '2022-06-07 16:16:26', 'pojedinacna', 'ostali', 2000, 2, 1);
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.usluga
 DROP TABLE IF EXISTS `usluga`;
@@ -169,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `usluga` (
   PRIMARY KEY (`usluga_id`),
   UNIQUE KEY `uq_usluga_naziv` (`naziv`),
   UNIQUE KEY `uq_usluga_sifra_usluge` (`sifra_usluge`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.usluga: ~8 rows (approximately)
 INSERT INTO `usluga` (`usluga_id`, `naziv`, `opis`, `sifra_usluge`, `kategorija`, `cena`, `popust_paket`, `popust_dete`, `popust_penzioner`, `status`) VALUES
