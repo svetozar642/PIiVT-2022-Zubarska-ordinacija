@@ -13,10 +13,12 @@ export default interface IAddUsluga {
     opis: string;
     sifra_usluge: string;
     kategorija: Kategorija;
-    cena: number;
-    popust_paket: number;
-    popust_dete: number;
-    popust_penzioner: number;
+    cena_pojedinacna_dete: number;
+    cena_pojedinacna_penzioner: number;
+    cena_pojedinacna_ostali: number;
+    cena_paket_dete: number;
+    cena_paket_penzioner: number;
+    cena_paket_ostali: number;
     status: Status;
 }
 
@@ -42,16 +44,22 @@ const AddUslugaSchema = {
         kategorija: {
             enum: ["preventivna","redovna", "hirurska"],
         },
-        cena: {
+        cena_pojedinacna_dete: {
             type: "number",
         },
-        popust_paket: {
+        cena_pojedinacna_penzioner: {
             type: "number",
         },
-        popust_dete: {
+        cena_pojedinacna_ostali: {
             type: "number",
         },
-        popust_penzioner: {
+        cena_paket_dete: {
+            type: "number",
+        },
+        cena_paket_penzioner: {
+            type: "number",
+        },
+        cena_paket_ostali: {
             type: "number",
         },
         status: {
@@ -64,10 +72,12 @@ const AddUslugaSchema = {
         "opis",
         "sifra_usluge",
         "kategorija",
-        "cena",
-        "popust_paket",
-        "popust_dete",
-        "popust_penzioner",
+        "cena_pojedinacna_dete",
+        "cena_pojedinacna_penzioner",
+        "cena_pojedinacna_ostali",
+        "cena_paket_dete",
+        "cena_paket_penzioner",
+        "cena_paket_ostali",
         "status"
     ],
     additionalProperties: false,

@@ -8,13 +8,15 @@ class UslugaModel implements IModel{
     opis: string;
     sifra_usluge: string;
     kategorija: Kategorija;
-    cena: number;
-    popust_paket: number;
-    popust_dete: number;
-    popust_penzioner: number;
+    cena_pojedinacna_dete: number;
+    cena_pojedinacna_penzioner: number;
+    cena_pojedinacna_ostali: number;
+    cena_paket_dete: number;
+    cena_paket_penzioner: number;
+    cena_paket_ostali: number;
     status: Status;
 
-    intervencije_log ?: Intervencija_logModel[];
+    
 }
 
 enum Kategorija{
