@@ -1,4 +1,4 @@
-import KorisnikModel from "./KorisnikModel.model";
+import KorisnikModel, { Status } from "./KorisnikModel.model";
 import * as mysql2 from 'mysql2/promise';
 import { resolve } from "path";
 import { rejects } from "assert";
@@ -32,7 +32,7 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
         korisnik.jmbg           = data?.jmbg;
         korisnik.email          = data?.email;
         korisnik.created_at     = data?.created_at;
-        korisnik.is_active      = +data?.is_active;
+        korisnik.is_active      = data?.is_active;
 
         return korisnik;
     }
@@ -69,7 +69,7 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
 
     }
 
-    public async getAllByIs_active(is_active: number, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
+    public async getAllByIs_active(is_active: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
         
         return this.getAllByFieldNameAnValue('is_active', is_active, options );
 

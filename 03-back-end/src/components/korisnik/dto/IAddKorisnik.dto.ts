@@ -1,5 +1,6 @@
 //Validaciju cemo da implementiramo gde je i sam DTO ...
 import Ajv from "ajv";
+import { Status } from "../KorisnikModel.model";
 
 const ajv = new Ajv();
 
@@ -15,7 +16,7 @@ export default interface IAddKorisnik {
     jmbg: string;
     email: string;
     created_at ?: string;
-    is_active: number;
+    is_active: Status;
     
 }
 
@@ -57,7 +58,7 @@ const AddKorisnikSchema = {
             type: "string"
         },
         is_active: {
-            type: "number"
+            enum: ["aktivan", "neaktivan"]
         }
     },
     required: [

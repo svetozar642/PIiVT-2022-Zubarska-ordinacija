@@ -8,8 +8,14 @@ class KorisnikModel implements IModel{
     jmbg: string;
     email: string;
     created_at ?: string;
-    is_active: number;
+    is_active: Status;
     
 }
 
+enum Status{
+    aktivan = "aktivan",
+    neaktivan = "neaktivan"
+}
+
 export default KorisnikModel;
+export {Status};

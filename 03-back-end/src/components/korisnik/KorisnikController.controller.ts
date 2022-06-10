@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import IAddKorisnik, { AddKorisnikValidator } from "./dto/IAddKorisnik.dto";
+import { Status } from "./KorisnikModel.model";
 import KorisnikService, { DefaultKorisnikAdapterOptions } from './KorisnikService.service';
 
 
@@ -150,7 +151,7 @@ class KorisnikController{
     }
 
     async getAllByIs_active(req: Request, res:Response) {
-        const is_active : number = +req.params?.is_active;
+        const is_active : string = req.params?.is_active;
 
         this.KorisnikService.getAllByIs_active(is_active, DefaultKorisnikAdapterOptions )
             .then( result => {
