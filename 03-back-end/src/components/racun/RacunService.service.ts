@@ -12,7 +12,7 @@ class RacunAdapterOptions implements IAdapterOptions {
 }
 
 const DefaultRacunAdapterOptions: RacunAdapterOptions = {
-    loadIntervencija_log: false,
+    
 }
 class RacunService extends BaseService<RacunModel, RacunAdapterOptions >{
     
@@ -28,7 +28,7 @@ class RacunService extends BaseService<RacunModel, RacunAdapterOptions >{
 
         racun.tip_usluge    = data?.tip_usluge;
         racun.senioritet    = data?.senioritet;
-        racun.cena          = +data?.cena;
+        
         racun.pacijentId    = +data?.pacijent_id;
         racun.korisnikId    = +data?.korisnik_id;
 
@@ -69,9 +69,9 @@ class RacunService extends BaseService<RacunModel, RacunAdapterOptions >{
     public async add(data: IAddRacun): Promise<RacunModel> {
         return new Promise<RacunModel>( (resolve, reject) => {
             //const sql : string = "INSERT `racun` SET `tip_usluge` = ? AND `senioritet` = ? AND `cena` = ? AND `pacijent_id` = ? AND `korinsik_id` = ? ;";
-            const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`racun` (`tip_usluge`, `senioritet`, `cena`, `pacijent_id`, `korisnik_id`) VALUES (?, ?, ?, ?, ?);";
+            const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`racun` (`tip_usluge`, `senioritet`, `pacijent_id`, `korisnik_id`) VALUES ( ?, ?, ?, ?);";
 
-            this.db.execute(sql, [data.tip_usluge, data.senioritet, data.cena, data.pacijentId, data.korisnikId ])
+            this.db.execute(sql, [data.tip_usluge, data.senioritet, data.pacijentId, data.korisnikId ])
                 .then( async result => {
                     const info: any = result;
 

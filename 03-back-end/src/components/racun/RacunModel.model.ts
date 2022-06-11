@@ -5,7 +5,7 @@ class RacunModel implements IModel{
     created_at: string;
     tip_usluge: TipUsluge;
     senioritet: Senioritet;
-    cena: number;
+    
     pacijentId: number;
     korisnikId: number;
     

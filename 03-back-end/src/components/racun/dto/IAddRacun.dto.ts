@@ -12,7 +12,7 @@ export default interface IAddRacun {
 
     tip_usluge: TipUsluge;
     senioritet: Senioritet;
-    cena: number;
+    
     pacijentId: number;
     korisnikId: number;
     
@@ -29,9 +29,6 @@ const AddRacunSchema = {
         senioritet: {
             enum: ["dete","penzioner", "ostali"],
         },
-        cena: {
-            type: "number",
-        },
         pacijentId: {
             type: "number",
         },
@@ -43,7 +40,6 @@ const AddRacunSchema = {
     required: [
         "tip_usluge",
         "senioritet",
-        "cena",
         "pacijentId",
         "korisnikId",
     ],
