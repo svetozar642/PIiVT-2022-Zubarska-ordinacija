@@ -1,12 +1,12 @@
 import IConfig from './common/IConfig.interface';
 import ZubRouter from './components/zub/ZubRouter.router';
-import Intervencija_logRouter from './components/intervencija_log/Intervencija_logRouter.router';
 import UslugaRouter from './components/usluga/UslugaRouter.router';
 import PacijentRouter from './components/pacijent/PacijentRouter.router';
 import KorisnikRouter from './components/korisnik/KorisnikRouter.router';
 import Prijava_korisnikaRouter from './components/prijava_korisnika/Prijava_korisnikaRouter.router';
 import KartonRouter from './components/karton/KartonRouter.router';
 import RacunRouter from './components/racun/RacunRouter.router';
+import Racun_uslugaRouter from './components/racun_usluga/Racun_uslugaRouter.router';
 
 const DevConfig: IConfig = {
     server: {
@@ -38,7 +38,7 @@ const DevConfig: IConfig = {
     },
     routers: [
         new ZubRouter(),
-        new Intervencija_logRouter(),
+        new Racun_uslugaRouter(),
         new UslugaRouter(),
         new PacijentRouter(),
         new KorisnikRouter(),
