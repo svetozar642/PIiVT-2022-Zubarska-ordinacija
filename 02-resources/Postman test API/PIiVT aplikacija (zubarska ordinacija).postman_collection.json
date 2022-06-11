@@ -7,614 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "Intervencija_log",
-			"item": [
-				{
-					"name": "Get All Intervencija_log",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:10000/api/intervencija_log/",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"intervencija_log",
-								""
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get All Intervencija_log",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:10000/api/intervencija_log/",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"intervencija_log",
-										""
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "350"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"15e-O4EVshYvFL6rqUlaxjmVWMx/rYc\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:11:46 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"intervencija_logId\": 1,\n        \"sifra_zuba\": \"GLK5\",\n        \"sifra_usluge\": \"PKR\",\n        \"zubId\": 5,\n        \"uslugaId\": 2,\n        \"pacijentId\": 1,\n        \"racunId\": 1\n    },\n    {\n        \"intervencija_logId\": 2,\n        \"sifra_zuba\": \"DDS1\",\n        \"sifra_usluge\": \"SKP\",\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    },\n    {\n        \"intervencija_logId\": 7,\n        \"sifra_zuba\": \"DLS1\",\n        \"sifra_usluge\": \"PKR\",\n        \"zubId\": 1,\n        \"uslugaId\": 2,\n        \"pacijentId\": 5,\n        \"racunId\": 1\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Get By Id {1}",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:10000/api/intervencija_log/1",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"intervencija_log",
-								"1"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get By Id {1}",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:10000/api/intervencija_log/1",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"intervencija_log",
-										"1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "115"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"73-PZPCIk4zinGUQcED/3s+ofKi1fw\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:12:17 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"intervencija_logId\": 1,\n    \"sifra_zuba\": \"GLK5\",\n    \"sifra_usluge\": \"PKR\",\n    \"zubId\": 5,\n    \"uslugaId\": 2,\n    \"pacijentId\": 1,\n    \"racunId\": 1\n}"
-						}
-					]
-				},
-				{
-					"name": "Get By Id {2}",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:10000/api/intervencija_log/2",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"intervencija_log",
-								"2"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get By Id {2}",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:10000/api/intervencija_log/2",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"intervencija_log",
-										"2"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "116"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"74-HzfOrGzlyqn4ZH0Y8DSl4fwBnA0\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:12:24 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"intervencija_logId\": 2,\n    \"sifra_zuba\": \"DDS1\",\n    \"sifra_usluge\": \"SKP\",\n    \"zubId\": 25,\n    \"uslugaId\": 3,\n    \"pacijentId\": 2,\n    \"racunId\": 2\n}"
-						}
-					]
-				},
-				{
-					"name": "Add New Intervencija_log",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"sifra_zuba\" : \"DLS1\",\r\n    \"sifra_usluge\" : \"PKR\",\r\n    \"zubId\" : 1,\r\n    \"uslugaId\" : 2,\r\n    \"pacijentId\" : 1,\r\n    \"racunId\" : 1\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:10000/api/intervencija_log",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"intervencija_log"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Add New Intervencija_log",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"sifra_zuba\" : \"DLO3\",\r\n    \"sifra_usluge\" : \"PKR\",\r\n    \"zubId\" : 19,\r\n    \"uslugaId\" : 2,\r\n    \"pacijentId\" : 2,\r\n    \"racunId\" : 4\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:10000/api/intervencija_log",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"intervencija_log"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "116"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"74-Yji6Ayan2XeGSolsFSkpalP/HAI\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:17:06 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"intervencija_logId\": 8,\n    \"sifra_zuba\": \"DLO3\",\n    \"sifra_usluge\": \"PKR\",\n    \"zubId\": 19,\n    \"uslugaId\": 2,\n    \"pacijentId\": 2,\n    \"racunId\": 4\n}"
-						}
-					]
-				},
-				{
-					"name": "Add New Intervencija_log Validacija sifre_zuba kada je ispod min duzine",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"sifra_zuba\" : \"D\",\r\n    \"sifra_usluge\" : \"PKR\",\r\n    \"zubId\" : 1,\r\n    \"uslugaId\" : 2,\r\n    \"pacijentId\" : 1,\r\n    \"racunId\" : 1\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:10000/api/intervencija_log",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"intervencija_log"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Add New Intervencija_log Validacija sifre_zuba kada je ispod min duzine",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"sifra_zuba\" : \"D\",\r\n    \"sifra_usluge\" : \"PKR\",\r\n    \"zubId\" : 1,\r\n    \"uslugaId\" : 2,\r\n    \"pacijentId\" : 1,\r\n    \"racunId\" : 1\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:10000/api/intervencija_log",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"intervencija_log"
-									]
-								}
-							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "174"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"ae-mCMvMGzkb2aE938+70eUTE7sCP4\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:13:17 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"instancePath\": \"/sifra_zuba\",\n        \"schemaPath\": \"#/properties/sifra_zuba/minLength\",\n        \"keyword\": \"minLength\",\n        \"params\": {\n            \"limit\": 2\n        },\n        \"message\": \"must NOT have fewer than 2 characters\"\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Add New Intervencija_log Validacija zubId kada je prosledjen string a ne number",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"sifra_zuba\" : \"D\",\r\n    \"sifra_usluge\" : \"PKR\",\r\n    \"zubId\" : \"1\",\r\n    \"uslugaId\" : 2,\r\n    \"pacijentId\" : 1,\r\n    \"racunId\" : 1\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:10000/api/intervencija_log",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"intervencija_log"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Add New Intervencija_log Validacija zubId kada je prosledjen string a ne number",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"sifra_zuba\" : \"D\",\r\n    \"sifra_usluge\" : \"PKR\",\r\n    \"zubId\" : \"1\",\r\n    \"uslugaId\" : 2,\r\n    \"pacijentId\" : 1,\r\n    \"racunId\" : 1\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:10000/api/intervencija_log",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"intervencija_log"
-									]
-								}
-							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "174"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"ae-mCMvMGzkb2aE938+70eUTE7sCP4\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:13:09 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"instancePath\": \"/sifra_zuba\",\n        \"schemaPath\": \"#/properties/sifra_zuba/minLength\",\n        \"keyword\": \"minLength\",\n        \"params\": {\n            \"limit\": 2\n        },\n        \"message\": \"must NOT have fewer than 2 characters\"\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Get all intervencija_log By zub_id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:10000/api/intervencija_log/zub/25",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"intervencija_log",
-								"zub",
-								"25"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get all intervencija_log By zub_id",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:10000/api/intervencija_log/zub/25",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"intervencija_log",
-										"zub",
-										"25"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "118"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"76-rLalKi5wkSbJzdfLzX2MzPOEKi4\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:12:41 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"intervencija_logId\": 2,\n        \"sifra_zuba\": \"DDS1\",\n        \"sifra_usluge\": \"SKP\",\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    }\n]"
-						}
-					]
-				}
-			]
-		},
-		{
 			"name": "Zub",
 			"item": [
 				{
@@ -1155,15 +547,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "1825"
+									"value": "2598"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"721-nfDP0gorcMA2LU0etA31ao1VOrE\""
+									"value": "W/\"a26-36MTZJn7X4ogh4tzDj9jROFPbNw\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:26:07 GMT"
+									"value": "Fri, 10 Jun 2022 15:03:53 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1175,7 +567,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"uslugaId\": 1,\n        \"naziv\": \"vadjenje zuba\",\n        \"opis\": \"vadjenje zuba \",\n        \"sifra_usluge\": \"VZH\",\n        \"kategorija\": \"hirurska\",\n        \"cena\": 3000,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 2,\n        \"naziv\": \"popravka krunice\",\n        \"opis\": \"popravka karijesa na krunici zuba\",\n        \"sifra_usluge\": \"PKR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2000,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 3,\n        \"naziv\": \"skidanje kamenca\",\n        \"opis\": \"skidanje kamenca sa zuba\",\n        \"sifra_usluge\": \"SKP\",\n        \"kategorija\": \"preventivna\",\n        \"cena\": 1000,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 4,\n        \"naziv\": \"nadogradnja zuba\",\n        \"opis\": \"nadogradnja polomljenog zuba\",\n        \"sifra_usluge\": \"NZR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2200,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 5,\n        \"naziv\": \"lecenje zuba\",\n        \"opis\": \"lecenje pokvarenog zuba pre plombiranja\",\n        \"sifra_usluge\": \"LZR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2500,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 6,\n        \"naziv\": \"plombiranje zuba\",\n        \"opis\": \"stavljanje bele plombe nakon uspesnog lecenja zuba\",\n        \"sifra_usluge\": \"PZR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2100,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 8,\n        \"naziv\": \"vadjenje zivca\",\n        \"opis\": \"prethodno umrtvljivanje zivca lekom pa potom i njegovo vadjenje\",\n        \"sifra_usluge\": \"UVZH\",\n        \"kategorija\": \"hirurska\",\n        \"cena\": 2400,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 9,\n        \"naziv\": \"izrada mosta od 3 zuba\",\n        \"opis\": \"izrada i montaza mosta duzine 3 zuba koja se kace na 2 obradjena\",\n        \"sifra_usluge\": \"IM3\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 7800,\n        \"popust_paket\": 0.3,\n        \"popust_dete\": 0.27,\n        \"popust_penzioner\": 0.45,\n        \"status\": \"aktivna\"\n    }\n]"
+							"body": "[\n    {\n        \"uslugaId\": 1,\n        \"naziv\": \"vadjenje zuba\",\n        \"opis\": \"vadjenje zuba \",\n        \"sifra_usluge\": \"VZH\",\n        \"kategorija\": \"hirurska\",\n        \"cena_pojedinacna_dete\": 1500,\n        \"cena_pojedinacna_penzioner\": 1800,\n        \"cena_pojedinacna_ostali\": 2000,\n        \"cena_paket_dete\": 1000,\n        \"cena_paket_penzioner\": 1200,\n        \"cena_paket_ostali\": 1500,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 2,\n        \"naziv\": \"popravka krunice\",\n        \"opis\": \"popravka karijesa na krunici zuba\",\n        \"sifra_usluge\": \"PKR\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 1800,\n        \"cena_pojedinacna_penzioner\": 2000,\n        \"cena_pojedinacna_ostali\": 2500,\n        \"cena_paket_dete\": 1200,\n        \"cena_paket_penzioner\": 1500,\n        \"cena_paket_ostali\": 1700,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 3,\n        \"naziv\": \"skidanje kamenca\",\n        \"opis\": \"skidanje kamenca sa zuba\",\n        \"sifra_usluge\": \"SKP\",\n        \"kategorija\": \"preventivna\",\n        \"cena_pojedinacna_dete\": 1000,\n        \"cena_pojedinacna_penzioner\": 1200,\n        \"cena_pojedinacna_ostali\": 1400,\n        \"cena_paket_dete\": 800,\n        \"cena_paket_penzioner\": 900,\n        \"cena_paket_ostali\": 1000,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 4,\n        \"naziv\": \"nadogradnja zuba\",\n        \"opis\": \"nadogradnja polomljenog zuba\",\n        \"sifra_usluge\": \"NZR\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 2200,\n        \"cena_pojedinacna_penzioner\": 2600,\n        \"cena_pojedinacna_ostali\": 3000,\n        \"cena_paket_dete\": 2000,\n        \"cena_paket_penzioner\": 2300,\n        \"cena_paket_ostali\": 2600,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 5,\n        \"naziv\": \"lecenje zuba\",\n        \"opis\": \"lecenje pokvarenog zuba pre plombiranja\",\n        \"sifra_usluge\": \"LZR\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 2500,\n        \"cena_pojedinacna_penzioner\": 2700,\n        \"cena_pojedinacna_ostali\": 3000,\n        \"cena_paket_dete\": 2100,\n        \"cena_paket_penzioner\": 2400,\n        \"cena_paket_ostali\": 2700,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 6,\n        \"naziv\": \"plombiranje zuba\",\n        \"opis\": \"stavljanje bele plombe nakon uspesnog lecenja zuba\",\n        \"sifra_usluge\": \"PZR\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 2100,\n        \"cena_pojedinacna_penzioner\": 2200,\n        \"cena_pojedinacna_ostali\": 2300,\n        \"cena_paket_dete\": 1700,\n        \"cena_paket_penzioner\": 1900,\n        \"cena_paket_ostali\": 2000,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 8,\n        \"naziv\": \"vadjenje zivca\",\n        \"opis\": \"prethodno umrtvljivanje zivca lekom pa potom i njegovo vadjenje\",\n        \"sifra_usluge\": \"UVZH\",\n        \"kategorija\": \"hirurska\",\n        \"cena_pojedinacna_dete\": 2800,\n        \"cena_pojedinacna_penzioner\": 3000,\n        \"cena_pojedinacna_ostali\": 3400,\n        \"cena_paket_dete\": 2500,\n        \"cena_paket_penzioner\": 2700,\n        \"cena_paket_ostali\": 2900,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 9,\n        \"naziv\": \"izrada mosta od 3 zuba\",\n        \"opis\": \"izrada i montaza mosta duzine 3 zuba koja se kace na 2 obradjena\",\n        \"sifra_usluge\": \"IM3\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 7800,\n        \"cena_pojedinacna_penzioner\": 8000,\n        \"cena_pojedinacna_ostali\": 8500,\n        \"cena_paket_dete\": 6500,\n        \"cena_paket_penzioner\": 6700,\n        \"cena_paket_ostali\": 7000,\n        \"status\": \"aktivna\"\n    }\n]"
 						}
 					]
 				},
@@ -1234,15 +626,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "220"
+									"value": "317"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"dc-s+Mn5tSwwgMCZ4Atm80k9+K2uFo\""
+									"value": "W/\"13d-nxDMr363dkqp80zkbjb5k4oy/9I\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:26:15 GMT"
+									"value": "Fri, 10 Jun 2022 15:04:11 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1254,7 +646,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"uslugaId\": 2,\n    \"naziv\": \"popravka krunice\",\n    \"opis\": \"popravka karijesa na krunici zuba\",\n    \"sifra_usluge\": \"PKR\",\n    \"kategorija\": \"redovna\",\n    \"cena\": 2000,\n    \"popust_paket\": 0.1,\n    \"popust_dete\": 0.2,\n    \"popust_penzioner\": 0.15,\n    \"status\": \"aktivna\"\n}"
+							"body": "{\n    \"uslugaId\": 2,\n    \"naziv\": \"popravka krunice\",\n    \"opis\": \"popravka karijesa na krunici zuba\",\n    \"sifra_usluge\": \"PKR\",\n    \"kategorija\": \"redovna\",\n    \"cena_pojedinacna_dete\": 1800,\n    \"cena_pojedinacna_penzioner\": 2000,\n    \"cena_pojedinacna_ostali\": 2500,\n    \"cena_paket_dete\": 1200,\n    \"cena_paket_penzioner\": 1500,\n    \"cena_paket_ostali\": 1700,\n    \"status\": \"aktivna\"\n}"
 						}
 					]
 				},
@@ -1292,7 +684,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"naziv\": \"izrada mosta od 3 zuba\",\r\n    \"opis\": \"izrada i montaza mosta duzine 3 zuba koja se kace na 2 obradjena\",\r\n    \"sifra_usluge\": \"IM3\",\r\n    \"kategorija\": \"redovna\",\r\n    \"cena\": 7800,\r\n    \"popust_paket\": 0.3,\r\n    \"popust_dete\": 0.27,\r\n    \"popust_penzioner\": 0.45,\r\n    \"status\": \"aktivna\"\r\n}",
+									"raw": "{\r\n    \"naziv\": \"izrada mosta od 4 zuba\",\r\n    \"opis\": \"izrada i montaza mosta duzine 4 zuba koja se kace na 2 obradjena\",\r\n    \"sifra_usluge\": \"IM4\",\r\n    \"kategorija\": \"redovna\",\r\n    \"cena_pojedinacna_dete\": 9800,\r\n    \"cena_pojedinacna_penzioner\": 10000,\r\n    \"cena_pojedinacna_ostali\": 10500,\r\n    \"cena_paket_dete\": 8500,\r\n    \"cena_paket_penzioner\": 9500,\r\n    \"cena_paket_ostali\": 9800,\r\n    \"status\": \"aktivna\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1311,9 +703,9 @@
 									]
 								}
 							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "html",
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -1325,19 +717,19 @@
 								},
 								{
 									"key": "Content-Type",
-									"value": "text/html; charset=utf-8"
+									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "73"
+									"value": "357"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"49-FGBnsX7TPsgumS/ieFEwF7h3gk8\""
+									"value": "W/\"165-N+mFx0YtJtKWVpCphUxoVCGlU2E\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:26:26 GMT"
+									"value": "Fri, 10 Jun 2022 15:08:57 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1349,7 +741,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "Duplicate entry 'izrada mosta od 3 zuba' for key 'usluga.uq_usluga_naziv'"
+							"body": "{\n    \"uslugaId\": 12,\n    \"naziv\": \"izrada mosta od 4 zuba\",\n    \"opis\": \"izrada i montaza mosta duzine 4 zuba koja se kace na 2 obradjena\",\n    \"sifra_usluge\": \"IM4\",\n    \"kategorija\": \"redovna\",\n    \"cena_pojedinacna_dete\": 9800,\n    \"cena_pojedinacna_penzioner\": 10000,\n    \"cena_pojedinacna_ostali\": 10500,\n    \"cena_paket_dete\": 8500,\n    \"cena_paket_penzioner\": 9500,\n    \"cena_paket_ostali\": 9800,\n    \"status\": \"aktivna\"\n}"
 						}
 					]
 				},
@@ -1621,6 +1013,65 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"uslugaId\": 6,\n        \"naziv\": \"plombiranje zuba\",\n        \"opis\": \"stavljanje bele plombe nakon uspesnog lecenja zuba\",\n        \"sifra_usluge\": \"PZR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2100,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    }\n]"
+						},
+						{
+							"name": "Get All By Naziv",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/usluga/naziv/plombiranje zuba",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"usluga",
+										"naziv",
+										"plombiranje zuba"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "336"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"150-nGUla4PwQNR3LtO7YPyWOo0dSt4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 15:09:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uslugaId\": 6,\n        \"naziv\": \"plombiranje zuba\",\n        \"opis\": \"stavljanje bele plombe nakon uspesnog lecenja zuba\",\n        \"sifra_usluge\": \"PZR\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 2100,\n        \"cena_pojedinacna_penzioner\": 2200,\n        \"cena_pojedinacna_ostali\": 2300,\n        \"cena_paket_dete\": 1700,\n        \"cena_paket_penzioner\": 1900,\n        \"cena_paket_ostali\": 2000,\n        \"status\": \"aktivna\"\n    }\n]"
 						}
 					]
 				},
@@ -1702,6 +1153,65 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"uslugaId\": 2,\n        \"naziv\": \"popravka krunice\",\n        \"opis\": \"popravka karijesa na krunici zuba\",\n        \"sifra_usluge\": \"PKR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2000,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    }\n]"
+						},
+						{
+							"name": "Get All By Sifra_usluge",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/usluga/sifra_usluge/im4",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"usluga",
+										"sifra_usluge",
+										"im4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "359"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"167-Wr79fec6a0KM1TctzVATr9XqHPY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 15:09:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uslugaId\": 12,\n        \"naziv\": \"izrada mosta od 4 zuba\",\n        \"opis\": \"izrada i montaza mosta duzine 4 zuba koja se kace na 2 obradjena\",\n        \"sifra_usluge\": \"IM4\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 9800,\n        \"cena_pojedinacna_penzioner\": 10000,\n        \"cena_pojedinacna_ostali\": 10500,\n        \"cena_paket_dete\": 8500,\n        \"cena_paket_penzioner\": 9500,\n        \"cena_paket_ostali\": 9800,\n        \"status\": \"aktivna\"\n    }\n]"
 						}
 					]
 				},
@@ -1783,6 +1293,65 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"uslugaId\": 1,\n        \"naziv\": \"vadjenje zuba\",\n        \"opis\": \"vadjenje zuba \",\n        \"sifra_usluge\": \"VZH\",\n        \"kategorija\": \"hirurska\",\n        \"cena\": 3000,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 8,\n        \"naziv\": \"vadjenje zivca\",\n        \"opis\": \"prethodno umrtvljivanje zivca lekom pa potom i njegovo vadjenje\",\n        \"sifra_usluge\": \"UVZH\",\n        \"kategorija\": \"hirurska\",\n        \"cena\": 2400,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    }\n]"
+						},
+						{
+							"name": "Get All By Kategorija",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/usluga/kategorija/redovna",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"usluga",
+										"kategorija",
+										"redovna"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2000"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7d0-26vmLFPWTA5FgQeKmt/nlaaefFU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 15:10:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uslugaId\": 2,\n        \"naziv\": \"popravka krunice\",\n        \"opis\": \"popravka karijesa na krunici zuba\",\n        \"sifra_usluge\": \"PKR\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 1800,\n        \"cena_pojedinacna_penzioner\": 2000,\n        \"cena_pojedinacna_ostali\": 2500,\n        \"cena_paket_dete\": 1200,\n        \"cena_paket_penzioner\": 1500,\n        \"cena_paket_ostali\": 1700,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 4,\n        \"naziv\": \"nadogradnja zuba\",\n        \"opis\": \"nadogradnja polomljenog zuba\",\n        \"sifra_usluge\": \"NZR\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 2200,\n        \"cena_pojedinacna_penzioner\": 2600,\n        \"cena_pojedinacna_ostali\": 3000,\n        \"cena_paket_dete\": 2000,\n        \"cena_paket_penzioner\": 2300,\n        \"cena_paket_ostali\": 2600,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 5,\n        \"naziv\": \"lecenje zuba\",\n        \"opis\": \"lecenje pokvarenog zuba pre plombiranja\",\n        \"sifra_usluge\": \"LZR\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 2500,\n        \"cena_pojedinacna_penzioner\": 2700,\n        \"cena_pojedinacna_ostali\": 3000,\n        \"cena_paket_dete\": 2100,\n        \"cena_paket_penzioner\": 2400,\n        \"cena_paket_ostali\": 2700,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 6,\n        \"naziv\": \"plombiranje zuba\",\n        \"opis\": \"stavljanje bele plombe nakon uspesnog lecenja zuba\",\n        \"sifra_usluge\": \"PZR\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 2100,\n        \"cena_pojedinacna_penzioner\": 2200,\n        \"cena_pojedinacna_ostali\": 2300,\n        \"cena_paket_dete\": 1700,\n        \"cena_paket_penzioner\": 1900,\n        \"cena_paket_ostali\": 2000,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 9,\n        \"naziv\": \"izrada mosta od 3 zuba\",\n        \"opis\": \"izrada i montaza mosta duzine 3 zuba koja se kace na 2 obradjena\",\n        \"sifra_usluge\": \"IM3\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 7800,\n        \"cena_pojedinacna_penzioner\": 8000,\n        \"cena_pojedinacna_ostali\": 8500,\n        \"cena_paket_dete\": 6500,\n        \"cena_paket_penzioner\": 6700,\n        \"cena_paket_ostali\": 7000,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 12,\n        \"naziv\": \"izrada mosta od 4 zuba\",\n        \"opis\": \"izrada i montaza mosta duzine 4 zuba koja se kace na 2 obradjena\",\n        \"sifra_usluge\": \"IM4\",\n        \"kategorija\": \"redovna\",\n        \"cena_pojedinacna_dete\": 9800,\n        \"cena_pojedinacna_penzioner\": 10000,\n        \"cena_pojedinacna_ostali\": 10500,\n        \"cena_paket_dete\": 8500,\n        \"cena_paket_penzioner\": 9500,\n        \"cena_paket_ostali\": 9800,\n        \"status\": \"aktivna\"\n    }\n]"
 						}
 					]
 				},
@@ -1933,7 +1502,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:23:20 GMT"
+									"value": "Sat, 11 Jun 2022 12:51:14 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2012,7 +1581,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:23:29 GMT"
+									"value": "Sat, 11 Jun 2022 12:51:32 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2062,7 +1631,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"ime\": \"Milica\",\r\n    \"prezime\": \"Petrovic\",\r\n    \"jmbg\": \"0304955410111\",\r\n    \"adresa\": \"Ustanicka 15\",\r\n    \"telefon\": \"061332211\",\r\n    \"email\": \"mpetrovic@gmail.com\",\r\n    \"senioritet\": \"penzioner\",\r\n    \"status\": \"aktivan\",\r\n    \"korisnikId\": 1\r\n}",
+									"raw": "{\r\n    \"ime\": \"Luka\",\r\n    \"prezime\": \"Jovanovic\",\r\n    \"jmbg\": \"0505945510444\",\r\n    \"adresa\": \"Mirijevski venac 15\",\r\n    \"telefon\": \"061443311\",\r\n    \"email\": \"ljovanovic@gmail.com\",\r\n    \"senioritet\": \"penzioner\",\r\n    \"status\": \"aktivan\",\r\n    \"korisnikId\": 4\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2081,9 +1650,9 @@
 									]
 								}
 							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "html",
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -2095,19 +1664,19 @@
 								},
 								{
 									"key": "Content-Type",
-									"value": "text/html; charset=utf-8"
+									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "67"
+									"value": "218"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"43-XxsSu1fmjp1rZJfsDho7e1YVMC0\""
+									"value": "W/\"da-tXnvkUhQHYhACNEPOoxAU88fAaA\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:23:38 GMT"
+									"value": "Sat, 11 Jun 2022 12:59:56 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2119,7 +1688,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "Duplicate entry '0304955410111' for key 'pacijent.uq_pacijent_jmbg'"
+							"body": "{\n    \"pacijentId\": 11,\n    \"ime\": \"Luka\",\n    \"prezime\": \"Jovanovic\",\n    \"jmbg\": \"0505945510444\",\n    \"adresa\": \"Mirijevski venac 15\",\n    \"telefon\": \"061443311\",\n    \"email\": \"ljovanovic@gmail.com\",\n    \"senioritet\": \"penzioner\",\n    \"status\": \"aktivan\",\n    \"korisnikId\": 4\n}"
 						}
 					]
 				},
@@ -2451,15 +2020,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "212"
+									"value": "431"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"d4-ElZMBDPCjQAXkGVYS+Co/2PNZ1w\""
+									"value": "W/\"1af-CWUqGZzLcNZkWGM12q5oC9Bk2QI\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:24:10 GMT"
+									"value": "Sat, 11 Jun 2022 13:00:42 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2471,7 +2040,66 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 2\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 2\n    },\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 4\n    }\n]"
+						},
+						{
+							"name": "Get All By Senioritet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/pacijent/senioritet/ostali",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"senioritet",
+										"ostali"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "407"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"197-9Gy/3mTK+rsJFFNiRr++xzgoRKM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:02:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    },\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    }\n]"
 						}
 					]
 				},
@@ -3039,6 +2667,65 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    },\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    }\n]"
+						},
+						{
+							"name": "Get All By Korisnik_id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/pacijent/korisnik_id/4",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"korisnik_id",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dc-V33rohAYg9zxUNKF80TX3+37AFY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:01:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 4\n    }\n]"
 						}
 					]
 				}
@@ -3100,15 +2787,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "481"
+									"value": "497"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"1e1-s1dIi/81cII8qVp8sxCzVt9+06Q\""
+									"value": "W/\"1f1-qRLRWCrsVCUivTgPnVzjmufI6/U\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:21:47 GMT"
+									"value": "Fri, 10 Jun 2022 14:42:12 GMT"
 								},
 								{
 									"key": "Connection",
@@ -3120,7 +2807,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"korisnikId\": 1,\n        \"korisnicko_ime\": \"milica123\",\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\",\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"2505994410888\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"created_at\": \"2022-05-31T19:11:37.000Z\",\n        \"is_active\": 1\n    },\n    {\n        \"korisnikId\": 2,\n        \"korisnicko_ime\": \"tamara123\",\n        \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\n        \"ime\": \"Tamara\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"2010932410777\",\n        \"email\": \"tjovanovic@gmail.com\",\n        \"created_at\": \"2022-06-04T16:54:52.000Z\",\n        \"is_active\": 1\n    }\n]"
+							"body": "[\n    {\n        \"korisnikId\": 1,\n        \"korisnicko_ime\": \"milica123\",\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\",\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"2505994410888\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"created_at\": \"2022-05-31T19:11:37.000Z\",\n        \"is_active\": \"aktivan\"\n    },\n    {\n        \"korisnikId\": 2,\n        \"korisnicko_ime\": \"tamara123\",\n        \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\n        \"ime\": \"Tamara\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"2010932410777\",\n        \"email\": \"tjovanovic@gmail.com\",\n        \"created_at\": \"2022-06-04T16:54:52.000Z\",\n        \"is_active\": \"aktivan\"\n    }\n]"
 						}
 					]
 				},
@@ -3179,15 +2866,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "238"
+									"value": "246"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"ee-61wz9/wVRSYTCB/QPw6lLAdIPXw\""
+									"value": "W/\"f6-FgRBEPLoi1Fulaeg6V5949+l78Y\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:21:55 GMT"
+									"value": "Fri, 10 Jun 2022 14:42:34 GMT"
 								},
 								{
 									"key": "Connection",
@@ -3199,7 +2886,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"korisnikId\": 1,\n    \"korisnicko_ime\": \"milica123\",\n    \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\",\n    \"ime\": \"Milica\",\n    \"prezime\": \"Petrovic\",\n    \"jmbg\": \"2505994410888\",\n    \"email\": \"mpetrovic@gmail.com\",\n    \"created_at\": \"2022-05-31T19:11:37.000Z\",\n    \"is_active\": 1\n}"
+							"body": "{\n    \"korisnikId\": 1,\n    \"korisnicko_ime\": \"milica123\",\n    \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\",\n    \"ime\": \"Milica\",\n    \"prezime\": \"Petrovic\",\n    \"jmbg\": \"2505994410888\",\n    \"email\": \"mpetrovic@gmail.com\",\n    \"created_at\": \"2022-05-31T19:11:37.000Z\",\n    \"is_active\": \"aktivan\"\n}"
 						}
 					]
 				},
@@ -3237,7 +2924,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"korisnicko_ime\": \"tamara123\",\r\n    \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\r\n    \"ime\": \"Tamara\",\r\n    \"prezime\": \"Jovanovic\",\r\n    \"jmbg\": \"2010932410777\",\r\n    \"email\": \"tjovanovic@gmail.com\",\r\n    \"is_active\": 1\r\n}",
+									"raw": "{\r\n    \"korisnicko_ime\": \"jelena123\",\r\n    \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\r\n    \"ime\": \"Jelena\",\r\n    \"prezime\": \"Popovic\",\r\n    \"jmbg\": \"2103992410777\",\r\n    \"email\": \"jpopovic@gmail.com\",\r\n    \"is_active\": \"aktivan\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3256,9 +2943,9 @@
 									]
 								}
 							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "html",
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -3270,19 +2957,19 @@
 								},
 								{
 									"key": "Content-Type",
-									"value": "text/html; charset=utf-8"
+									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "73"
+									"value": "244"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"49-Y9m63WscirlDE7mZ8/i5yvhTVaA\""
+									"value": "W/\"f4-xuZwldBPZ8ypkb7sZI0nraQaFjM\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:22:05 GMT"
+									"value": "Fri, 10 Jun 2022 14:45:21 GMT"
 								},
 								{
 									"key": "Connection",
@@ -3294,7 +2981,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "Duplicate entry 'tamara123' for key 'korisnik.uq_korisnik_korisnicko_ime'"
+							"body": "{\n    \"korisnikId\": 4,\n    \"korisnicko_ime\": \"jelena123\",\n    \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\n    \"ime\": \"Jelena\",\n    \"prezime\": \"Popovic\",\n    \"jmbg\": \"2103992410777\",\n    \"email\": \"jpopovic@gmail.com\",\n    \"created_at\": \"2022-06-10T15:45:21.000Z\",\n    \"is_active\": \"aktivan\"\n}"
 						}
 					]
 				},
@@ -3471,6 +3158,65 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"korisnikId\": 2,\n        \"korisnicko_ime\": \"tamara123\",\n        \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\n        \"ime\": \"Tamara\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"2010932410777\",\n        \"email\": \"tjovanovic@gmail.com\",\n        \"created_at\": \"2022-06-04T16:54:52.000Z\",\n        \"is_active\": 1\n    }\n]"
+						},
+						{
+							"name": "Get All By Korisnicko_ime",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/korisnik/korisnicko_ime/jelena123",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"korisnik",
+										"korisnicko_ime",
+										"jelena123"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "246"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f6-mqvT9YEmFQHKGct5tVlmRPVaXog\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 14:46:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"korisnikId\": 4,\n        \"korisnicko_ime\": \"jelena123\",\n        \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\n        \"ime\": \"Jelena\",\n        \"prezime\": \"Popovic\",\n        \"jmbg\": \"2103992410777\",\n        \"email\": \"jpopovic@gmail.com\",\n        \"created_at\": \"2022-06-10T15:45:21.000Z\",\n        \"is_active\": \"aktivan\"\n    }\n]"
 						}
 					]
 				},
@@ -3824,7 +3570,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:10000/api/korisnik/is_active/1",
+									"raw": "localhost:10000/api/korisnik/is_active/aktivan",
 									"host": [
 										"localhost"
 									],
@@ -3833,7 +3579,7 @@
 										"api",
 										"korisnik",
 										"is_active",
-										"1"
+										"aktivan"
 									]
 								}
 							},
@@ -3855,15 +3601,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "481"
+									"value": "742"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"1e1-s1dIi/81cII8qVp8sxCzVt9+06Q\""
+									"value": "W/\"2e6-vltG98QYMr6wo66xXgSjKfwQYK8\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:23:08 GMT"
+									"value": "Fri, 10 Jun 2022 14:47:12 GMT"
 								},
 								{
 									"key": "Connection",
@@ -3875,7 +3621,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"korisnikId\": 1,\n        \"korisnicko_ime\": \"milica123\",\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\",\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"2505994410888\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"created_at\": \"2022-05-31T19:11:37.000Z\",\n        \"is_active\": 1\n    },\n    {\n        \"korisnikId\": 2,\n        \"korisnicko_ime\": \"tamara123\",\n        \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\n        \"ime\": \"Tamara\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"2010932410777\",\n        \"email\": \"tjovanovic@gmail.com\",\n        \"created_at\": \"2022-06-04T16:54:52.000Z\",\n        \"is_active\": 1\n    }\n]"
+							"body": "[\n    {\n        \"korisnikId\": 1,\n        \"korisnicko_ime\": \"milica123\",\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\",\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"2505994410888\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"created_at\": \"2022-05-31T19:11:37.000Z\",\n        \"is_active\": \"aktivan\"\n    },\n    {\n        \"korisnikId\": 2,\n        \"korisnicko_ime\": \"tamara123\",\n        \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\n        \"ime\": \"Tamara\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"2010932410777\",\n        \"email\": \"tjovanovic@gmail.com\",\n        \"created_at\": \"2022-06-04T16:54:52.000Z\",\n        \"is_active\": \"aktivan\"\n    },\n    {\n        \"korisnikId\": 4,\n        \"korisnicko_ime\": \"jelena123\",\n        \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\n        \"ime\": \"Jelena\",\n        \"prezime\": \"Popovic\",\n        \"jmbg\": \"2103992410777\",\n        \"email\": \"jpopovic@gmail.com\",\n        \"created_at\": \"2022-06-10T15:45:21.000Z\",\n        \"is_active\": \"aktivan\"\n    }\n]"
 						}
 					]
 				}
@@ -4484,614 +4230,6 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"prijava_korisnikaId\": 2,\n        \"logged_at\": \"2022-06-04T21:42:15.000Z\",\n        \"status\": 0,\n        \"korisnicko_ime\": \"tamara123\",\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\"\n    }\n]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Karton",
-			"item": [
-				{
-					"name": "Get All Karton",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:10000/api/karton",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"karton"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get All Karton",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:10000/api/karton",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"karton"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "213"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"d5-cvSM7utTIgyIibFnNFgf0vqu594\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:18:40 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"kartonId\": 1,\n        \"pacijentId\": 1,\n        \"intervencija_logId\": 1\n    },\n    {\n        \"kartonId\": 2,\n        \"pacijentId\": 2,\n        \"intervencija_logId\": 2\n    },\n    {\n        \"kartonId\": 3,\n        \"pacijentId\": 5,\n        \"intervencija_logId\": 7\n    },\n    {\n        \"kartonId\": 4,\n        \"pacijentId\": 2,\n        \"intervencija_logId\": 8\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Get By Id {2}",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:10000/api/karton/2",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"karton",
-								"2"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get By Id {2}",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:10000/api/karton/2",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"karton",
-										"2"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "52"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"34-2IEI7Q04YOL7Ks9i3CajHdWHCs0\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:18:35 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"kartonId\": 2,\n    \"pacijentId\": 2,\n    \"intervencija_logId\": 2\n}"
-						}
-					]
-				},
-				{
-					"name": "Add New Karton",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"pacijentId\": 5,\r\n    \"intervencija_logId\": 7\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:10000/api/karton",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"karton"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Add New Karton",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"pacijentId\": 2,\r\n    \"intervencija_logId\": 8\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:10000/api/karton",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"karton"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "52"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"34-DDKp0iUftQ+qr4qSjNrZ8Ya5xB0\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:18:27 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"kartonId\": 4,\n    \"pacijentId\": 2,\n    \"intervencija_logId\": 8\n}"
-						}
-					]
-				},
-				{
-					"name": "Add New Karton  Validacija sa pogresnim formatom Pacijent_id",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"pacijentId\": \"4\",\r\n    \"intervencija_logId\": 7\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:10000/api/karton",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"karton"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Add New Karton  Validacija sa pogresnim formatom Pacijent_id",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"pacijentId\": \"4\",\r\n    \"intervencija_logId\": 7\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:10000/api/karton",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"karton"
-									]
-								}
-							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "147"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"93-IWAqMApDwbz16Wg2QLSuwokXNhA\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:18:46 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"instancePath\": \"/pacijentId\",\n        \"schemaPath\": \"#/properties/pacijentId/type\",\n        \"keyword\": \"type\",\n        \"params\": {\n            \"type\": \"number\"\n        },\n        \"message\": \"must be number\"\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Add New Karton  Validacija sa pogresnim formatom Intervencija_log_id",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"pacijentId\": 5,\r\n    \"intervencija_logId\": \"7\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:10000/api/karton",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"karton"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Add New Karton  Validacija sa pogresnim formatom Intervencija_log_id",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"pacijentId\": 5,\r\n    \"intervencija_logId\": \"7\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:10000/api/karton",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"karton"
-									]
-								}
-							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "163"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"a3-w/E0zoOIRJX7DYVnVdx1wD+FrsY\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:18:52 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"instancePath\": \"/intervencija_logId\",\n        \"schemaPath\": \"#/properties/intervencija_logId/type\",\n        \"keyword\": \"type\",\n        \"params\": {\n            \"type\": \"number\"\n        },\n        \"message\": \"must be number\"\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Get All By Pacijent_id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:10000/api/karton/pacijent_id/5",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"karton",
-								"pacijent_id",
-								"5"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get All By Pacijent_id",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:10000/api/karton/pacijent_id/5",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"karton",
-										"pacijent_id",
-										"5"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "54"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"36-mrz6yNQHib11jfdhpyxsqHgHDh8\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:18:59 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"kartonId\": 3,\n        \"pacijentId\": 5,\n        \"intervencija_logId\": 7\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Get All By Intervencija_log_id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:10000/api/karton/intervencija_log/1",
-							"host": [
-								"localhost"
-							],
-							"port": "10000",
-							"path": [
-								"api",
-								"karton",
-								"intervencija_log",
-								"1"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get All By Intervencija_log_id",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:10000/api/karton/intervencija_log/1",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"karton",
-										"intervencija_log",
-										"1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "54"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"36-1MPO0aaceL6vmBWJB7t1KmO2GGE\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:19:05 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"kartonId\": 1,\n        \"pacijentId\": 1,\n        \"intervencija_logId\": 1\n    }\n]"
 						}
 					]
 				}
@@ -5862,6 +5000,966 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"racunId\": 3,\n        \"created_at\": \"2022-06-05T22:18:44.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"cena\": 800,\n        \"pacijentId\": 5,\n        \"korisnikId\": 2\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Racun_usluga",
+			"item": [
+				{
+					"name": "Get All Racun_usluga",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Racun_usluga",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "287"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11f-2+u8rLFxE9FGtq6aIhYSejPtm9E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:47:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"racun_uslugaId\": 1,\n        \"zubId\": 5,\n        \"uslugaId\": 2,\n        \"pacijentId\": 1,\n        \"racunId\": 1\n    },\n    {\n        \"racun_uslugaId\": 2,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    },\n    {\n        \"racun_uslugaId\": 7,\n        \"zubId\": 1,\n        \"uslugaId\": 2,\n        \"pacijentId\": 5,\n        \"racunId\": 1\n    },\n    {\n        \"racun_uslugaId\": 8,\n        \"zubId\": 19,\n        \"uslugaId\": 2,\n        \"pacijentId\": 2,\n        \"racunId\": 4\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get By Id Racun_usluga",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get By Id Racun_usluga",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47-dZW/BuH1KbZLGL60FUEnTN4MjQA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:47:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"racun_uslugaId\": 2,\n    \"zubId\": 25,\n    \"uslugaId\": 3,\n    \"pacijentId\": 2,\n    \"racunId\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Add New Racun_usluga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zubId\": 25,\r\n    \"uslugaId\": 3,\r\n    \"pacijentId\": 11,\r\n    \"racunId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add New Racun_usluga",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"zubId\": 25,\r\n    \"uslugaId\": 3,\r\n    \"pacijentId\": 11,\r\n    \"racunId\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-6cAOa3A3g7mcxbld/dpfwe5H3KI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:49:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"racun_uslugaId\": 9,\n    \"zubId\": 25,\n    \"uslugaId\": 3,\n    \"pacijentId\": 11,\n    \"racunId\": 6\n}"
+						}
+					]
+				},
+				{
+					"name": "Add New Racun_usluga Validator sa pogresnim tipom zub_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zubId\": \"35\",\r\n    \"uslugaId\": 3,\r\n    \"pacijentId\": 11,\r\n    \"racunId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add New Racun_usluga Validator sa pogresnim tipom zub_id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"zubId\": \"35\",\r\n    \"uslugaId\": 3,\r\n    \"pacijentId\": 11,\r\n    \"racunId\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "137"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"89-HUHEQfeu5T82QTC2L/bPNA2k15k\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:51:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"instancePath\": \"/zubId\",\n        \"schemaPath\": \"#/properties/zubId/type\",\n        \"keyword\": \"type\",\n        \"params\": {\n            \"type\": \"number\"\n        },\n        \"message\": \"must be number\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add New Racun_usluga Validator sa pogresnim tipom usluga_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zubId\": 25,\r\n    \"uslugaId\": \"3\",\r\n    \"pacijentId\": 11,\r\n    \"racunId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add New Racun_usluga Validator sa pogresnim tipom usluga_id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"zubId\": 25,\r\n    \"uslugaId\": \"3\",\r\n    \"pacijentId\": 11,\r\n    \"racunId\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8f-kegMA+pgsC6WPlgecwN2kUWtMk0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:53:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"instancePath\": \"/uslugaId\",\n        \"schemaPath\": \"#/properties/uslugaId/type\",\n        \"keyword\": \"type\",\n        \"params\": {\n            \"type\": \"number\"\n        },\n        \"message\": \"must be number\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add New Racun_usluga Validator sa pogresnim tipom pacijent_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zubId\": 25,\r\n    \"uslugaId\": 3,\r\n    \"pacijentId\": \"11\",\r\n    \"racunId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add New Racun_usluga Validator sa pogresnim tipom pacijent_id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"zubId\": 25,\r\n    \"uslugaId\": 3,\r\n    \"pacijentId\": \"11\",\r\n    \"racunId\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"93-IWAqMApDwbz16Wg2QLSuwokXNhA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:54:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"instancePath\": \"/pacijentId\",\n        \"schemaPath\": \"#/properties/pacijentId/type\",\n        \"keyword\": \"type\",\n        \"params\": {\n            \"type\": \"number\"\n        },\n        \"message\": \"must be number\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add New Racun_usluga Validator sa pogresnim tipom racun_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zubId\": 25,\r\n    \"uslugaId\": 3,\r\n    \"pacijentId\": \"11\",\r\n    \"racunId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add New Racun_usluga Validator sa pogresnim tipom racun_id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"zubId\": 25,\r\n    \"uslugaId\": 3,\r\n    \"pacijentId\": 11,\r\n    \"racunId\": \"6\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-fKb0exWhZ/mU4/cYeNIT/4I/Ip0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:54:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"instancePath\": \"/racunId\",\n        \"schemaPath\": \"#/properties/racunId/type\",\n        \"keyword\": \"type\",\n        \"params\": {\n            \"type\": \"number\"\n        },\n        \"message\": \"must be number\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All By zub_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga/zub/25",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga",
+								"zub",
+								"25"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All By zub_id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga/zub/25",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga",
+										"zub",
+										"25"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-NKn/Ye4fWr1BT4bk47hEwXcFegM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:55:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"racun_uslugaId\": 2,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    },\n    {\n        \"racun_uslugaId\": 9,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 11,\n        \"racunId\": 6\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All By usluga_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga/usluga/3",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga",
+								"usluga",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All By usluga_id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga/usluga/3",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga",
+										"usluga",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-NKn/Ye4fWr1BT4bk47hEwXcFegM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:56:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"racun_uslugaId\": 2,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    },\n    {\n        \"racun_uslugaId\": 9,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 11,\n        \"racunId\": 6\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All By pacijent_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga/pacijent/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga",
+								"pacijent",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All By pacijent_id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga/pacijent/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga",
+										"pacijent",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-6nxnzGOdp2GX/qRDFwiWzTsgm6M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:57:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"racun_uslugaId\": 2,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    },\n    {\n        \"racun_uslugaId\": 8,\n        \"zubId\": 19,\n        \"uslugaId\": 2,\n        \"pacijentId\": 2,\n        \"racunId\": 4\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All By racun_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:10000/api/racun_usluga/racun/1",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"racun_usluga",
+								"racun",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All By racun_id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/racun_usluga/racun/1",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"racun_usluga",
+										"racun",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8f-T2k2QNIEScD76LGXglhRmSZi8FI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jun 2022 13:58:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"racun_uslugaId\": 1,\n        \"zubId\": 5,\n        \"uslugaId\": 2,\n        \"pacijentId\": 1,\n        \"racunId\": 1\n    },\n    {\n        \"racun_uslugaId\": 7,\n        \"zubId\": 1,\n        \"uslugaId\": 2,\n        \"pacijentId\": 5,\n        \"racunId\": 1\n    }\n]"
 						}
 					]
 				}
