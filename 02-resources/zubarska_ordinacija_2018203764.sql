@@ -40,7 +40,8 @@ CREATE TABLE IF NOT EXISTS `korisnik` (
 INSERT INTO `korisnik` (`korisnik_id`, `korisnicko_ime`, `lozinka_hash`, `ime`, `prezime`, `jmbg`, `email`, `created_at`, `is_active`) VALUES
 	(1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e', 'Milica', 'Petrovic', '2505994410888', 'mpetrovic@gmail.com', '2022-05-31 18:11:37', 'aktivan'),
 	(2, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944', 'Tamara', 'Jovanovic', '2010932410777', 'tjovanovic@gmail.com', '2022-06-04 15:54:52', 'aktivan'),
-	(4, 'jelena123', 'c62439ea56c71bf8b4760d507e0e646a', 'Jelena', 'Popovic', '2103992410777', 'jpopovic@gmail.com', '2022-06-10 14:45:21', 'aktivan');
+	(4, 'jelena123', 'c62439ea56c71bf8b4760d507e0e646a', 'Jelena', 'Popovic', '2103992410777', 'jpopovic@gmail.com', '2022-06-10 14:45:21', 'aktivan'),
+	(5, 'katarina123', '59dda66f74e8c549f1cffbdb83cd699c', 'Katarina', 'Petrovic', '1511993410999', 'kpetrovic@gmail.com', '2022-06-11 15:03:17', 'aktivan');
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.pacijent
 DROP TABLE IF EXISTS `pacijent`;
@@ -61,12 +62,13 @@ CREATE TABLE IF NOT EXISTS `pacijent` (
   CONSTRAINT `fk_pacijent_korisnik_id` FOREIGN KEY (`korisnik_id`) REFERENCES `korisnik` (`korisnik_id`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table zubarska_ordinacija_2018203764.pacijent: ~3 rows (approximately)
+-- Dumping data for table zubarska_ordinacija_2018203764.pacijent: ~4 rows (approximately)
 INSERT INTO `pacijent` (`pacijent_id`, `ime`, `prezime`, `jmbg`, `adresa`, `telefon`, `email`, `senioritet`, `status`, `korisnik_id`) VALUES
 	(1, 'Petar', 'Petkovic', '0102990510111', 'Durmitorska 12', '061123456', 'ppetkovic@gmail.com', 'ostali', 'aktivan', 1),
 	(2, 'Mika', 'Mikic', '0203999510222', 'Cerska 15', '062654321', 'mmikic@gmail.com', 'ostali', 'aktivan', 1),
 	(5, 'Milica', 'Petrovic', '0304955410111', 'Ustanicka 15', '061332211', 'mpetrovic@gmail.com', 'penzioner', 'aktivan', 2),
-	(11, 'Luka', 'Jovanovic', '0505945510444', 'Mirijevski venac 15', '061443311', 'ljovanovic@gmail.com', 'penzioner', 'aktivan', 4);
+	(11, 'Luka', 'Jovanovic', '0505945510444', 'Mirijevski venac 15', '061443311', 'ljovanovic@gmail.com', 'penzioner', 'aktivan', 4),
+	(12, 'Katarina', 'Marjanovic', '0710008410111', 'Cerska 15', '064552211', 'kmarjanovic@gmail.com', 'dete', 'aktivan', 5);
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.prijava_korisnika
 DROP TABLE IF EXISTS `prijava_korisnika`;
@@ -85,7 +87,9 @@ INSERT INTO `prijava_korisnika` (`prijava_korisnika_id`, `logged_at`, `status`, 
 	(2, '2022-06-04 20:42:15', 0, 'tamara123', '504938a121efec5f4fbdbcc64ca5736e'),
 	(3, '2022-06-04 20:42:39', 1, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944'),
 	(4, '2022-06-04 20:47:01', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e'),
-	(5, '2022-06-07 16:21:09', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e');
+	(5, '2022-06-07 16:21:09', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e'),
+	(6, '2022-06-11 15:15:39', 0, 'tamara123', '504938a121efec5f4fbdbcc64ca5736e'),
+	(7, '2022-06-11 15:15:53', 1, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944');
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.racun
 DROP TABLE IF EXISTS `racun`;
@@ -103,13 +107,14 @@ CREATE TABLE IF NOT EXISTS `racun` (
   CONSTRAINT `fk_racun_pacijent_id` FOREIGN KEY (`pacijent_id`) REFERENCES `pacijent` (`pacijent_id`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table zubarska_ordinacija_2018203764.racun: ~4 rows (approximately)
+-- Dumping data for table zubarska_ordinacija_2018203764.racun: ~5 rows (approximately)
 INSERT INTO `racun` (`racun_id`, `created_at`, `tip_usluge`, `senioritet`, `pacijent_id`, `korisnik_id`) VALUES
 	(1, '2022-05-31 18:21:23', 'pojedinacna', 'ostali', 1, 1),
 	(2, '2022-05-31 18:22:27', 'pojedinacna', 'ostali', 2, 1),
 	(3, '2022-06-05 21:18:44', 'paket', 'penzioner', 5, 2),
 	(4, '2022-06-07 16:16:26', 'pojedinacna', 'ostali', 2, 1),
-	(6, '2022-06-11 13:49:23', 'paket', 'penzioner', 11, 4);
+	(6, '2022-06-11 13:49:23', 'paket', 'penzioner', 11, 4),
+	(7, '2022-06-11 15:19:23', 'pojedinacna', 'dete', 12, 5);
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.racun_usluga
 DROP TABLE IF EXISTS `racun_usluga`;
@@ -130,13 +135,14 @@ CREATE TABLE IF NOT EXISTS `racun_usluga` (
   CONSTRAINT `fk_intervencija_log_zub_id` FOREIGN KEY (`zub_id`) REFERENCES `zub` (`zub_id`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table zubarska_ordinacija_2018203764.racun_usluga: ~4 rows (approximately)
+-- Dumping data for table zubarska_ordinacija_2018203764.racun_usluga: ~5 rows (approximately)
 INSERT INTO `racun_usluga` (`racun_usluga_id`, `zub_id`, `usluga_id`, `pacijent_id`, `racun_id`) VALUES
 	(1, 5, 2, 1, 1),
 	(2, 25, 3, 2, 2),
 	(7, 1, 2, 5, 1),
 	(8, 19, 2, 2, 4),
-	(9, 25, 3, 11, 6);
+	(9, 25, 3, 11, 6),
+	(10, 15, 4, 12, 7);
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.usluga
 DROP TABLE IF EXISTS `usluga`;
@@ -168,7 +174,8 @@ INSERT INTO `usluga` (`usluga_id`, `naziv`, `opis`, `sifra_usluge`, `kategorija`
 	(6, 'plombiranje zuba', 'stavljanje bele plombe nakon uspesnog lecenja zuba', 'PZR', 'redovna', 2100, 2200, 2300, 1700, 1900, 2000, 'aktivna'),
 	(8, 'vadjenje zivca', 'prethodno umrtvljivanje zivca lekom pa potom i njegovo vadjenje', 'UVZH', 'hirurska', 2800, 3000, 3400, 2500, 2700, 2900, 'aktivna'),
 	(9, 'izrada mosta od 3 zuba', 'izrada i montaza mosta duzine 3 zuba koja se kace na 2 obradjena', 'IM3', 'redovna', 7800, 8000, 8500, 6500, 6700, 7000, 'aktivna'),
-	(12, 'izrada mosta od 4 zuba', 'izrada i montaza mosta duzine 4 zuba koja se kace na 2 obradjena', 'IM4', 'redovna', 9800, 10000, 10500, 8500, 9500, 9800, 'aktivna');
+	(12, 'izrada mosta od 4 zuba', 'izrada i montaza mosta duzine 4 zuba koja se kace na 2 obradjena', 'IM4', 'redovna', 9800, 10000, 10500, 8500, 9500, 9800, 'aktivna'),
+	(13, 'poliranje zuba', 'poliranje zuba gornje i donje vilice ', 'PZGDV', 'redovna', 1000, 1300, 1400, 700, 900, 1200, 'aktivna');
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.zub
 DROP TABLE IF EXISTS `zub`;
@@ -183,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `zub` (
   UNIQUE KEY `uq_zub_sifra_zuba` (`sifra_zuba`)
 ) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table zubarska_ordinacija_2018203764.zub: ~29 rows (approximately)
+-- Dumping data for table zubarska_ordinacija_2018203764.zub: ~32 rows (approximately)
 INSERT INTO `zub` (`zub_id`, `broj`, `vilica`, `tip`, `strana`, `sifra_zuba`) VALUES
 	(1, 1, 'gornja', 'sekutic', 'leva', 'GLS1'),
 	(2, 2, 'gornja', 'sekutic', 'leva', 'GLS2'),

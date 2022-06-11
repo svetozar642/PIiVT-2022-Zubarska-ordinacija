@@ -29,8 +29,8 @@ class RacunService extends BaseService<RacunModel, RacunAdapterOptions >{
         racun.tip_usluge    = data?.tip_usluge;
         racun.senioritet    = data?.senioritet;
         
-        racun.pacijentId    = +data?.pacijent_id;
-        racun.korisnikId    = +data?.korisnik_id;
+        racun.pacijent_id    = +data?.pacijent_id;
+        racun.korisnik_id    = +data?.korisnik_id;
 
         return racun;
     }
@@ -66,7 +66,8 @@ class RacunService extends BaseService<RacunModel, RacunAdapterOptions >{
     // Posto smo obecali da cemo dostaviti jedan KorisnikModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
     // i moracemo da reject-ujemo (reject od Promise-a) 
-    public async add(data: IAddRacun): Promise<RacunModel> {
+    //Posto smo implementirali u Base servisu univerzalnu metodu add() ovo cemo da stavimo pod komentar jer necemo koristiti ovaj nacin (manuelni)...
+    /*public async add(data: IAddRacun): Promise<RacunModel> {
         return new Promise<RacunModel>( (resolve, reject) => {
             //const sql : string = "INSERT `racun` SET `tip_usluge` = ? AND `senioritet` = ? AND `cena` = ? AND `pacijent_id` = ? AND `korinsik_id` = ? ;";
             const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`racun` (`tip_usluge`, `senioritet`, `pacijent_id`, `korisnik_id`) VALUES ( ?, ?, ?, ?);";
@@ -89,7 +90,12 @@ class RacunService extends BaseService<RacunModel, RacunAdapterOptions >{
                     reject(error);
                 });
         } );
+    }*/
+
+    public async add(data: IAddRacun): Promise<RacunModel> {
+        return this.baseAdd(data, DefaultRacunAdapterOptions);
     }
+
 }
 
 export default RacunService;

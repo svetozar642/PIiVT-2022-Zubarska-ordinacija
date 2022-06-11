@@ -23,13 +23,13 @@ class Racun_uslugaService extends BaseService<Racun_uslugaModel, Racun_uslugaAda
     protected async adaptToModel(data: any, options: Racun_uslugaAdapterOptions): Promise<Racun_uslugaModel>{
         const racun_usluga: Racun_uslugaModel = new Racun_uslugaModel();
 
-        racun_usluga.racun_uslugaId = +data?.racun_usluga_id;
+        racun_usluga.racun_usluga_id = +data?.racun_usluga_id;
         
 
-        racun_usluga.zubId              = data?.zub_id;
-        racun_usluga.uslugaId           = data?.usluga_id;
-        racun_usluga.pacijentId         = data?.pacijent_id;
-        racun_usluga.racunId            = data?.racun_id;
+        racun_usluga.zub_id              = data?.zub_id;
+        racun_usluga.usluga_id           = data?.usluga_id;
+        racun_usluga.pacijent_id         = data?.pacijent_id;
+        racun_usluga.racun_id            = data?.racun_id;
 
         return racun_usluga;
     }
@@ -63,7 +63,8 @@ class Racun_uslugaService extends BaseService<Racun_uslugaModel, Racun_uslugaAda
     // Posto smo obecali da cemo dostaviti jedan Racun_uslugaModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
     // i moracemo da reject-ujemo (reject od Promise-a) 
-    public async add(data: IAddRacun_usluga): Promise<Racun_uslugaModel> {
+    //Posto smo implementirali u Base servisu univerzalnu metodu add() ovo cemo da stavimo pod komentar jer necemo koristiti ovaj nacin (manuelni)...
+    /*public async add(data: IAddRacun_usluga): Promise<Racun_uslugaModel> {
         return new Promise<Racun_uslugaModel>( (resolve, reject) => {
             //const sql : string = "INSERT `racun_usluga` SET `zub_id` = ? AND `usluga_id` = ? AND `pacijent_id` = ? AND `racun_id` = ? ;";
             const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`racun_usluga` ( `zub_id`, `usluga_id`, `pacijent_id`, `racun_id`) VALUES ( ?, ?, ?, ?);";
@@ -86,7 +87,12 @@ class Racun_uslugaService extends BaseService<Racun_uslugaModel, Racun_uslugaAda
                     reject(error);
                 });
         } );
+    }*/
+
+    public async add(data: IAddRacun_usluga): Promise<Racun_uslugaModel> {
+        return this.baseAdd(data, DefaultRacun_uslugaAdapterOptions);
     }
+
 }
 
 export default Racun_uslugaService;

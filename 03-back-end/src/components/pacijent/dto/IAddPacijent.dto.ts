@@ -1,10 +1,11 @@
 //Validaciju cemo da implementiramo gde je i sam DTO ...
 import Ajv from "ajv";
+import IServiceData from "../../../common/IServiceData.interface";
 import { Senioritet, Status } from "../PacijentModel.model";
 
 const ajv = new Ajv();
 
-export default interface IAddPacijent {
+export default interface IAddPacijent extends IServiceData {
     //Iz spoljasnjeg okruzenja od klijenta ocekujemo sledece podatke , bez pacijent_id 
     //  jer je to AUTO_INCREMENT polje cija se vrednost automatski dodeljuje
     
@@ -18,7 +19,7 @@ export default interface IAddPacijent {
     status: Status;
 
     //FKs: 
-    korisnikId: number;
+    korisnik_id: number;
     
 }
 
@@ -63,7 +64,7 @@ const AddPacijentSchema = {
             enum: ["aktivan", "neaktivan"]
 
         },
-        korisnikId: {
+        korisnik_id: {
             type: "number",
         },
         
@@ -77,7 +78,7 @@ const AddPacijentSchema = {
         "email",
         "senioritet",
         "status",
-        "korisnikId"
+        "korisnik_id"
     ],
     additionalProperties: false,
 };

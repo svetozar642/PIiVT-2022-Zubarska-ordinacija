@@ -1,6 +1,7 @@
 import * as mysql2 from 'mysql2/promise';
 import IModel from './IModel.interface';
 import IAdapterOptions from './IAdapterOptions.interface';
+import IServiceData from './IServiceData.interface';
 
 //Ovu BASE SERVICE klasu pravimo kao abstract jer ne zelimo da neko moze da je extend-uje
 export default abstract class BaseService<ReturnModel extends IModel, AdapterOptions extends IAdapterOptions> {
@@ -107,5 +108,38 @@ export default abstract class BaseService<ReturnModel extends IModel, AdapterOpt
             }
         );
 
+    }
+
+    protected async baseAdd(data: IServiceData, options: AdapterOptions): Promise<ReturnModel>{
+        const tableName = this.tableName();
+
+        return new Promise( (resolve, reject) => {
+            const properties = Object.getOwnPropertyNames(data);
+            const sqlPairs = properties.map(property => "`" + property + "` = ?").join(", ");
+            const values = properties.map(property => data[property]);
+
+
+            //const sql : string = "INSERT `korisnik` SET `korisnicko_ime` = ? AND `lozinka_hash` = ? AND `ime` = ? AND `prezime` = ? AND `jmbg` = ? AND `email` = ? AND `created_at` = ? AND `is_active` = ? ;";
+            //const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`korisnik` (`korisnicko_ime`, `lozinka_hash`, `ime`, `prezime`, `jmbg`, `email`, `is_active`) VALUES (?, ?, ?, ?, ?, ?, ?);";
+            const sql: string = "INSERT `"+ tableName + "` SET "+ sqlPairs+ ";" ;
+
+            this.db.execute(sql, values)
+                .then( async result => {
+                    const info: any = result;
+
+                    const newItemId = +(info[0]?.insertId);
+
+                    const newItem: ReturnModel | null = await this.getById(newItemId, options); 
+
+                    if (newItem === null){
+                        return reject({ message: 'Could not add a new item into the '+ tableName + `table!`, });
+                    }
+
+                    resolve(newItem);
+                })
+                .catch(error => {
+                    reject(error);
+                });
+        } );
     }
 }

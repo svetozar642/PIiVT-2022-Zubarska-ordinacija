@@ -12,7 +12,7 @@ class PacijentModel implements IModel{
     status: Status;
 
     //FKs :
-    korisnikId: number;
+    korisnik_id: number;
 
 }
 

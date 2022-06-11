@@ -1,11 +1,12 @@
 //Validaciju cemo da implementiramo gde je i sam DTO ...
 import Ajv from "ajv";
+import IServiceData from "../../../common/IServiceData.interface";
 import { Status } from "../UslugaModel.model";
 import { Kategorija } from "../UslugaModel.model";
 
 const ajv = new Ajv();
 
-export default interface IAddUsluga {
+export default interface IAddUsluga extends IServiceData {
     //Iz spoljasnjeg okruzenja od klijenta ocekujemo sledece podatke , bez usluga_id 
     //  jer je to AUTO_INCREMENT polje cija se vrednost automatski dodeljuje
     

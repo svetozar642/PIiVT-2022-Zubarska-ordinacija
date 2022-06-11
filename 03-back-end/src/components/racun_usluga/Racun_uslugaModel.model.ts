@@ -1,12 +1,12 @@
 import IModel from '../../common/IModel.interface';
 class Racun_uslugaModel implements IModel{
-    racun_uslugaId: number;
+    racun_usluga_id: number;
     
     //FKs: 
-    zubId: number;
-    uslugaId: number;
-    pacijentId: number;
-    racunId: number;
+    zub_id: number;
+    usluga_id: number;
+    pacijent_id: number;
+    racun_id: number;
 }
 
 export default Racun_uslugaModel;

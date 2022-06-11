@@ -3,7 +3,6 @@ import * as mysql2 from 'mysql2/promise';
 import { resolve } from "path";
 import { rejects } from "assert";
 import IAdapterOptions from '../../common/IAdapterOptions.interface';
-import Intervencija_logService from '../intervencija_log/Intervencija_logService.service'; 
 import BaseService from "../../common/BaseService";
 import IAddUsluga from "./dto/IAddUsluga.dto";
 
@@ -77,7 +76,8 @@ class UslugaService extends BaseService<UslugaModel, UslugaAdapterOptions>{
     // Posto smo obecali da cemo dostaviti jedan UslugaModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
     // i moracemo da reject-ujemo (reject od Promise-a) 
-    public async add(data: IAddUsluga): Promise<UslugaModel> {
+    //Posto smo implementirali u Base servisu univerzalnu metodu add() ovo cemo da stavimo pod komentar jer necemo koristiti ovaj nacin (manuelni)...
+    /*public async add(data: IAddUsluga): Promise<UslugaModel> {
         return new Promise<UslugaModel>( (resolve, reject) => {
             //const sql : string = "INSERT `usluga` SET `naziv` = ? AND `opis = ? AND `sifra_usluge` = ? AND `kategorija` = ? AND `cena_pojedinacna_dete` = ? AND `cena_pojedinacna_penzioner` = ? AND `cena_pojedinacna_ostali` = ? AND `cena_paket_dete` = ? AND `cena_paket_penzioner` = ? AND `cena_paket_ostali` = ? AND `status` = ?;";
             const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`usluga` (`naziv`, `opis`, `sifra_usluge`, `kategorija`, `cena_pojedinacna_dete`, `cena_pojedinacna_penzioner`, `cena_pojedinacna_ostali`, `cena_paket_dete`, `cena_paket_penzioner`, `cena_paket_ostali`, `status`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
@@ -100,7 +100,12 @@ class UslugaService extends BaseService<UslugaModel, UslugaAdapterOptions>{
                     reject(error);
                 });
         } );
+    }*/
+
+    public async add(data: IAddUsluga): Promise<UslugaModel> {
+        return this.baseAdd(data, DefaultUslugaAdapterOptions);
     }
+
 }
 
 export default UslugaService;

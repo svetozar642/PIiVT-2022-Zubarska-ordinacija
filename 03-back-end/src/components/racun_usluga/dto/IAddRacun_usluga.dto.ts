@@ -1,42 +1,43 @@
 //Validaciju cemo da implementiramo gde je i sam DTO ...
 import Ajv from "ajv";
+import IServiceData from "../../../common/IServiceData.interface";
 
 const ajv = new Ajv();
 
-export default interface IAddIntervencija_log {
+export default interface IAddIntervencija_log extends IServiceData {
     //Iz spoljasnjeg okruzenja od klijenta ocekujemo sledece podatke , bez racun_usluga_id 
     //  jer je to AUTO_INCREMENT polje cija se vrednost automatski dodeljuje
     
     
     //FKs: 
-    zubId: number;
-    uslugaId: number;
-    pacijentId: number;
-    racunId: number;
+    zub_id: number;
+    usluga_id: number;
+    pacijent_id: number;
+    racun_id: number;
 }
 
 //Za potrebe validacije (unosimo osobine polja) :
 const AddRacun_uslugaSchema = {
     type: "object",
     properties: {
-        zubId: {
+        zub_id: {
             type: "number",
         },
-        uslugaId: {
+        usluga_id: {
             type: "number",
         },
-        pacijentId: {
+        pacijent_id: {
             type: "number",
         },
-        racunId: {
+        racun_id: {
             type: "number",
         },
     },
     required: [
-        "zubId",
-        "uslugaId",
-        "pacijentId",
-        "racunId",
+        "zub_id",
+        "usluga_id",
+        "pacijent_id",
+        "racun_id",
     ],
     additionalProperties: false,
 };

@@ -50,7 +50,8 @@ class Prijava_korisnikaService extends BaseService<Prijava_korisnikaModel, Prija
     // Posto smo obecali da cemo dostaviti jedan Prijava_korisnikaModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
     // i moracemo da reject-ujemo (reject od Promise-a) 
-    public async add(data: IAddPrijava_korisnika): Promise<Prijava_korisnikaModel> {
+    //Posto smo implementirali u Base servisu univerzalnu metodu add() ovo cemo da stavimo pod komentar jer necemo koristiti ovaj nacin (manuelni)...
+    /*public async add(data: IAddPrijava_korisnika): Promise<Prijava_korisnikaModel> {
         return new Promise<Prijava_korisnikaModel>( (resolve, reject) => {
             //const sql : string = "INSERT `prijava_korisnika` SET `status` AND `korisnicko_ime` = ? AND `lozinka_hash` = ? ;";
             const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`prijava_korisnika` (`status`, `korisnicko_ime`, `lozinka_hash`) VALUES (?, ?, ?);";
@@ -73,7 +74,12 @@ class Prijava_korisnikaService extends BaseService<Prijava_korisnikaModel, Prija
                     reject(error);
                 });
         } );
+    }*/
+
+    public async add(data: IAddPrijava_korisnika): Promise<Prijava_korisnikaModel> {
+        return this.baseAdd(data, DefaultPrijava_korisnikaAdapterOptions);
     }
+
 }
 
 export default Prijava_korisnikaService;

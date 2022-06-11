@@ -1,9 +1,10 @@
 //Validaciju cemo da implementiramo gde je i sam DTO ...
 import Ajv from "ajv";
+import IServiceData from "../../../common/IServiceData.interface";
 
 const ajv = new Ajv();
 
-export default interface IAddPrijava_korisnika {
+export default interface IAddPrijava_korisnika extends IServiceData {
     //Iz spoljasnjeg okruzenja od klijenta ocekujemo sledece podatke , bez prijava_korisnika_id 
     //  jer je to AUTO_INCREMENT polje cija se vrednost automatski dodeljuje
     // Takodje ne ukljucujemo ni polje logged_at jer se automatski dodaje TIMESTAMP trenutnog vremena u bazi 

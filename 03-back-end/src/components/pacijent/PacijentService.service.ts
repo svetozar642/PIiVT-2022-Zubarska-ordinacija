@@ -33,7 +33,7 @@ class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions 
         pacijent.senioritet = data?.senioritet;
         pacijent.status     = data?.status;
 
-        pacijent.korisnikId = +data?.korisnik_id;
+        pacijent.korisnik_id = +data?.korisnik_id;
         
         return pacijent;
     }
@@ -99,7 +99,8 @@ class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions 
     // Posto smo obecali da cemo dostaviti jedan PacijentModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
     // i moracemo da reject-ujemo (reject od Promise-a) 
-    public async add(data: IAddPacijent): Promise<PacijentModel> {
+    //Posto smo implementirali u Base servisu univerzalnu metodu add() ovo cemo da stavimo pod komentar jer necemo koristiti ovaj nacin (manuelni)...
+    /*public async add(data: IAddPacijent): Promise<PacijentModel> {
         return new Promise<PacijentModel>( (resolve, reject) => {
             //const sql : string = "INSERT `pacijent` SET `ime` = ? AND `prezime = ? AND `jmbg` = ? AND `adresa` = ? AND `telefon` = ? AND `email` = ? AND `status` = ? AND `korisnik_id` = ? ;";
             const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`pacijent` (`ime`, `prezime`, `jmbg`, `adresa`, `telefon`, `email`, `senioritet`, `status`, `korisnik_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
@@ -122,6 +123,10 @@ class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions 
                     reject(error);
                 });
         } );
+    }*/
+
+    public async add(data: IAddPacijent): Promise<PacijentModel> {
+        return this.baseAdd(data, DefaultPacijentAdapterOptions);
     }
 }
 

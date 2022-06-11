@@ -78,7 +78,8 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
     // Posto smo obecali da cemo dostaviti jedan KorisnikModel nakon uspesnog dodavanja zajedno sa njegovim novododeljenim ID
     // Napomena: ukoliko tabela u koju dodajemo polje sadrzi neko UQ polje i mi pokusamo da dodamo novi red sa vec postojecim takvim poljem to nece biti moguce 
     // i moracemo da reject-ujemo (reject od Promise-a) 
-    public async add(data: IAddKorisnik): Promise<KorisnikModel> {
+    //Posto smo implementirali u Base servisu univerzalnu metodu add() ovo cemo da stavimo pod komentar jer necemo koristiti ovaj nacin (manuelni)...
+    /*public async add(data: IAddKorisnik): Promise<KorisnikModel> {
         return new Promise<KorisnikModel>( (resolve, reject) => {
             //const sql : string = "INSERT `korisnik` SET `korisnicko_ime` = ? AND `lozinka_hash` = ? AND `ime` = ? AND `prezime` = ? AND `jmbg` = ? AND `email` = ? AND `created_at` = ? AND `is_active` = ? ;";
             const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`korisnik` (`korisnicko_ime`, `lozinka_hash`, `ime`, `prezime`, `jmbg`, `email`, `is_active`) VALUES (?, ?, ?, ?, ?, ?, ?);";
@@ -101,7 +102,12 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
                     reject(error);
                 });
         } );
+    }*/
+
+    public async add(data: IAddKorisnik): Promise<KorisnikModel> {
+        return this.baseAdd(data, DefaultKorisnikAdapterOptions);
     }
+
 }
 
 export default KorisnikService;

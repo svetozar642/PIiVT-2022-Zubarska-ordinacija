@@ -6,8 +6,8 @@ class RacunModel implements IModel{
     tip_usluge: TipUsluge;
     senioritet: Senioritet;
     
-    pacijentId: number;
-    korisnikId: number;
+    pacijent_id: number;
+    korisnik_id: number;
     
 }
 

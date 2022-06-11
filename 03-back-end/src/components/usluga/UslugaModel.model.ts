@@ -1,5 +1,4 @@
 import { TimerOptions } from "timers";
-import Intervencija_logModel from "../intervencija_log/Intervencija_logModel.model";
 import IModel from '../../common/IModel.interface';
 
 class UslugaModel implements IModel{

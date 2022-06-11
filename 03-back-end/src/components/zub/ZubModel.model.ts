@@ -1,5 +1,4 @@
 import { TimerOptions } from "timers";
-import Intervencija_logModel from "../intervencija_log/Intervencija_logModel.model";
 import IModel from '../../common/IModel.interface';
 
 class ZubModel implements IModel{
@@ -10,7 +9,6 @@ class ZubModel implements IModel{
     strana: Strana;
     sifra_zuba: string;
 
-    intervencije_log ?: Intervencija_logModel[];
 }
 
 enum Vilica{

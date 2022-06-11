@@ -3,7 +3,6 @@ import * as mysql2 from 'mysql2/promise';
 import { resolve } from "path";
 import { rejects } from "assert";
 import IAdapterOptions from '../../common/IAdapterOptions.interface';
-import Intervencija_logService from '../intervencija_log/Intervencija_logService.service'; 
 import BaseService from "../../common/BaseService";
 
 
