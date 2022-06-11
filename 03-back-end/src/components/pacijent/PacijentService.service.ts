@@ -102,9 +102,9 @@ class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions 
     public async add(data: IAddPacijent): Promise<PacijentModel> {
         return new Promise<PacijentModel>( (resolve, reject) => {
             //const sql : string = "INSERT `pacijent` SET `ime` = ? AND `prezime = ? AND `jmbg` = ? AND `adresa` = ? AND `telefon` = ? AND `email` = ? AND `status` = ? AND `korisnik_id` = ? ;";
-            const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`pacijent` (`ime`, `prezime`, `jmbg`, `adresa`, `telefon`, `email`, `status`, `korisnik_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+            const sql : string = "INSERT INTO `zubarska_ordinacija_2018203764`.`pacijent` (`ime`, `prezime`, `jmbg`, `adresa`, `telefon`, `email`, `senioritet`, `status`, `korisnik_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
-            this.db.execute(sql, [data.ime, data.prezime, data.jmbg, data.adresa, data.telefon, data.email, data.status, data.korisnikId])
+            this.db.execute(sql, [data.ime, data.prezime, data.jmbg, data.adresa, data.telefon, data.email, data.senioritet, data.status, data.korisnikId])
                 .then( async result => {
                     const info: any = result;
 
