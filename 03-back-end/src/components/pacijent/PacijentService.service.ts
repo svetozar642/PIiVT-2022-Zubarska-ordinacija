@@ -12,7 +12,7 @@ class PacijentAdapterOptions implements IAdapterOptions {
 }
 
 const DefaultPacijentAdapterOptions: PacijentAdapterOptions = {
-    loadIntervencije_log: false,
+    
 }
 class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions >{
     
