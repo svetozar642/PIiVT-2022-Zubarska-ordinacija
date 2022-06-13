@@ -6,6 +6,7 @@ import { ResultSetHeader } from "mysql2/promise";
 import BaseService from "../../common/BaseService";
 import IAdapterOptions from '../../common/IAdapterOptions.interface';
 import PacijentModel from "./PacijentModel.model";
+import IEditPacijent from './dto/IEditPacijent.dto';
 
 class PacijentAdapterOptions implements IAdapterOptions {
     
@@ -128,6 +129,11 @@ class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions 
     public async add(data: IAddPacijent): Promise<PacijentModel> {
         return this.baseAdd(data, DefaultPacijentAdapterOptions);
     }
+
+    public async editById(pacijent_id: number, data: IEditPacijent ): Promise<PacijentModel> {
+        return this.baseEditById(pacijent_id, data, DefaultPacijentAdapterOptions);
+    } 
+
 }
 
 export default PacijentService;

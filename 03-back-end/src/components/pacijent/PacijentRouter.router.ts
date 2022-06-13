@@ -23,6 +23,8 @@ class PacijentRouter implements IRouter{
         application.get("/api/pacijent/korisnik_id/:korisnik_id", pacijentController.getAllByKorisnikId.bind(pacijentController));
 
         application.post("/api/pacijent", pacijentController.add.bind(pacijentController));
+
+        application.put("/api/pacijent/:pacijent_id", pacijentController.edit.bind(pacijentController));
     }
 }
 

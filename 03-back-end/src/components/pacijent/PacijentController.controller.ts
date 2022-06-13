@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import IAddPacijent, { AddPacijentValidator } from "./dto/IAddPacijent.dto";
+import IEditPacijentDto, { EditPacijentValidator } from "./dto/IEditPacijent.dto";
 import PacijentService, { DefaultPacijentAdapterOptions } from './PacijentService.service';
 
 class PacijentController{
@@ -233,6 +234,56 @@ class PacijentController{
             })
             .catch( error => {
                 res.status(400).send(error?.message);
+            });
+
+    }
+
+    async edit(req: Request, res: Response) {
+        const id : number = +req.params?.pacijent_id;
+
+        const data = req.body as IEditPacijentDto;
+
+        //provera prilikom testiranja ...
+        //console.log(data);
+        //console.log(id)
+
+        // TODO : VALIDACIJA
+        if ( !EditPacijentValidator(data) ) {
+            return res.status(400).send(EditPacijentValidator.errors);
+        }
+
+        this.PacijentService.getById(id)
+            .then( result => {
+
+                //za potrebe testiranja...
+                //console.log(result);
+
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                this.PacijentService.editById(id, {
+                    ime: data.ime,
+                    prezime: data.prezime,
+                    adresa: data.adresa,
+                    telefon: data.telefon,
+                    senioritet: data.senioritet,
+                    status: data.status,
+                    korisnik_id: data.korisnik_id
+                })
+                    .then( result => {
+
+                        //za potrebe testiranja..
+                        //console.log("edit deo ... "+result);
+
+                        res.send(result);
+                    })
+                    .catch( error => {
+                        return res.sendStatus(404);
+                    });
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
             });
 
     }
