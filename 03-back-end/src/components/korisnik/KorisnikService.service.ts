@@ -6,6 +6,7 @@ import IAddKorisnik from "./dto/IAddKorisnik.dto";
 import { ResultSetHeader } from "mysql2/promise";
 import BaseService from "../../common/BaseService";
 import IAdapterOptions from '../../common/IAdapterOptions.interface';
+import IEditKorisnik from './dto/IEditKorisnik.dto';
 
 class KorisnikAdapterOptions implements IAdapterOptions {
     
@@ -107,6 +108,10 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
     public async add(data: IAddKorisnik): Promise<KorisnikModel> {
         return this.baseAdd(data, DefaultKorisnikAdapterOptions);
     }
+
+    public async editById(korisnik_id: number, data: IEditKorisnik ): Promise<KorisnikModel> {
+        return this.baseEditById(korisnik_id, data, DefaultKorisnikAdapterOptions);
+    } 
 
 }
 

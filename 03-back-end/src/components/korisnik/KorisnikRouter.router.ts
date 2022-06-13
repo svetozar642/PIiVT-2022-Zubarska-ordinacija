@@ -20,6 +20,8 @@ class KorisnikRouter implements IRouter{
         application.get("/api/korisnik/jmbg/:jmbg",                     korisnikController.getAllByJmbg.bind(korisnikController));
 
         application.post("/api/korisnik",                               korisnikController.add.bind(korisnikController));
+
+        application.put("/api/korisnik/:korisnik_id",                   korisnikController.edit.bind(korisnikController));
     }
 }
 

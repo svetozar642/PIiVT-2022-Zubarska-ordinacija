@@ -142,4 +142,39 @@ export default abstract class BaseService<ReturnModel extends IModel, AdapterOpt
                 });
         } );
     }
+
+    protected async baseEditById(id: number, data:IServiceData, options: AdapterOptions): Promise<ReturnModel> {
+        const tableName = this.tableName();
+
+        return new Promise( (resolve,reject) => {
+            const properties = Object.getOwnPropertyNames(data);
+            const sqlPairs = properties.map(property => "`" + property + "` = ?").join(", ");
+            const values = properties.map(property => data[property]);
+            values.push(id); // Za WHERE table_name_id = ?
+
+            const sql: string = "UPDATE `"+ tableName + "` SET "+ sqlPairs+ " WHERE `"+tableName+"_id` = ? ;" ;
+
+            this.db.execute(sql, values)
+                .then( async result => {
+                    const info: any = result;
+
+                    if (info[0]?.affectedRows === 0) {
+                        return reject({ message: "Could not change any items in the "+tableName+ " table !"});
+                    }
+
+                    const item: ReturnModel | null = await this.getById(id, options); 
+
+                    if (item === null){
+                        return reject({ message: 'Could not find this item into the '+ tableName + ' table!', });
+                    }
+
+                    resolve(item);
+                })
+                .catch(error => {
+                    reject(error);
+                });
+
+        } );
+    }
+
 }

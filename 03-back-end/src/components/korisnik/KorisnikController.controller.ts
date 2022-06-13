@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import IAddKorisnik, { AddKorisnikValidator } from "./dto/IAddKorisnik.dto";
 import { Status } from "./KorisnikModel.model";
 import KorisnikService, { DefaultKorisnikAdapterOptions } from './KorisnikService.service';
+import IEditKorisnik, { EditKorisnikValidator, IEditKorisnikDto } from './dto/IEditKorisnik.dto';
 
 
 class KorisnikController{
@@ -188,6 +189,55 @@ class KorisnikController{
             })
             .catch( error => {
                 res.status(400).send(error?.message);
+            });
+
+    }
+
+    async edit(req: Request, res: Response) {
+        const id : number = +req.params?.korisnik_id;
+
+        const data = req.body as IEditKorisnikDto;
+
+        //provera prilikom testiranja ...
+        //console.log(data);
+        //console.log(id)
+
+        // TODO : VALIDACIJA
+        if ( !EditKorisnikValidator(data) ) {
+            return res.status(400).send(EditKorisnikValidator.errors);
+        }
+
+        this.KorisnikService.getById(id)
+            .then( result => {
+
+                //za potrebe testiranja...
+                //console.log(result);
+
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                this.KorisnikService.editById(id, {
+                    korisnicko_ime: data.korisnicko_ime ,
+                    lozinka_hash: data.lozinka_hash ,
+                    ime: data.ime ,
+                    prezime: data.prezime ,
+                    jmbg: data.jmbg ,
+                    is_active: data.is_active
+                })
+                    .then( result => {
+
+                        //za potrebe testiranja..
+                        //console.log("edit deo ... "+result);
+
+                        res.send(result);
+                    })
+                    .catch( error => {
+                        return res.sendStatus(404);
+                    });
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
             });
 
     }
