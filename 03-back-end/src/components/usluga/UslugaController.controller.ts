@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import UslugaService, { DefaultUslugaAdapterOptions } from './UslugaService.service';
 import IAddUsluga, { AddUslugaValidator } from './dto/IAddUsluga.dto';
+import IEditUslugaDto, { EditUslugaValidator } from "./dto/IEditUsluga.dto";
 
 class UslugaController{
     private UslugaService: UslugaService;
@@ -153,6 +154,60 @@ class UslugaController{
             })
             .catch( error => {
                 res.status(400).send(error?.message);
+            });
+
+    }
+
+    async edit(req: Request, res: Response) {
+        const id : number = +req.params?.usluga_id;
+
+        const data = req.body as IEditUslugaDto;
+
+        //provera prilikom testiranja ...
+        //console.log(data);
+        //console.log(id)
+
+        // TODO : VALIDACIJA
+        if ( !EditUslugaValidator(data) ) {
+            return res.status(400).send(EditUslugaValidator.errors);
+        }
+
+        this.UslugaService.getById(id)
+            .then( result => {
+
+                //za potrebe testiranja...
+                //console.log(result);
+
+                if ( result === null){
+                    return res.sendStatus(404);
+                }
+
+                this.UslugaService.editById(id, {
+                    naziv: data.naziv,
+                    opis: data.opis,
+                    sifra_usluge: data.sifra_usluge,
+                    kategorija: data.kategorija,
+                    cena_pojedinacna_dete: data.cena_pojedinacna_dete,
+                    cena_pojedinacna_penzioner: data.cena_pojedinacna_penzioner,
+                    cena_pojedinacna_ostali: data.cena_pojedinacna_ostali,
+                    cena_paket_dete: data.cena_paket_dete,
+                    cena_paket_penzioner: data.cena_paket_penzioner,
+                    cena_paket_ostali: data.cena_paket_ostali,
+                    status: data.status,
+                })
+                    .then( result => {
+
+                        //za potrebe testiranja..
+                        //console.log("edit deo ... "+result);
+
+                        res.send(result);
+                    })
+                    .catch( error => {
+                        return res.sendStatus(404);
+                    });
+            })
+            .catch( error => {
+                res.status(500).send(error?.message);
             });
 
     }

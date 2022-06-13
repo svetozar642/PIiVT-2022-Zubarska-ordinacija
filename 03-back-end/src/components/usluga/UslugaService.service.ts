@@ -5,6 +5,7 @@ import { rejects } from "assert";
 import IAdapterOptions from '../../common/IAdapterOptions.interface';
 import BaseService from "../../common/BaseService";
 import IAddUsluga from "./dto/IAddUsluga.dto";
+import IEditUsluga from "./dto/IEditUsluga.dto";
 
 
 //Definisali smo opsti interfejs sa opcijama adaptera (IAdapterOptions)
@@ -105,6 +106,10 @@ class UslugaService extends BaseService<UslugaModel, UslugaAdapterOptions>{
     public async add(data: IAddUsluga): Promise<UslugaModel> {
         return this.baseAdd(data, DefaultUslugaAdapterOptions);
     }
+
+    public async editById(usluga_id: number, data: IEditUsluga ): Promise<UslugaModel> {
+        return this.baseEditById(usluga_id, data, DefaultUslugaAdapterOptions);
+    } 
 
 }
 
