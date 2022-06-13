@@ -1501,6 +1501,103 @@
 							"body": "[\n    {\n        \"uslugaId\": 1,\n        \"naziv\": \"vadjenje zuba\",\n        \"opis\": \"vadjenje zuba \",\n        \"sifra_usluge\": \"VZH\",\n        \"kategorija\": \"hirurska\",\n        \"cena\": 3000,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 2,\n        \"naziv\": \"popravka krunice\",\n        \"opis\": \"popravka karijesa na krunici zuba\",\n        \"sifra_usluge\": \"PKR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2000,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 3,\n        \"naziv\": \"skidanje kamenca\",\n        \"opis\": \"skidanje kamenca sa zuba\",\n        \"sifra_usluge\": \"SKP\",\n        \"kategorija\": \"preventivna\",\n        \"cena\": 1000,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 4,\n        \"naziv\": \"nadogradnja zuba\",\n        \"opis\": \"nadogradnja polomljenog zuba\",\n        \"sifra_usluge\": \"NZR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2200,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 5,\n        \"naziv\": \"lecenje zuba\",\n        \"opis\": \"lecenje pokvarenog zuba pre plombiranja\",\n        \"sifra_usluge\": \"LZR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2500,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 6,\n        \"naziv\": \"plombiranje zuba\",\n        \"opis\": \"stavljanje bele plombe nakon uspesnog lecenja zuba\",\n        \"sifra_usluge\": \"PZR\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 2100,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 8,\n        \"naziv\": \"vadjenje zivca\",\n        \"opis\": \"prethodno umrtvljivanje zivca lekom pa potom i njegovo vadjenje\",\n        \"sifra_usluge\": \"UVZH\",\n        \"kategorija\": \"hirurska\",\n        \"cena\": 2400,\n        \"popust_paket\": 0.1,\n        \"popust_dete\": 0.2,\n        \"popust_penzioner\": 0.15,\n        \"status\": \"aktivna\"\n    },\n    {\n        \"uslugaId\": 9,\n        \"naziv\": \"izrada mosta od 3 zuba\",\n        \"opis\": \"izrada i montaza mosta duzine 3 zuba koja se kace na 2 obradjena\",\n        \"sifra_usluge\": \"IM3\",\n        \"kategorija\": \"redovna\",\n        \"cena\": 7800,\n        \"popust_paket\": 0.3,\n        \"popust_dete\": 0.27,\n        \"popust_penzioner\": 0.45,\n        \"status\": \"aktivna\"\n    }\n]"
 						}
 					]
+				},
+				{
+					"name": "Edit Usluga By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"naziv\": \"popravka krunice\",\r\n    \"opis\": \"popravka karijesa na krunici zuba\",\r\n    \"sifra_usluge\": \"PKR\",\r\n    \"kategorija\": \"redovna\",\r\n    \"cena_pojedinacna_dete\": 1700,\r\n    \"cena_pojedinacna_penzioner\": 2000,\r\n    \"cena_pojedinacna_ostali\": 2500,\r\n    \"cena_paket_dete\": 1200,\r\n    \"cena_paket_penzioner\": 1500,\r\n    \"cena_paket_ostali\": 1700,\r\n    \"status\": \"aktivna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/usluga/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"usluga",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Usluga By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"naziv\": \"popravka krunice\",\r\n    \"opis\": \"popravka karijesa na krunici zuba\",\r\n    \"sifra_usluge\": \"PKR\",\r\n    \"kategorija\": \"redovna\",\r\n    \"cena_pojedinacna_dete\": 1700,\r\n    \"cena_pojedinacna_penzioner\": 2000,\r\n    \"cena_pojedinacna_ostali\": 2500,\r\n    \"cena_paket_dete\": 1200,\r\n    \"cena_paket_penzioner\": 1500,\r\n    \"cena_paket_ostali\": 1700,\r\n    \"status\": \"aktivna\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/usluga/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"usluga",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "317"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13d-oAUu4r8wgIf8F3d3Tw/XNmrd/iM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Jun 2022 21:32:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uslugaId\": 2,\n    \"naziv\": \"popravka krunice\",\n    \"opis\": \"popravka karijesa na krunici zuba\",\n    \"sifra_usluge\": \"PKR\",\n    \"kategorija\": \"redovna\",\n    \"cena_pojedinacna_dete\": 1700,\n    \"cena_pojedinacna_penzioner\": 2000,\n    \"cena_pojedinacna_ostali\": 2500,\n    \"cena_paket_dete\": 1200,\n    \"cena_paket_penzioner\": 1500,\n    \"cena_paket_ostali\": 1700,\n    \"status\": \"aktivna\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -1670,7 +1767,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ime\": \"Milica\",\r\n    \"prezime\": \"Petrovic\",\r\n    \"jmbg\": \"0304955410111\",\r\n    \"adresa\": \"Ustanicka 15\",\r\n    \"telefon\": \"061332211\",\r\n    \"email\": \"mpetrovic@gmail.com\",\r\n    \"senioritet\": \"penzioner\",\r\n    \"status\": \"aktivan\",\r\n    \"korisnikId\": 1\r\n}",
+							"raw": "{\r\n    \"ime\": \"Katarina\",\r\n    \"prezime\": \"Marjanovic\",\r\n    \"jmbg\": \"0710008410111\",\r\n    \"adresa\": \"Cerska 15\",\r\n    \"telefon\": \"064552211\",\r\n    \"email\": \"kmarjanovic@gmail.com\",\r\n    \"senioritet\": \"dete\",\r\n    \"status\": \"aktivan\",\r\n    \"korisnik_id\": 5\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2005,15 +2102,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "198"
+									"value": "205"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"c6-5kgBIEEA6CVT3ajo8n4u46dzGiE\""
+									"value": "W/\"cd-nkzy/sOevprjS3+dLk43EIbbeJI\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:24:03 GMT"
+									"value": "Mon, 13 Jun 2022 21:10:20 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2025,7 +2122,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"neaktivan\",\n        \"korisnik_id\": 1\n    }\n]"
 						}
 					]
 				},
@@ -2035,7 +2132,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:10000/api/pacijent/senioritet/penzioner",
+							"raw": "localhost:10000/api/pacijent/senioritet/ostali",
 							"host": [
 								"localhost"
 							],
@@ -2044,7 +2141,7 @@
 								"api",
 								"pacijent",
 								"senioritet",
-								"penzioner"
+								"ostali"
 							]
 						}
 					},
@@ -2086,15 +2183,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "431"
+									"value": "433"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"1af-CWUqGZzLcNZkWGM12q5oC9Bk2QI\""
+									"value": "W/\"1b1-dWhncU8qdnKxND6sqSjoc8uIsNY\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 13:00:42 GMT"
+									"value": "Mon, 13 Jun 2022 21:10:51 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2106,7 +2203,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 2\n    },\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 4\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 2\n    },\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 4\n    }\n]"
 						},
 						{
 							"name": "Get All By Senioritet",
@@ -2145,15 +2242,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "407"
+									"value": "415"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"197-9Gy/3mTK+rsJFFNiRr++xzgoRKM\""
+									"value": "W/\"19f-MLxyZl8mJa/YWeYxH7Vnj+w+uEo\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 13:02:07 GMT"
+									"value": "Mon, 13 Jun 2022 21:11:00 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2165,7 +2262,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    },\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 1\n    },\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"neaktivan\",\n        \"korisnik_id\": 1\n    }\n]"
 						}
 					]
 				},
@@ -2226,15 +2323,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "212"
+									"value": "213"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"d4-ElZMBDPCjQAXkGVYS+Co/2PNZ1w\""
+									"value": "W/\"d5-u1QdCezzQCEKT3/q0EFWyTmNEiU\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:24:18 GMT"
+									"value": "Mon, 13 Jun 2022 21:11:22 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2246,7 +2343,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 2\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 2\n    }\n]"
 						}
 					]
 				},
@@ -2307,15 +2404,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "210"
+									"value": "211"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"d2-vO0r7F3kdeAuz7UjH5w8w65vGu0\""
+									"value": "W/\"d3-cHt30uufnUSC3ebYrTQlmeZkN/w\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:25:03 GMT"
+									"value": "Mon, 13 Jun 2022 21:11:38 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2327,7 +2424,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 1\n    }\n]"
 						}
 					]
 				},
@@ -2388,15 +2485,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "198"
+									"value": "212"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"c6-5kgBIEEA6CVT3ajo8n4u46dzGiE\""
+									"value": "W/\"d4-XJdhlQf6jH+qsw30FcOflLdYQ5o\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:25:13 GMT"
+									"value": "Mon, 13 Jun 2022 21:11:58 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2408,7 +2505,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 12,\n        \"ime\": \"Katarina\",\n        \"prezime\": \"Marjanovic\",\n        \"jmbg\": \"0710008410111\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"064552211\",\n        \"email\": \"kmarjanovic@gmail.com\",\n        \"senioritet\": \"dete\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 5\n    }\n]"
 						}
 					]
 				},
@@ -2469,15 +2566,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "212"
+									"value": "213"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"d4-ElZMBDPCjQAXkGVYS+Co/2PNZ1w\""
+									"value": "W/\"d5-u1QdCezzQCEKT3/q0EFWyTmNEiU\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:25:21 GMT"
+									"value": "Mon, 13 Jun 2022 21:12:39 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2489,7 +2586,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 2\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 2\n    }\n]"
 						}
 					]
 				},
@@ -2550,15 +2647,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "198"
+									"value": "205"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"c6-5kgBIEEA6CVT3ajo8n4u46dzGiE\""
+									"value": "W/\"cd-nkzy/sOevprjS3+dLk43EIbbeJI\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:25:30 GMT"
+									"value": "Mon, 13 Jun 2022 21:13:04 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2570,7 +2667,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"neaktivan\",\n        \"korisnik_id\": 1\n    }\n]"
 						}
 					]
 				},
@@ -2631,15 +2728,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "618"
+									"value": "854"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"26a-lp0YFCkAVsm0Yzn/L8bceTipb3A\""
+									"value": "W/\"356-hAf9rqDeJjIJiszaSqJBalHlhkk\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:25:38 GMT"
+									"value": "Mon, 13 Jun 2022 21:13:25 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2651,7 +2748,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    },\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    },\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 2\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 1\n    },\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 2\n    },\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 4\n    },\n    {\n        \"pacijentId\": 12,\n        \"ime\": \"Katarina\",\n        \"prezime\": \"Marjanovic\",\n        \"jmbg\": \"0710008410111\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"064552211\",\n        \"email\": \"kmarjanovic@gmail.com\",\n        \"senioritet\": \"dete\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 5\n    }\n]"
 						}
 					]
 				},
@@ -2661,7 +2758,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:10000/api/pacijent/korisnik_id/1",
+							"raw": "localhost:10000/api/pacijent/korisnik_id/4",
 							"host": [
 								"localhost"
 							],
@@ -2670,7 +2767,7 @@
 								"api",
 								"pacijent",
 								"korisnik_id",
-								"1"
+								"4"
 							]
 						}
 					},
@@ -2712,15 +2809,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "407"
+									"value": "415"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"197-9Gy/3mTK+rsJFFNiRr++xzgoRKM\""
+									"value": "W/\"19f-MLxyZl8mJa/YWeYxH7Vnj+w+uEo\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:25:47 GMT"
+									"value": "Mon, 13 Jun 2022 21:14:38 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2732,7 +2829,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    },\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 1\n    },\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"neaktivan\",\n        \"korisnik_id\": 1\n    }\n]"
 						},
 						{
 							"name": "Get All By Korisnik_id",
@@ -2771,15 +2868,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "220"
+									"value": "221"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"dc-V33rohAYg9zxUNKF80TX3+37AFY\""
+									"value": "W/\"dd-mCE5piQPQfc3quOHSac02wGnuH4\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 13:01:15 GMT"
+									"value": "Mon, 13 Jun 2022 21:14:51 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2791,7 +2888,365 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 4\n    }\n]"
+							"body": "[\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 4\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Edit Pacijent By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"Ammikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/pacijent/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Pacijent By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"mmikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"neaktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/pacijent/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-2HhrgbZw0aalphtSx/6bOc6YNAA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Jun 2022 21:04:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pacijentId\": 2,\n    \"ime\": \"Mika\",\n    \"prezime\": \"Mikic\",\n    \"jmbg\": \"0203999510222\",\n    \"adresa\": \"Kumanovska 15\",\n    \"telefon\": \"062654321\",\n    \"email\": \"mmikic@gmail.com\",\n    \"senioritet\": \"ostali\",\n    \"status\": \"neaktivan\",\n    \"korisnik_id\": 1\n}"
+						},
+						{
+							"name": "Edit Pacijent By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"Ammikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/pacijent/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "201"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c9-H0PlB57pOdnxxhn+2MLlCPvZFGI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Jun 2022 21:05:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pacijentId\": 2,\n    \"ime\": \"Mika\",\n    \"prezime\": \"Mikic\",\n    \"jmbg\": \"0203999510222\",\n    \"adresa\": \"Kumanovska 15\",\n    \"telefon\": \"062654321\",\n    \"email\": \"mmikic@gmail.com\",\n    \"senioritet\": \"ostali\",\n    \"status\": \"aktivan\",\n    \"korisnik_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Pacijent By Id Pokusaj promene email adrese (ignosrise se i nema efekat)- nedozvoljeno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"AAAmmikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/pacijent/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Pacijent By Id Pokusaj promene email adrese (ignosrise se i nema efekat)- nedozvoljeno",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"AAAmmikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/pacijent/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "201"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c9-H0PlB57pOdnxxhn+2MLlCPvZFGI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Jun 2022 21:08:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pacijentId\": 2,\n    \"ime\": \"Mika\",\n    \"prezime\": \"Mikic\",\n    \"jmbg\": \"0203999510222\",\n    \"adresa\": \"Kumanovska 15\",\n    \"telefon\": \"062654321\",\n    \"email\": \"mmikic@gmail.com\",\n    \"senioritet\": \"ostali\",\n    \"status\": \"aktivan\",\n    \"korisnik_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Pacijent By Id Pokusaj promene jmbg (ignosrise se i nema efekat)- nedozvoljeno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"jmbg\": \"7777999510222\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"mmikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"neaktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/pacijent/2",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"pacijent",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Pacijent By Id Pokusaj promene jmbg (ignosrise se i nema efekat)- nedozvoljeno",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"jmbg\": \"7777999510222\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"mmikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"neaktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/pacijent/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-2HhrgbZw0aalphtSx/6bOc6YNAA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Jun 2022 21:09:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pacijentId\": 2,\n    \"ime\": \"Mika\",\n    \"prezime\": \"Mikic\",\n    \"jmbg\": \"0203999510222\",\n    \"adresa\": \"Kumanovska 15\",\n    \"telefon\": \"062654321\",\n    \"email\": \"mmikic@gmail.com\",\n    \"senioritet\": \"ostali\",\n    \"status\": \"neaktivan\",\n    \"korisnik_id\": 1\n}"
 						}
 					]
 				}
@@ -2963,7 +3418,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"korisnicko_ime\": \"tamara123\",\r\n    \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\r\n    \"ime\": \"Tamara\",\r\n    \"prezime\": \"Jovanovic\",\r\n    \"jmbg\": \"2010932410777\",\r\n    \"email\": \"tjovanovic@gmail.com\",\r\n    \"is_active\": 1\r\n}",
+							"raw": "{\r\n    \"korisnicko_ime\": \"katarina123\",\r\n    \"lozinka_hash\": \"59dda66f74e8c549f1cffbdb83cd699c\",\r\n    \"ime\": \"Katarina\",\r\n    \"prezime\": \"Petrovic\",\r\n    \"jmbg\": \"1511993410999\",\r\n    \"email\": \"kpetrovic@gmail.com\",\r\n    \"is_active\": \"aktivan\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3756,6 +4211,170 @@
 							"body": "[\n    {\n        \"korisnikId\": 1,\n        \"korisnicko_ime\": \"milica123\",\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\",\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"2505994410888\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"created_at\": \"2022-05-31T19:11:37.000Z\",\n        \"is_active\": \"aktivan\"\n    },\n    {\n        \"korisnikId\": 2,\n        \"korisnicko_ime\": \"tamara123\",\n        \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\",\n        \"ime\": \"Tamara\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"2010932410777\",\n        \"email\": \"tjovanovic@gmail.com\",\n        \"created_at\": \"2022-06-04T16:54:52.000Z\",\n        \"is_active\": \"aktivan\"\n    },\n    {\n        \"korisnikId\": 4,\n        \"korisnicko_ime\": \"jelena123\",\n        \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\n        \"ime\": \"Jelena\",\n        \"prezime\": \"Popovic\",\n        \"jmbg\": \"2103992410777\",\n        \"email\": \"jpopovic@gmail.com\",\n        \"created_at\": \"2022-06-10T15:45:21.000Z\",\n        \"is_active\": \"aktivan\"\n    }\n]"
 						}
 					]
+				},
+				{
+					"name": "Edit Korisnik By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"korisnicko_ime\": \"jelena111\",\r\n    \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\r\n    \"ime\": \"Jelena\",\r\n    \"prezime\": \"Popovic\",\r\n    \"jmbg\": \"2103992410777\",\r\n    \"is_active\": \"aktivan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:10000/api/korisnik/4",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"api",
+								"korisnik",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Korisnik By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"korisnicko_ime\": \"jelena111\",\r\n    \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\r\n    \"ime\": \"Jelena\",\r\n    \"prezime\": \"Popovic\",\r\n    \"jmbg\": \"2103992410777\",\r\n    \"is_active\": \"neaktivan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/korisnik/4",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"korisnik",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "246"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f6-YkdRz5XPrl5q30PGlE0Dg9g4nB8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Jun 2022 18:20:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"korisnikId\": 4,\n    \"korisnicko_ime\": \"jelena111\",\n    \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\n    \"ime\": \"Jelena\",\n    \"prezime\": \"Popovic\",\n    \"jmbg\": \"2103992410777\",\n    \"email\": \"jpopovic@gmail.com\",\n    \"created_at\": \"2022-06-10T15:45:21.000Z\",\n    \"is_active\": \"neaktivan\"\n}"
+						},
+						{
+							"name": "Edit Korisnik By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"korisnicko_ime\": \"jelena111\",\r\n    \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\r\n    \"ime\": \"Jelena\",\r\n    \"prezime\": \"Popovic\",\r\n    \"jmbg\": \"2103992410777\",\r\n    \"is_active\": \"aktivan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/korisnik/4",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"korisnik",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f4-aclGeHuyHB96irxfQmzA+ncPeQo\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Jun 2022 18:22:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"korisnikId\": 4,\n    \"korisnicko_ime\": \"jelena111\",\n    \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\n    \"ime\": \"Jelena\",\n    \"prezime\": \"Popovic\",\n    \"jmbg\": \"2103992410777\",\n    \"email\": \"jpopovic@gmail.com\",\n    \"created_at\": \"2022-06-10T15:45:21.000Z\",\n    \"is_active\": \"aktivan\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -4006,7 +4625,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"status\": 1,\r\n        \"korisnicko_ime\": \"milica123\",\r\n        \"lozinka_hash\": \"504938a121efec5f4fbdbcc64ca5736e\"\r\n}",
+							"raw": "{\r\n        \"status\": 1,\r\n        \"korisnicko_ime\": \"tamara123\",\r\n        \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4665,7 +5284,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tip_usluge\": \"paket\",\r\n    \"senioritet\": \"penzioner\",\r\n    \"cena\": 800,\r\n    \"pacijentId\": 5,\r\n    \"korisnikId\": 2\r\n}",
+							"raw": "{\r\n    \"tip_usluge\": \"pojedinacna\",\r\n    \"senioritet\": \"dete\",\r\n    \"pacijent_id\": 12,\r\n    \"korisnik_id\": 5\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5435,7 +6054,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"zubId\": 25,\r\n    \"uslugaId\": 3,\r\n    \"pacijentId\": 11,\r\n    \"racunId\": 6\r\n}",
+							"raw": "{\r\n    \"zub_id\": 15,\r\n    \"usluga_id\": 4,\r\n    \"pacijent_id\": 12,\r\n    \"racun_id\": 7\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
