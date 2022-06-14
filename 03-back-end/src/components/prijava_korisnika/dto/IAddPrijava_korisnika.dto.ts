@@ -15,6 +15,14 @@ export default interface IAddPrijava_korisnika extends IServiceData {
     status: number;
     
 }
+interface IAddPrijava_korisnikaDto{
+    korisnicko_ime: string;
+    //lozinka_hash: string;
+    lozinka:string;
+    logged_at ?: string;
+    status: number;
+    
+}
 
 //Za potrebe validacije (unosimo osobine polja) :
 const AddPrijava_korisnikaSchema = {
@@ -25,10 +33,14 @@ const AddPrijava_korisnikaSchema = {
             minLength: 2,
             maxLength: 64,
         },
-        lozinka_hash: {
+        /*lozinka_hash: {
             type: "string",
             minLength: 2,
             maxLength: 64,
+        },*/
+        lozinka: {
+            type: "string",
+            pattern: "^([A-Z]*?[a-z]*?[0-9]*?.*?){6,64}$"
         },
         status: {
             type: "number"
@@ -36,7 +48,8 @@ const AddPrijava_korisnikaSchema = {
     },
     required: [
         "korisnicko_ime",
-        "lozinka_hash",
+        //"lozinka_hash",
+        "lozinka",
         "status",
 
     ],
@@ -45,4 +58,4 @@ const AddPrijava_korisnikaSchema = {
 
 const AddPrijava_korisnikaValidator = ajv.compile(AddPrijava_korisnikaSchema);
 
-export {AddPrijava_korisnikaValidator};
+export {AddPrijava_korisnikaValidator, IAddPrijava_korisnikaDto};

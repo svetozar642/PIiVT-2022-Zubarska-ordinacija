@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import IAddPrijava_korisnika, { AddPrijava_korisnikaValidator } from "./dto/IAddPrijava_korisnika.dto";
+import IAddPrijava_korisnika, { AddPrijava_korisnikaValidator, IAddPrijava_korisnikaDto } from "./dto/IAddPrijava_korisnika.dto";
 import Prijava_korisnikaService , { DefaultPrijava_korisnikaAdapterOptions } from './Prijava_korisnikaService.service';
-
+import * as bcrypt from "bcrypt";
 
 class Prijava_korisnikaController{
     private Prijava_korisnikaService: Prijava_korisnikaService;
@@ -106,18 +106,34 @@ class Prijava_korisnikaController{
         // "body" content ce automatski biti parsiran (Ako je poslat kao JSON bice pretvoren u objekat koji predstavlja to sto je JSON bio)
         //Ovo radi autmatski jer smo na pocetku u main.ts bili ukljicili da aplikacija (application) koristi (use) express.json()
         // To znaci da ako stigne request koji je oblika JSON bice automatski parsiran i mi ne moramo da ga tretiramo kao String i dodatno obradjujemo
-        const data = req.body as IAddPrijava_korisnika; 
+        const data = req.body as IAddPrijava_korisnikaDto; 
 
         // TODO : VALIDACIJA
         if ( !AddPrijava_korisnikaValidator(data) ) {
             return res.status(400).send(AddPrijava_korisnikaValidator.errors);
         }
 
+        const salt = bcrypt.genSaltSync(10);
+        const lozinka_hash = bcrypt.hashSync(data.lozinka, salt);
+
 
         //Provera sta smo dobili od klijenta i sta prosledjujemo dalje metodi add()...
         /*console.log(data);*/
 
-        this.Prijava_korisnikaService.add(data)
+
+        //Kada zelimo da uvedemo mogucnost prosledjivanja opcionih polja koja mogu a i ne moraju da se dostave ...
+        const serviceData: IAddPrijava_korisnika = {
+            korisnicko_ime: data.korisnicko_ime,
+            lozinka_hash: lozinka_hash,
+            //logged_at : data.logged_at,
+            status: data.status
+        }
+
+        if (data.logged_at !== undefined){
+            serviceData.logged_at = data.logged_at;
+        }
+
+        this.Prijava_korisnikaService.add(serviceData)
             .then( result => {
                 res.send(result);
             })
