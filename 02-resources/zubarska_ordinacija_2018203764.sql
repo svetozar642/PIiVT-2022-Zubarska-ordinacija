@@ -34,14 +34,15 @@ CREATE TABLE IF NOT EXISTS `korisnik` (
   `is_active` enum('aktivan','neaktivan') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'aktivan',
   PRIMARY KEY (`korisnik_id`),
   UNIQUE KEY `uq_korisnik_korisnicko_ime` (`korisnicko_ime`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.korisnik: ~4 rows (approximately)
 INSERT INTO `korisnik` (`korisnik_id`, `korisnicko_ime`, `lozinka_hash`, `ime`, `prezime`, `jmbg`, `email`, `created_at`, `is_active`) VALUES
 	(1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e', 'Milica', 'Petrovic', '2505994410888', 'mpetrovic@gmail.com', '2022-05-31 18:11:37', 'aktivan'),
 	(2, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944', 'Tamara', 'Jovanovic', '2010932410777', 'tjovanovic@gmail.com', '2022-06-04 15:54:52', 'aktivan'),
 	(4, 'jelena111', 'c62439ea56c71bf8b4760d507e0e646a', 'Jelena', 'Popovic', '2103992410777', 'jpopovic@gmail.com', '2022-06-10 14:45:21', 'aktivan'),
-	(5, 'katarina123', '59dda66f74e8c549f1cffbdb83cd699c', 'Katarina', 'Petrovic', '1511993410999', 'kpetrovic@gmail.com', '2022-06-11 15:03:17', 'aktivan');
+	(5, 'katarina123', '59dda66f74e8c549f1cffbdb83cd699c', 'Katarina', 'Petrovic', '1511993410999', 'kpetrovic@gmail.com', '2022-06-11 15:03:17', 'aktivan'),
+	(6, 'tina123', '$2b$10$JGwtOdP4JP.8RLudEGEttumPSzTfx5Kgjq59phshwPsa7pzAGgiKG', 'Tina', 'Lazarevic', '1007994410555', 'tlazarevic@gmail.com', '2022-06-14 21:43:19', 'aktivan');
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.pacijent
 DROP TABLE IF EXISTS `pacijent`;
@@ -79,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `prijava_korisnika` (
   `korisnicko_ime` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `lozinka_hash` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`prijava_korisnika_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.prijava_korisnika: ~7 rows (approximately)
 INSERT INTO `prijava_korisnika` (`prijava_korisnika_id`, `logged_at`, `status`, `korisnicko_ime`, `lozinka_hash`) VALUES
@@ -89,7 +90,9 @@ INSERT INTO `prijava_korisnika` (`prijava_korisnika_id`, `logged_at`, `status`, 
 	(4, '2022-06-04 20:47:01', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e'),
 	(5, '2022-06-07 16:21:09', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e'),
 	(6, '2022-06-11 15:15:39', 0, 'tamara123', '504938a121efec5f4fbdbcc64ca5736e'),
-	(7, '2022-06-11 15:15:53', 1, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944');
+	(7, '2022-06-11 15:15:53', 1, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944'),
+	(8, '2022-06-14 22:52:54', 0, 'tamara333', '$2b$10$BwsTGWJMGR5BPqjHgHgR9OnwOiMraf.HIPQ7n.HX0Am51w423UR/u'),
+	(9, '2022-06-14 22:53:10', 0, 'tamara333', '$2b$10$Bn.99erITURguECj7U1Glu2OMKT6cGf3qq3kuhF.jO3Z32Azp0D52');
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.racun
 DROP TABLE IF EXISTS `racun`;

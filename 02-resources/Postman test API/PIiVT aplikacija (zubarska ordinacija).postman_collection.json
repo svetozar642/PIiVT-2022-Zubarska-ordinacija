@@ -3338,7 +3338,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:10000/api/korisnik/1",
+							"raw": "localhost:10000/api/korisnik/6",
 							"host": [
 								"localhost"
 							],
@@ -3346,7 +3346,7 @@
 							"path": [
 								"api",
 								"korisnik",
-								"1"
+								"6"
 							]
 						}
 					},
@@ -3418,7 +3418,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"korisnicko_ime\": \"katarina123\",\r\n    \"lozinka_hash\": \"59dda66f74e8c549f1cffbdb83cd699c\",\r\n    \"ime\": \"Katarina\",\r\n    \"prezime\": \"Petrovic\",\r\n    \"jmbg\": \"1511993410999\",\r\n    \"email\": \"kpetrovic@gmail.com\",\r\n    \"is_active\": \"aktivan\"\r\n}",
+							"raw": "{\r\n    \"korisnicko_ime\": \"tina123\",\r\n    \"lozinka\": \"tina123\",\r\n    \"ime\": \"Tina\",\r\n    \"prezime\": \"Lazarevic\",\r\n    \"jmbg\": \"1007994410555\",\r\n    \"email\": \"tlazarevic@gmail.com\",\r\n    \"is_active\": \"aktivan\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3569,6 +3569,72 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"korisnikId\": 5,\n    \"korisnicko_ime\": \"katarina123\",\n    \"lozinka_hash\": \"59dda66f74e8c549f1cffbdb83cd699c\",\n    \"ime\": \"Katarina\",\n    \"prezime\": \"Petrovic\",\n    \"jmbg\": \"1511993410999\",\n    \"email\": \"kpetrovic@gmail.com\",\n    \"created_at\": \"2022-06-11T16:03:17.000Z\",\n    \"is_active\": \"aktivan\"\n}"
+						},
+						{
+							"name": "Add New Korisnik",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"korisnicko_ime\": \"tina123\",\r\n    \"lozinka\": \"tina123\",\r\n    \"ime\": \"Tina\",\r\n    \"prezime\": \"Lazarevic\",\r\n    \"jmbg\": \"1007994410555\",\r\n    \"email\": \"tlazarevic@gmail.com\",\r\n    \"is_active\": \"aktivan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/korisnik",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"korisnik"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "272"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"110-cXx+CnvNboZC5H6wa76VkWZU2S0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 14 Jun 2022 21:43:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"korisnikId\": 6,\n    \"korisnicko_ime\": \"tina123\",\n    \"lozinka_hash\": \"$2b$10$1isxE4xDO05BOQH2GrDY5eOSz49MVd/TugerxWnrYdwG2xS3G7sWq\",\n    \"ime\": \"Tina\",\n    \"prezime\": \"Lazarevic\",\n    \"jmbg\": \"1007994410555\",\n    \"email\": \"tlazarevic@gmail.com\",\n    \"created_at\": \"2022-06-14T22:43:19.000Z\",\n    \"is_active\": \"aktivan\"\n}"
 						}
 					]
 				},
@@ -4219,7 +4285,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"korisnicko_ime\": \"jelena111\",\r\n    \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\r\n    \"ime\": \"Jelena\",\r\n    \"prezime\": \"Popovic\",\r\n    \"jmbg\": \"2103992410777\",\r\n    \"is_active\": \"aktivan\"\r\n}",
+							"raw": "{\r\n    \"korisnicko_ime\": \"tina123\",\r\n    \"lozinka\": \"tina123\",\r\n    \"ime\": \"Tina\",\r\n    \"prezime\": \"Lazarevic\",\r\n    \"jmbg\": \"1007994410555\",\r\n    \"email\": \"tlazarevic@gmail.com\",\r\n    \"created_at\": \"2022-06-14T22:43:19.000Z\",\r\n    \"is_active\": \"aktivan\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4227,7 +4293,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:10000/api/korisnik/4",
+							"raw": "localhost:10000/api/korisnik/6",
 							"host": [
 								"localhost"
 							],
@@ -4235,7 +4301,7 @@
 							"path": [
 								"api",
 								"korisnik",
-								"4"
+								"6"
 							]
 						}
 					},
@@ -4373,6 +4439,73 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"korisnikId\": 4,\n    \"korisnicko_ime\": \"jelena111\",\n    \"lozinka_hash\": \"c62439ea56c71bf8b4760d507e0e646a\",\n    \"ime\": \"Jelena\",\n    \"prezime\": \"Popovic\",\n    \"jmbg\": \"2103992410777\",\n    \"email\": \"jpopovic@gmail.com\",\n    \"created_at\": \"2022-06-10T15:45:21.000Z\",\n    \"is_active\": \"aktivan\"\n}"
+						},
+						{
+							"name": "Edit Korisnik By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"korisnicko_ime\": \"tina333\",\r\n    \"lozinka\": \"tina123\",\r\n    \"ime\": \"Tina\",\r\n    \"prezime\": \"Lazarevic\",\r\n    \"jmbg\": \"1807994410555\",\r\n    \"email\": \"tlazarevic@gmail.com\",\r\n    \"created_at\": \"2022-06-14T22:43:19.000Z\",\r\n    \"is_active\": \"neaktivan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/korisnik/6",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"korisnik",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "274"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"112-n3QpowqNwJH4DwkZ2obZDfoJwQM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 14 Jun 2022 22:19:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"korisnikId\": 6,\n    \"korisnicko_ime\": \"tina123\",\n    \"lozinka_hash\": \"$2b$10$qNzqtm2fFyFboRi72jYOhezogyO4rPR6agAt7LKw1i5jGXzYQyyba\",\n    \"ime\": \"Tina\",\n    \"prezime\": \"Lazarevic\",\n    \"jmbg\": \"1007994410555\",\n    \"email\": \"tlazarevic@gmail.com\",\n    \"created_at\": \"2022-06-14T22:43:19.000Z\",\n    \"is_active\": \"neaktivan\"\n}"
 						}
 					]
 				}
@@ -4625,7 +4758,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"status\": 1,\r\n        \"korisnicko_ime\": \"tamara123\",\r\n        \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\"\r\n}",
+							"raw": "{\r\n        \"status\": 0,\r\n        \"korisnicko_ime\": \"tamara333\",\r\n        \"lozinka\": \"tamara123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4842,6 +4975,72 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"prijava_korisnikaId\": 7,\n    \"logged_at\": \"2022-06-11T16:15:53.000Z\",\n    \"status\": 1,\n    \"korisnicko_ime\": \"tamara123\",\n    \"lozinka_hash\": \"b4bd15e18040aeed3fea89609b0b1944\"\n}"
+						},
+						{
+							"name": "Add New Prijava_korisnika",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"status\": 0,\r\n        \"korisnicko_ime\": \"tamara333\",\r\n        \"lozinka\": \"tamara123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/prijava_korisnika",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"prijava_korisnika"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b6-Fh4yHlorr57OzbvJrXGVzLBFG/A\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 14 Jun 2022 22:53:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"prijava_korisnikaId\": 9,\n    \"logged_at\": \"2022-06-14T23:53:10.000Z\",\n    \"status\": 0,\n    \"korisnicko_ime\": \"tamara333\",\n    \"lozinka_hash\": \"$2b$10$Bn.99erITURguECj7U1Glu2OMKT6cGf3qq3kuhF.jO3Z32Azp0D52\"\n}"
 						}
 					]
 				},
