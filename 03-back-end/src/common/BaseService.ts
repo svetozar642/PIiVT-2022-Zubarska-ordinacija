@@ -148,6 +148,12 @@ export default abstract class BaseService<ReturnModel extends IModel, AdapterOpt
 
         return new Promise( (resolve,reject) => {
             const properties = Object.getOwnPropertyNames(data);
+
+            //Validacija ukoliko se dostavi prazan JSON objekat za izmenu od strane klijenta
+            if (properties.length === 0) {
+                return reject({ message: "There is nothing to change !"});
+            }
+
             const sqlPairs = properties.map(property => "`" + property + "` = ?").join(", ");
             const values = properties.map(property => data[property]);
             values.push(id); // Za WHERE table_name_id = ?
