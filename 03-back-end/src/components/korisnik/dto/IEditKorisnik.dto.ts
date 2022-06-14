@@ -10,11 +10,12 @@ export default interface IEditKorisnik extends IServiceData {
     //  jer je to polje ne smemo da menjamo prilikom edit-a
     // Takodje ne ukljucujemo ni polje created_at jer se automatski dodaje TIMESTAMP u bazi trenutnog vremena i to takodje ne smemo da menjamo
     
-    korisnicko_ime: string;
+    //necemo da dozvolimo mogucnost promene korisnickog imena i email adrese i jmbg-a korisnika, kao i izmenu created_at polja
+    korisnicko_ime?: string; 
     lozinka_hash: string;
     ime: string;
     prezime: string;
-    jmbg: string;
+    jmbg?: string;
     email?: string;
     created_at ?: string;
     is_active: Status;
@@ -22,11 +23,11 @@ export default interface IEditKorisnik extends IServiceData {
 }
 
 interface IEditKorisnikDto {
-    korisnicko_ime: string;
-    lozinka_hash: string;
+    korisnicko_ime?: string;
+    lozinka: string;
     ime: string;
     prezime: string;
-    jmbg: string;
+    jmbg?: string;
     email?: string;
     created_at ?: string;
     is_active: Status;
@@ -41,10 +42,14 @@ const EditKorisnikSchema = {
             minLength: 2,
             maxLength: 64,
         },
-        lozinka_hash: {
+        /*lozinka_hash: {
             type: "string",
             minLength: 2,
             maxLength: 64,
+        },*/
+        lozinka: {
+            type: "string",
+            pattern: "^([A-Z]*?[a-z]*?[0-9]*?.*?){6,64}$"
         },
         ime: {
             type: "string",
@@ -74,11 +79,12 @@ const EditKorisnikSchema = {
         }
     },
     required: [
-        "korisnicko_ime",
-        "lozinka_hash",
+        //"korisnicko_ime",
+        //"lozinka_hash",
+        "lozinka",
         "ime",
         "prezime",
-        "jmbg",
+        //"jmbg",
         //"email",
         //"created_at",
         "is_active"

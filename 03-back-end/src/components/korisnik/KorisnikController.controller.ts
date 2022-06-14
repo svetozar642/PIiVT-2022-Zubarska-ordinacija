@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
-import IAddKorisnik, { AddKorisnikValidator } from "./dto/IAddKorisnik.dto";
+import IAddKorisnik, { AddKorisnikValidator, IAddKorisnikDto } from "./dto/IAddKorisnik.dto";
 import { Status } from "./KorisnikModel.model";
 import KorisnikService, { DefaultKorisnikAdapterOptions } from './KorisnikService.service';
 import IEditKorisnik, { EditKorisnikValidator, IEditKorisnikDto } from './dto/IEditKorisnik.dto';
+import * as bcrypt from "bcrypt";
 
 
 class KorisnikController{
@@ -172,7 +173,7 @@ class KorisnikController{
         // "body" content ce automatski biti parsiran (Ako je poslat kao JSON bice pretvoren u objekat koji predstavlja to sto je JSON bio)
         //Ovo radi autmatski jer smo na pocetku u main.ts bili ukljicili da aplikacija (application) koristi (use) express.json()
         // To znaci da ako stigne request koji je oblika JSON bice automatski parsiran i mi ne moramo da ga tretiramo kao String i dodatno obradjujemo
-        const data = req.body as IAddKorisnik; 
+        const data = req.body as IAddKorisnikDto; 
 
         // TODO : VALIDACIJA
         if ( !AddKorisnikValidator(data) ) {
@@ -183,7 +184,19 @@ class KorisnikController{
         //Provera sta smo dobili od klijenta i sta prosledjujemo dalje metodi add()...
         /*console.log(data);*/
 
-        this.KorisnikService.add(data)
+        const salt = bcrypt.genSaltSync(10);
+        const lozinka_hash = bcrypt.hashSync(data.lozinka, salt);
+        
+
+        this.KorisnikService.add({
+            korisnicko_ime: data.korisnicko_ime,
+            lozinka_hash: lozinka_hash,
+            ime: data.ime,
+            prezime: data.prezime,
+            jmbg: data.jmbg,
+            email: data.email,
+            is_active: data.is_active
+        })
             .then( result => {
                 res.send(result);
             })
@@ -207,6 +220,9 @@ class KorisnikController{
             return res.status(400).send(EditKorisnikValidator.errors);
         }
 
+        const salt = bcrypt.genSaltSync(10);
+        const lozinka_hash = bcrypt.hashSync(data.lozinka, salt);
+
         this.KorisnikService.getById(id)
             .then( result => {
 
@@ -218,11 +234,15 @@ class KorisnikController{
                 }
 
                 this.KorisnikService.editById(id, {
-                    korisnicko_ime: data.korisnicko_ime ,
-                    lozinka_hash: data.lozinka_hash ,
+                    //ovde smo stavili pod komentar korisnicko_ime i jmbg jer ne zelimo da omogucimo izmenu ovih polja ,
+                    //ali takodje nismo ni naveli polje created_at iz istog razloga ...
+                    //U sustini ona polja kojima ne zelimo da dozvolimo izmenu  od strane korisnika ,jednostavno ne navedemo ovde,
+                    //i korisnik cak i da posalje nove vrednosti tih polja one jednostavno ce se ignorisati kao da nisu poslate i nece biti nikakvih izmena u bazi ...
+                    //korisnicko_ime: data.korisnicko_ime ,
+                    lozinka_hash: lozinka_hash ,
                     ime: data.ime ,
                     prezime: data.prezime ,
-                    jmbg: data.jmbg ,
+                    //jmbg: data.jmbg ,
                     is_active: data.is_active
                 })
                     .then( result => {

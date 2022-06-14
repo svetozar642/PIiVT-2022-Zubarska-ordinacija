@@ -5,6 +5,7 @@ import { Status } from "../KorisnikModel.model";
 
 const ajv = new Ajv();
 
+//Ono sto servis treba da trazi za bazu podataka (ono sto dostavljamo mi bazi) :
 export default interface IAddKorisnik extends IServiceData {
     //Iz spoljasnjeg okruzenja od klijenta ocekujemo sledece podatke , bez korisnik_id 
     //  jer je to AUTO_INCREMENT polje cija se vrednost automatski dodeljuje
@@ -12,6 +13,22 @@ export default interface IAddKorisnik extends IServiceData {
     
     korisnicko_ime: string;
     lozinka_hash: string;
+    //lozinka: string;
+    ime: string;
+    prezime: string;
+    jmbg: string;
+    email: string;
+    created_at ?: string;
+    is_active: Status;
+    
+}
+
+//Ono sto dostavlja klijent serveru (za kontroler) :
+interface IAddKorisnikDto {
+    
+    korisnicko_ime: string;
+    //lozinka_hash: string;
+    lozinka: string;
     ime: string;
     prezime: string;
     jmbg: string;
@@ -30,10 +47,14 @@ const AddKorisnikSchema = {
             minLength: 2,
             maxLength: 64,
         },
-        lozinka_hash: {
+        /*lozinka_hash: {
             type: "string",
             minLength: 2,
             maxLength: 64,
+        },*/
+        lozinka: {
+            type: "string",
+            pattern: "^([A-Z]*?[a-z]*?[0-9]*?.*?){6,64}$"
         },
         ime: {
             type: "string",
@@ -64,17 +85,18 @@ const AddKorisnikSchema = {
     },
     required: [
         "korisnicko_ime",
-        "lozinka_hash",
+        //"lozinka_hash",
+        "lozinka",
         "ime",
         "prezime",
         "jmbg",
         "email",
         //"created_at",
-        "is_active"
+        //"is_active"
     ],
     additionalProperties: false,
 };
 
 const AddKorisnikValidator = ajv.compile(AddKorisnikSchema);
 
-export {AddKorisnikValidator};
+export {AddKorisnikValidator, IAddKorisnikDto};
