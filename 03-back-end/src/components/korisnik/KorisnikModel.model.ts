@@ -1,14 +1,15 @@
 import IModel from '../../common/IModel.interface';
 class KorisnikModel implements IModel{
-    korisnikId: number;
+    korisnik_id: number;
     korisnicko_ime: string;
-    lozinka_hash: string;
+    lozinka_hash: string | null;
     ime: string;
     prezime: string;
     jmbg: string;
     email: string;
     created_at ?: string;
     is_active: Status;
+    aktivacioni_kod: string | null;
     
 }
 

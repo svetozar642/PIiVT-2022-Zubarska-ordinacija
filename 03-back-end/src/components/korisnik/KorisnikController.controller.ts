@@ -1,9 +1,11 @@
 import { Request, Response } from "express";
-import IAddKorisnik, { AddKorisnikValidator, IAddKorisnikDto } from "./dto/IAddKorisnik.dto";
-import { Status } from "./KorisnikModel.model";
 import KorisnikService, { DefaultKorisnikAdapterOptions } from './KorisnikService.service';
 import IEditKorisnik, { EditKorisnikValidator, IEditKorisnikDto } from './dto/IEditKorisnik.dto';
 import * as bcrypt from "bcrypt";
+import { AddKorisnikValidator, IAddKorisnikDto } from "./dto/IAddKorisnik.dto";
+import * as uuid from "uuid";
+import { Status } from "./KorisnikModel.model";
+import KorisnikModel from './KorisnikModel.model';
 
 
 class KorisnikController{
@@ -23,7 +25,10 @@ class KorisnikController{
 
         //promena zapisa iznad jer sada KorisnikModel moze vratiti prazan [] ili KorisnikModel[] a moze i reject-ovati usled greske
 
-        this.KorisnikService.getAll()
+        this.KorisnikService.getAll({
+            removePassword:true,
+            removeActivationCode:true
+        })
             .then( result => {
                 res.send(result);
             })
@@ -59,7 +64,10 @@ class KorisnikController{
         res.send(korisnik);
        */
 
-        this.KorisnikService.getById(id)
+        this.KorisnikService.getById(id, {
+            removePassword:true,
+            removeActivationCode:true
+        })
             .then( result => {
                 if ( result === null){
                     return res.sendStatus(404);
@@ -195,15 +203,54 @@ class KorisnikController{
             prezime: data.prezime,
             jmbg: data.jmbg,
             email: data.email,
-            is_active: data.is_active
+            is_active: data.is_active,
+            aktivacioni_kod: uuid.v4()
         })
             .then( result => {
+
+                //TODO: send mail
+                
+
                 res.send(result);
             })
             .catch( error => {
                 res.status(400).send(error?.message);
             });
 
+    }
+
+    async activate(req: Request, res: Response){
+        const code: string = req.params?.code;
+        
+        this.KorisnikService.getKorisnikByAktivacioniKod(code, { removeActivationCode:true, removePassword:true})
+            .then(result => {
+                if (result === null){
+                    //sprecavanje brute-force napada "pocekom" ...
+                    setTimeout( () => {
+                        return res.status(404).send("User not found !");
+                    }, 500);
+                }
+
+                return result;
+            })
+            .then( result => {
+                const korisnik = result as KorisnikModel;
+                
+                return this.KorisnikService.editById(korisnik.korisnik_id, 
+                    {
+                        is_active: Status.aktivan ,
+                        aktivacioni_kod: null,
+                    } );
+            })
+            .then( korisnik => {
+                res.send(korisnik);
+            })
+            .catch(error =>{
+                //Postavljanje "poceka" - pauze sprecavamo brute-force napad ...
+                setTimeout( () => {
+                    res.status(500).send(error?.message);
+                }, 500);
+            })
     }
 
     async edit(req: Request, res: Response) {
@@ -220,10 +267,35 @@ class KorisnikController{
             return res.status(400).send(EditKorisnikValidator.errors);
         }
 
-        const salt = bcrypt.genSaltSync(10);
-        const lozinka_hash = bcrypt.hashSync(data.lozinka, salt);
+        //Prvi nacin :
+       // const salt = bcrypt.genSaltSync(10);
+       // const lozinka_hash = bcrypt.hashSync(data.lozinka, salt);
 
-        this.KorisnikService.getById(id)
+       //Drugi nacin:
+        const serviceData: IEditKorisnik = {};
+
+        const salt = bcrypt.genSaltSync(10);
+
+        if (data.lozinka !== undefined) {
+            const lozinka_hash = bcrypt.hashSync(data.lozinka, salt); 
+            
+            serviceData.lozinka_hash = lozinka_hash;
+        }
+
+        if (data.is_active !== undefined){
+            serviceData.is_active = data.is_active;
+        }
+        
+        if (data.ime !== undefined) {
+            serviceData.ime = data.ime;
+        }
+
+        if (data.prezime !== undefined) {
+            serviceData.prezime = data.prezime;
+        }
+        
+
+        this.KorisnikService.getById(id, { removePassword:true, removeActivationCode:true})
             .then( result => {
 
                 //za potrebe testiranja...
@@ -233,7 +305,8 @@ class KorisnikController{
                     return res.sendStatus(404);
                 }
 
-                this.KorisnikService.editById(id, {
+                this.KorisnikService.editById(id, serviceData /* ukoliko prosledjujemo ove informacije kroz serviceData*/ 
+                /*{
                     //ovde smo stavili pod komentar korisnicko_ime i jmbg jer ne zelimo da omogucimo izmenu ovih polja ,
                     //ali takodje nismo ni naveli polje created_at iz istog razloga ...
                     //U sustini ona polja kojima ne zelimo da dozvolimo izmenu  od strane korisnika ,jednostavno ne navedemo ovde,
@@ -244,7 +317,7 @@ class KorisnikController{
                     prezime: data.prezime ,
                     //jmbg: data.jmbg ,
                     is_active: data.is_active
-                })
+                }*/ )
                     .then( result => {
 
                         //za potrebe testiranja..

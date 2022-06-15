@@ -2,8 +2,10 @@
 import Ajv from "ajv";
 import IServiceData from "../../../common/IServiceData.interface";
 import { Status } from "../KorisnikModel.model";
+import addFormats from "ajv-formats";
 
 const ajv = new Ajv();
+addFormats(ajv);
 
 export default interface IEditKorisnik extends IServiceData {
     //Iz spoljasnjeg okruzenja od klijenta ocekujemo sledece podatke , bez korisnik_id 
@@ -12,25 +14,26 @@ export default interface IEditKorisnik extends IServiceData {
     
     //necemo da dozvolimo mogucnost promene korisnickog imena i email adrese i jmbg-a korisnika, kao i izmenu created_at polja
     korisnicko_ime?: string; 
-    lozinka_hash: string;
-    ime: string;
-    prezime: string;
+    lozinka_hash?: string;
+    ime?: string;
+    prezime?: string;
     jmbg?: string;
     email?: string;
     created_at ?: string;
-    is_active: Status;
+    is_active?: Status;
+    aktivacioni_kod?: string;
     
 }
 
 interface IEditKorisnikDto {
-    korisnicko_ime?: string;
-    lozinka: string;
-    ime: string;
-    prezime: string;
-    jmbg?: string;
-    email?: string;
-    created_at ?: string;
-    is_active: Status;
+    //korisnicko_ime?: string;
+    lozinka?: string;
+    ime?: string;
+    prezime?: string;
+    //jmbg?: string;
+    //email?: string;
+    //created_at ?: string;
+    is_active?: Status;
 }
 
 //Za potrebe validacije (unosimo osobine polja) :
@@ -68,8 +71,7 @@ const EditKorisnikSchema = {
         },
         email: {
             type: "string",
-            minLength: 8,
-            maxLength: 64,
+            format: "email"
         },
         created_at: {
             type: "string"
@@ -79,15 +81,17 @@ const EditKorisnikSchema = {
         }
     },
     required: [
+        //Ni jedno od ovih polja nisu obavezni :
+
         //"korisnicko_ime",
         //"lozinka_hash",
-        "lozinka",
-        "ime",
-        "prezime",
+        //"lozinka",
+        //"ime",
+        //"prezime",
         //"jmbg",
         //"email",
         //"created_at",
-        "is_active"
+        //"is_active"
     ],
     additionalProperties: false,
 };

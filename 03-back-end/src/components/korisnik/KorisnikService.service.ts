@@ -1,19 +1,18 @@
-import KorisnikModel, { Status } from "./KorisnikModel.model";
-import * as mysql2 from 'mysql2/promise';
-import { resolve } from "path";
-import { rejects } from "assert";
-import IAddKorisnik from "./dto/IAddKorisnik.dto";
-import { ResultSetHeader } from "mysql2/promise";
+import KorisnikModel from "./KorisnikModel.model";
 import BaseService from "../../common/BaseService";
 import IAdapterOptions from '../../common/IAdapterOptions.interface';
 import IEditKorisnik from './dto/IEditKorisnik.dto';
+import IAddKorisnik from "./dto/IAddKorisnik.dto";
+import { rejects } from 'assert';
 
 class KorisnikAdapterOptions implements IAdapterOptions {
-    
+    removePassword: boolean;
+    removeActivationCode: boolean; 
 }
 
 const DefaultKorisnikAdapterOptions: KorisnikAdapterOptions = {
-    loadRacune: false,
+    removePassword:false,
+    removeActivationCode: false, 
 }
 class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions >{
     
@@ -24,16 +23,25 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
     protected async adaptToModel(data: any, options: KorisnikAdapterOptions): Promise<KorisnikModel>{
         const korisnik: KorisnikModel = new KorisnikModel();
 
-        korisnik.korisnikId     = +data?.korisnik_id;
-        korisnik.korisnicko_ime = data?.korisnicko_ime;
-        korisnik.lozinka_hash   = data?.lozinka_hash;
+        korisnik.korisnik_id        = +data?.korisnik_id;
+        korisnik.korisnicko_ime     = data?.korisnicko_ime;
+        korisnik.lozinka_hash       = data?.lozinka_hash;
 
-        korisnik.ime            = data?.ime;
-        korisnik.prezime        = data?.prezime;
-        korisnik.jmbg           = data?.jmbg;
-        korisnik.email          = data?.email;
-        korisnik.created_at     = data?.created_at;
-        korisnik.is_active      = data?.is_active;
+        korisnik.ime                = data?.ime;
+        korisnik.prezime            = data?.prezime;
+        korisnik.jmbg               = data?.jmbg;
+        korisnik.email              = data?.email;
+        korisnik.created_at         = data?.created_at;
+        korisnik.is_active          = data?.is_active;
+        korisnik.aktivacioni_kod    = data?.aktivacioni_kod ? data?.aktivacioni_kod : null ;
+
+        if (options.removePassword) {
+            korisnik.lozinka_hash = null;
+        }
+
+        if (options.removeActivationCode) {
+            korisnik.aktivacioni_kod = null;
+        }
 
         return korisnik;
     }
@@ -106,12 +114,34 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
     }*/
 
     public async add(data: IAddKorisnik): Promise<KorisnikModel> {
-        return this.baseAdd(data, DefaultKorisnikAdapterOptions);
+        return this.baseAdd(data, /*DefaultKorisnikAdapterOptions*/ {
+            removePassword:true,
+            removeActivationCode:true
+        });
     }
 
     public async editById(korisnik_id: number, data: IEditKorisnik ): Promise<KorisnikModel> {
-        return this.baseEditById(korisnik_id, data, DefaultKorisnikAdapterOptions);
+        return this.baseEditById(korisnik_id, data, /*DefaultKorisnikAdapterOptions*/ {
+            removePassword:true,
+            removeActivationCode:true
+        });
     } 
+
+    public async getKorisnikByAktivacioniKod(code: string , options: KorisnikAdapterOptions = DefaultKorisnikAdapterOptions): Promise<KorisnikModel | null>{
+        return new Promise( (resolve , reject) => {
+            return this.getAllByFieldNameAnValue("aktivacioni_kod", code, options)
+                .then(result => {
+                    if ( result.length === 0){
+                       return resolve(null);
+                    }
+
+                    resolve(result[0]);
+                })
+                .catch(error => {
+                    reject(error?.message);
+                })
+        })
+    }
 
 }
 

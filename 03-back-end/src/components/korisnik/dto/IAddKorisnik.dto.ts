@@ -2,8 +2,10 @@
 import Ajv from "ajv";
 import IServiceData from "../../../common/IServiceData.interface";
 import { Status } from "../KorisnikModel.model";
+import addFormats from "ajv-formats";
 
 const ajv = new Ajv();
+addFormats(ajv);
 
 //Ono sto servis treba da trazi za bazu podataka (ono sto dostavljamo mi bazi) :
 export default interface IAddKorisnik extends IServiceData {
@@ -20,6 +22,7 @@ export default interface IAddKorisnik extends IServiceData {
     email: string;
     created_at ?: string;
     is_active: Status;
+    aktivacioni_kod: string;
     
 }
 
@@ -73,8 +76,7 @@ const AddKorisnikSchema = {
         },
         email: {
             type: "string",
-            minLength: 8,
-            maxLength: 64,
+            format: "email"
         },
         created_at: {
             type: "string"
