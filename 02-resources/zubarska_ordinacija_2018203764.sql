@@ -31,18 +31,22 @@ CREATE TABLE IF NOT EXISTS `korisnik` (
   `jmbg` varchar(13) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `is_active` enum('aktivan','neaktivan') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'aktivan',
+  `is_active` enum('aktivan','neaktivan') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'neaktivan',
+  `aktivacioni_kod` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`korisnik_id`),
-  UNIQUE KEY `uq_korisnik_korisnicko_ime` (`korisnicko_ime`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  UNIQUE KEY `uq_korisnik_korisnicko_ime` (`korisnicko_ime`),
+  UNIQUE KEY `uq_korisnik_aktivacioni_kod` (`aktivacioni_kod`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table zubarska_ordinacija_2018203764.korisnik: ~4 rows (approximately)
-INSERT INTO `korisnik` (`korisnik_id`, `korisnicko_ime`, `lozinka_hash`, `ime`, `prezime`, `jmbg`, `email`, `created_at`, `is_active`) VALUES
-	(1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e', 'Milica', 'Petrovic', '2505994410888', 'mpetrovic@gmail.com', '2022-05-31 18:11:37', 'aktivan'),
-	(2, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944', 'Tamara', 'Jovanovic', '2010932410777', 'tjovanovic@gmail.com', '2022-06-04 15:54:52', 'aktivan'),
-	(4, 'jelena111', 'c62439ea56c71bf8b4760d507e0e646a', 'Jelena', 'Popovic', '2103992410777', 'jpopovic@gmail.com', '2022-06-10 14:45:21', 'aktivan'),
-	(5, 'katarina123', '59dda66f74e8c549f1cffbdb83cd699c', 'Katarina', 'Petrovic', '1511993410999', 'kpetrovic@gmail.com', '2022-06-11 15:03:17', 'aktivan'),
-	(6, 'tina123', '$2b$10$JGwtOdP4JP.8RLudEGEttumPSzTfx5Kgjq59phshwPsa7pzAGgiKG', 'Tina', 'Lazarevic', '1007994410555', 'tlazarevic@gmail.com', '2022-06-14 21:43:19', 'aktivan');
+-- Dumping data for table zubarska_ordinacija_2018203764.korisnik: ~7 rows (approximately)
+INSERT INTO `korisnik` (`korisnik_id`, `korisnicko_ime`, `lozinka_hash`, `ime`, `prezime`, `jmbg`, `email`, `created_at`, `is_active`, `aktivacioni_kod`) VALUES
+	(1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e', 'Milica', 'Petrovic', '2505994410888', 'mpetrovic@gmail.com', '2022-05-31 18:11:37', 'aktivan', NULL),
+	(2, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944', 'Tamara', 'Jovanovic', '2010932410777', 'tjovanovic@gmail.com', '2022-06-04 15:54:52', 'aktivan', NULL),
+	(4, 'jelena111', 'c62439ea56c71bf8b4760d507e0e646a', 'Jelena', 'Popovic', '2103992410777', 'jpopovic@gmail.com', '2022-06-10 14:45:21', 'aktivan', NULL),
+	(5, 'katarina123', '59dda66f74e8c549f1cffbdb83cd699c', 'Katarina', 'Petrovic', '1511993410999', 'kpetrovic@gmail.com', '2022-06-11 15:03:17', 'aktivan', NULL),
+	(6, 'tina123', '$2b$10$YUjNpbQWVDRBpfIZ7A/QUesGOV5tjqyV2WDVuWHrytffGxuU71tJu', 'Tina', 'Lazarevic', '1007994410555', 'tlazarevic@gmail.com', '2022-06-14 21:43:19', 'aktivan', NULL),
+	(8, 'teodora123', '$2b$10$smp3K90/oLfqq4hMrLcaa.5c8x5F55nEjU7wduFtJQZQwzwyVXzHa', 'Teodora', 'Popovic', '2207996410222', 'tpopovic@gmail.com', '2022-06-15 20:38:05', 'aktivan', '92344790-8e9f-4a1b-b2e8-7af7918e48e1'),
+	(10, 'marija123', '$2b$10$k76CF5r3DiyDkhDU2n8SBuyf.TiJ3kB3JZ5klUOGNYiPQFELQMf5S', 'Marija', 'Stankovic', '1507997410222', 'mstankovic@gmail.com', '2022-06-15 21:23:10', 'aktivan', NULL);
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.pacijent
 DROP TABLE IF EXISTS `pacijent`;
@@ -82,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `prijava_korisnika` (
   PRIMARY KEY (`prijava_korisnika_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table zubarska_ordinacija_2018203764.prijava_korisnika: ~7 rows (approximately)
+-- Dumping data for table zubarska_ordinacija_2018203764.prijava_korisnika: ~9 rows (approximately)
 INSERT INTO `prijava_korisnika` (`prijava_korisnika_id`, `logged_at`, `status`, `korisnicko_ime`, `lozinka_hash`) VALUES
 	(1, '2022-06-04 20:41:57', 1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e'),
 	(2, '2022-06-04 20:42:15', 0, 'tamara123', '504938a121efec5f4fbdbcc64ca5736e'),
