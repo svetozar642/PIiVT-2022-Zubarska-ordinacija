@@ -197,7 +197,7 @@ class KorisnikController{
         const salt = bcrypt.genSaltSync(10);
         const lozinka_hash = bcrypt.hashSync(data.lozinka, salt);
         
-        /*this.KorisnikService.startTransaction()
+        this.KorisnikService.startTransaction()
             .then( () => {
               return this.KorisnikService.add({
                         korisnicko_ime: data.korisnicko_ime,
@@ -209,9 +209,9 @@ class KorisnikController{
                         is_active: data.is_active,
                         aktivacioni_kod: uuid.v4()
                     })
-            })*/
+            })
             //Ovo ispod ukloniti sa this. i prespojiti na kod iznad koji je pod komentarom kada implementiras f-je za transakcije ,rollback i commit za ovaj servis ...
-            this.KorisnikService.add({
+            /*this.KorisnikService.add({
                 korisnicko_ime: data.korisnicko_ime,
                 lozinka_hash: lozinka_hash,
                 ime: data.ime,
@@ -220,22 +220,22 @@ class KorisnikController{
                 email: data.email,
                 is_active: data.is_active,
                 aktivacioni_kod: uuid.v4()
-            })
+            })*/
             .then( korisnik => {
 
                 //TODO: send mail
                 return this.sendRegistrationEmail(korisnik)
             })
-            .then( /*async*/ korinsik => {
-                //await this.KorisnikService.commitChanges();
+            .then( async korinsik => {
+                await this.KorisnikService.commitChanges();
                 return korinsik;
             })
             .then(korisnik => {
 
                 res.send(korisnik);
             })
-            .catch( /*async*/ error => {
-                //await this.KorisnikService.rollbackChanges();
+            .catch( async error => {
+                await this.KorisnikService.rollbackChanges();
 
                 res.status(400).send(error?.message);
             });

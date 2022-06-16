@@ -20,6 +20,19 @@ export default abstract class BaseService<ReturnModel extends IModel, AdapterOpt
     //Kada budemo korsitili ovu get metodu samo cemo je pozvati sa "this.db.execute" , bez zagrada ...
     //Da nismo stavili da je ova metoda "get" morali bi da je pozivamo sa zagradama "this.db().execute" ...
 
+    //Implementacija mehanizma za startTransaction(), rollbackChanges() i commitChanges() :
+    public startTransaction() {
+        return this.database.beginTransaction();
+    }
+
+    public commitChanges() {
+        return this.database.commit();
+    }
+
+    public rollbackChanges() {
+        return this.database.rollback();
+    }
+
     abstract tableName(): string;
 
     protected abstract adaptToModel(data: any , options: AdapterOptions): Promise<ReturnModel>;
