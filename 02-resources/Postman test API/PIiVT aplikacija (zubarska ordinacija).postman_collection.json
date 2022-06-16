@@ -3533,7 +3533,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"korisnicko_ime\": \"marija123\",\r\n    \"lozinka\": \"marija123\",\r\n    \"ime\": \"Marija\",\r\n    \"prezime\": \"Stankovic\",\r\n    \"jmbg\": \"1507997410222\",\r\n    \"email\": \"mstankovic@gmail.com\",\r\n    \"is_active\": \"aktivan\"\r\n}",
+							"raw": "{\r\n    \"korisnicko_ime\": \"jovana123\",\r\n    \"lozinka\": \"jovana123\",\r\n    \"ime\": \"Jovana\",\r\n    \"prezime\": \"Matovic\",\r\n    \"jmbg\": \"1202999410123\",\r\n    \"email\": \"jmatovic@gmail.com\",\r\n    \"is_active\": \"neaktivan\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

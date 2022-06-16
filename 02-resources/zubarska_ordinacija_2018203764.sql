@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `korisnik` (
   PRIMARY KEY (`korisnik_id`),
   UNIQUE KEY `uq_korisnik_korisnicko_ime` (`korisnicko_ime`),
   UNIQUE KEY `uq_korisnik_aktivacioni_kod` (`aktivacioni_kod`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table zubarska_ordinacija_2018203764.korisnik: ~7 rows (approximately)
 INSERT INTO `korisnik` (`korisnik_id`, `korisnicko_ime`, `lozinka_hash`, `ime`, `prezime`, `jmbg`, `email`, `created_at`, `is_active`, `aktivacioni_kod`) VALUES
@@ -46,7 +46,8 @@ INSERT INTO `korisnik` (`korisnik_id`, `korisnicko_ime`, `lozinka_hash`, `ime`, 
 	(5, 'katarina123', '59dda66f74e8c549f1cffbdb83cd699c', 'Katarina', 'Petrovic', '1511993410999', 'kpetrovic@gmail.com', '2022-06-11 15:03:17', 'aktivan', NULL),
 	(6, 'tina123', '$2b$10$YUjNpbQWVDRBpfIZ7A/QUesGOV5tjqyV2WDVuWHrytffGxuU71tJu', 'Tina', 'Lazarevic', '1007994410555', 'tlazarevic@gmail.com', '2022-06-14 21:43:19', 'aktivan', NULL),
 	(8, 'teodora123', '$2b$10$smp3K90/oLfqq4hMrLcaa.5c8x5F55nEjU7wduFtJQZQwzwyVXzHa', 'Teodora', 'Popovic', '2207996410222', 'tpopovic@gmail.com', '2022-06-15 20:38:05', 'aktivan', '92344790-8e9f-4a1b-b2e8-7af7918e48e1'),
-	(10, 'marija123', '$2b$10$k76CF5r3DiyDkhDU2n8SBuyf.TiJ3kB3JZ5klUOGNYiPQFELQMf5S', 'Marija', 'Stankovic', '1507997410222', 'mstankovic@gmail.com', '2022-06-15 21:23:10', 'aktivan', NULL);
+	(10, 'marija123', '$2b$10$k76CF5r3DiyDkhDU2n8SBuyf.TiJ3kB3JZ5klUOGNYiPQFELQMf5S', 'Marija', 'Stankovic', '1507997410222', 'mstankovic@gmail.com', '2022-06-15 21:23:10', 'aktivan', NULL),
+	(16, 'jovana123', '$2b$10$Q14t1yQwx4/mjxx3hUnTY.Gs.PH5Syz38tCDErLno1P5O.Tx.iIb.', 'Jovana', 'Matovic', '1202999410123', 'jmatovic@gmail.com', '2022-06-16 16:44:30', 'aktivan', '7b2463db-626d-4f5f-b149-426d66cd965d');
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.pacijent
 DROP TABLE IF EXISTS `pacijent`;
