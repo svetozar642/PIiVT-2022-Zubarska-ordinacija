@@ -6,6 +6,7 @@ import KorisnikRouter from './components/korisnik/KorisnikRouter.router';
 import Prijava_korisnikaRouter from './components/prijava_korisnika/Prijava_korisnikaRouter.router';
 import RacunRouter from './components/racun/RacunRouter.router';
 import Racun_uslugaRouter from './components/racun_usluga/Racun_uslugaRouter.router';
+import MailConfigurationParameters from './config.mail';
 
 const DevConfig: IConfig = {
     server: {
@@ -35,6 +36,13 @@ const DevConfig: IConfig = {
         timezone: '+01:00',
         //supportBigNumbers: true,
     },
+    mail: {
+        host: "smtp.office365.com",
+        port: 587,
+        email: "",
+        password: "",
+        debug: true
+    },
     routers: [
         new ZubRouter(),
         new Racun_uslugaRouter(),
@@ -45,6 +53,8 @@ const DevConfig: IConfig = {
         new RacunRouter(),
     ]
 }
+
+DevConfig.mail = MailConfigurationParameters; 
 
 /*
 const TestConfig: IConfig = {

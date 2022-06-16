@@ -6,7 +6,9 @@ import { AddKorisnikValidator, IAddKorisnikDto } from "./dto/IAddKorisnik.dto";
 import * as uuid from "uuid";
 import { Status } from "./KorisnikModel.model";
 import KorisnikModel from './KorisnikModel.model';
-
+import * as nodemailer from "nodemailer";
+import * as Mailer from "nodemailer/lib/mailer";
+import { DevConfig } from "../../configs";
 
 class KorisnikController{
     private KorisnikService: KorisnikService;
@@ -195,29 +197,170 @@ class KorisnikController{
         const salt = bcrypt.genSaltSync(10);
         const lozinka_hash = bcrypt.hashSync(data.lozinka, salt);
         
-
-        this.KorisnikService.add({
-            korisnicko_ime: data.korisnicko_ime,
-            lozinka_hash: lozinka_hash,
-            ime: data.ime,
-            prezime: data.prezime,
-            jmbg: data.jmbg,
-            email: data.email,
-            is_active: data.is_active,
-            aktivacioni_kod: uuid.v4()
-        })
-            .then( result => {
+        /*this.KorisnikService.startTransaction()
+            .then( () => {
+              return this.KorisnikService.add({
+                        korisnicko_ime: data.korisnicko_ime,
+                        lozinka_hash: lozinka_hash,
+                        ime: data.ime,
+                        prezime: data.prezime,
+                        jmbg: data.jmbg,
+                        email: data.email,
+                        is_active: data.is_active,
+                        aktivacioni_kod: uuid.v4()
+                    })
+            })*/
+            //Ovo ispod ukloniti sa this. i prespojiti na kod iznad koji je pod komentarom kada implementiras f-je za transakcije ,rollback i commit za ovaj servis ...
+            this.KorisnikService.add({
+                korisnicko_ime: data.korisnicko_ime,
+                lozinka_hash: lozinka_hash,
+                ime: data.ime,
+                prezime: data.prezime,
+                jmbg: data.jmbg,
+                email: data.email,
+                is_active: data.is_active,
+                aktivacioni_kod: uuid.v4()
+            })
+            .then( korisnik => {
 
                 //TODO: send mail
-                
-
-                res.send(result);
+                return this.sendRegistrationEmail(korisnik)
             })
-            .catch( error => {
+            .then( /*async*/ korinsik => {
+                //await this.KorisnikService.commitChanges();
+                return korinsik;
+            })
+            .then(korisnik => {
+
+                res.send(korisnik);
+            })
+            .catch( /*async*/ error => {
+                //await this.KorisnikService.rollbackChanges();
+
                 res.status(400).send(error?.message);
             });
 
     }
+
+    private async sendRegistrationEmail(korisnik: KorisnikModel) : Promise<KorisnikModel> {
+        return new Promise( (resolve,reject) => {
+            const mailTransport = nodemailer.createTransport(
+                {
+                    host: DevConfig.mail.host,
+                    port: DevConfig.mail.port,
+                    secure: false,
+                    tls: {
+                        ciphers: "SSLv3"
+                    },
+                    debug: DevConfig.mail.debug,
+                    auth: {
+                        user: DevConfig.mail.email,
+                        pass: "greska namerno ne stavljamo pass"
+                    },
+                },
+                {
+                    from: DevConfig.mail.email,
+                },
+            );
+
+            const mailOptions: Mailer.Options = {
+                to: korisnik.email,
+                subject: "Account registration",
+                html: `<!doctype html>
+                            <html>
+                                <head> <meta charset="utf-8"> </head>
+                                <body>
+                                    <p> 
+                                        Dear ${korisnik.ime} ${korisnik.prezime}, <br>
+                                        Your acccount was successfuly created.
+                                    </p>
+                                    <p> 
+                                        You must activate your account by clicking on th following link:
+                                    </p>
+                                    <p style="text-aligne:center; padding: 10px;">
+                                        <a href="http://localhost:10000/api/korisnik/activate/${korisnik.aktivacioni_kod}">Activate</a>
+                                    </p>
+                                </body>
+                            </html>`
+            };
+
+            mailTransport.sendMail(mailOptions)
+            .then( () => {
+                mailTransport.close();
+
+                //Ovde setujemo aktivacioni kod na vrednost NULL jer ne smemo da izlazemo tu informaciju spolja
+                korisnik.aktivacioni_kod = null;
+
+                resolve(korisnik);
+            })
+            .catch( error => {
+                mailTransport.close();
+
+                reject({
+                    message: error?.message,
+                })
+            });
+        });
+    }
+
+    private async senActivationEmail(korisnik: KorisnikModel) : Promise<KorisnikModel> {
+        return new Promise( (resolve,reject) => {
+            const mailTransport = nodemailer.createTransport(
+                {
+                    host: DevConfig.mail.host,
+                    port: DevConfig.mail.port,
+                    secure: false,
+                    tls: {
+                        ciphers: "SSLv3"
+                    },
+                    debug: DevConfig.mail.debug,
+                    auth: {
+                        user: DevConfig.mail.email,
+                        pass: DevConfig.mail.password
+                    },
+                },
+                {
+                    from: DevConfig.mail.email,
+                },
+            );
+
+            const mailOptions: Mailer.Options = {
+                to: korisnik.email,
+                subject: "Account activation",
+                html: `<!doctype html>
+                            <html>
+                                <head> <meta charset="utf-8"> </head>
+                                <body>
+                                    <p> 
+                                        Dear ${korisnik.ime} ${korisnik.prezime}, <br>
+                                        Your acccount was successfuly activated.
+                                    </p>
+                                    <p> 
+                                        You can now log into your account using the login form.
+                                    </p>
+                                </body>
+                            </html>`
+            };
+
+            mailTransport.sendMail(mailOptions)
+            .then( () => {
+                mailTransport.close();
+
+                //Ovde setujemo aktivacioni kod na vrednost NULL jer ne smemo da izlazemo tu informaciju spolja
+                korisnik.aktivacioni_kod = null;
+
+                resolve(korisnik);
+            })
+            .catch( error => {
+                mailTransport.close();
+
+                reject({
+                    message: error?.message,
+                })
+            });
+        });
+    }
+
 
     async activate(req: Request, res: Response){
         const code: string = req.params?.code;
@@ -226,9 +369,14 @@ class KorisnikController{
             .then(result => {
                 if (result === null){
                     //sprecavanje brute-force napada "pocekom" ...
-                    setTimeout( () => {
+                    /*setTimeout( () => {
                         return res.status(404).send("User not found !");
-                    }, 500);
+                    }, 500);*/
+
+                    throw {
+                        status: 404,
+                        message: "User not found !"
+                    }
                 }
 
                 return result;
@@ -243,12 +391,15 @@ class KorisnikController{
                     } );
             })
             .then( korisnik => {
+                return this.senActivationEmail(korisnik);
+            })
+            .then( korisnik => {
                 res.send(korisnik);
             })
             .catch(error =>{
                 //Postavljanje "poceka" - pauze sprecavamo brute-force napad ...
                 setTimeout( () => {
-                    res.status(500).send(error?.message);
+                    res.status(error?.status ?? 500).send(error?.message);
                 }, 500);
             })
     }

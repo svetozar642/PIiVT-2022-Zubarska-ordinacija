@@ -116,7 +116,7 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
     public async add(data: IAddKorisnik): Promise<KorisnikModel> {
         return this.baseAdd(data, /*DefaultKorisnikAdapterOptions*/ {
             removePassword:true,
-            removeActivationCode:true
+            removeActivationCode:false
         });
     }
 
