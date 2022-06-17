@@ -48,7 +48,7 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
 
     //Metode getAll() i getById() nam se sada nalaze u BaseService klasi tako da cemo ih obrisati odavde ...
 
-    public async getAllByKorisnicko_ime(korisnicko_ime: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
+    public async getByKorisnicko_ime(korisnicko_ime: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
         
         return this.getAllByFieldNameAnValue('korisnicko_ime', korisnicko_ime, options );
 
@@ -72,7 +72,7 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
 
     }
 
-    public async getAllByJmbg(jmbg: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
+    public async getByJmbg(jmbg: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
         
         return this.getAllByFieldNameAnValue('jmbg', jmbg, options );
 

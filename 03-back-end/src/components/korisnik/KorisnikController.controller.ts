@@ -82,10 +82,10 @@ class KorisnikController{
             });
     }
 
-    async getAllByKorisnicko_ime(req: Request, res:Response) {
+    async getByKorisnicko_ime(req: Request, res:Response) {
         const korisnicko_ime : string = req.params?.korisnicko_ime;
 
-        this.KorisnikService.getAllByKorisnicko_ime(korisnicko_ime, DefaultKorisnikAdapterOptions )
+        this.KorisnikService.getByKorisnicko_ime(korisnicko_ime, DefaultKorisnikAdapterOptions )
             .then( result => {
                 if ( result === null){
                     return res.sendStatus(404);
@@ -146,10 +146,10 @@ class KorisnikController{
             });
     }
 
-    async getAllByJmbg(req: Request, res:Response) {
+    async getByJmbg(req: Request, res:Response) {
         const jmbg : string = req.params?.jmbg;
 
-        this.KorisnikService.getAllByJmbg(jmbg, DefaultKorisnikAdapterOptions )
+        this.KorisnikService.getByJmbg(jmbg, DefaultKorisnikAdapterOptions )
             .then( result => {
                 if ( result === null){
                     return res.sendStatus(404);
