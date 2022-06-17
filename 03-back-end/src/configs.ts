@@ -7,6 +7,8 @@ import Prijava_korisnikaRouter from './components/prijava_korisnika/Prijava_kori
 import RacunRouter from './components/racun/RacunRouter.router';
 import Racun_uslugaRouter from './components/racun_usluga/Racun_uslugaRouter.router';
 import MailConfigurationParameters from './config.mail';
+import AuthRouter from './components/auth/AuthRouter.router';
+import { readFileSync } from 'fs';
 
 const DevConfig: IConfig = {
     server: {
@@ -43,6 +45,28 @@ const DevConfig: IConfig = {
         password: "",
         debug: true
     },
+    auth: {
+        korisnik: {
+            algorithm: "RS256",
+            issuer: "PIiVT",
+            tokens: {
+                auth: {
+                    duration: 60*60*24, // sada stavljamo trajanje od 24 sata za potrebe razvoja , iance treba par minuta
+                    keys: {
+                        public: readFileSync("./.keystore/app.public", "ascii"),
+                        private: readFileSync("./.keystore/app.private", "ascii")
+                    }
+                },
+                refresh: {
+                    duration: 60*60*24*60, // sada stavljamo trajanje od 60 dana za potrebe razvoja , iance treba par minuta
+                    keys: {
+                        public: readFileSync("./.keystore/app.public", "ascii"),
+                        private: readFileSync("./.keystore/app.private", "ascii")
+                    }
+                }
+            }
+        }
+    },
     routers: [
         new ZubRouter(),
         new Racun_uslugaRouter(),
@@ -51,6 +75,7 @@ const DevConfig: IConfig = {
         new KorisnikRouter(),
         new Prijava_korisnikaRouter(),
         new RacunRouter(),
+        new AuthRouter(),
     ]
 }
 

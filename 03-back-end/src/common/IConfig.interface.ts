@@ -1,5 +1,6 @@
 import IRouter from "./IRouter.interface";
-
+import PacijentController from '../components/pacijent/PacijentController.controller';
+import {Algorithm} from "jsonwebtoken";
 export interface IMailConfiguration {
     host: string,
     port: number,
@@ -8,6 +9,26 @@ export interface IMailConfiguration {
     debug: boolean,
     
 } 
+
+export interface ITokenProperties {
+    duration: number,
+    keys: {
+        public: string,
+        private: string,
+    },
+
+}
+export interface IAuthTokenOptions {
+    //kako se identifikujemo mi koji imamo taj token ...
+    issuer: string,
+    //koji se algoritam koristi
+    algorithm: Algorithm, //koristi neki od jwt web token algoritama kao default algoritam za autorizacione opcije
+    //pored autorizacionog i refresh token mozemo imati i vise drugih tokena ...
+    tokens: {
+        auth: ITokenProperties,
+        refresh: ITokenProperties
+    },
+}
 interface IConfig{
     server:{
         port: number;
@@ -38,6 +59,9 @@ interface IConfig{
         //supportBigNumbers: boolean,
     },
     mail: IMailConfiguration,
+    auth: {
+        korisnik: IAuthTokenOptions,
+    },
     routers: IRouter[],
     
 }

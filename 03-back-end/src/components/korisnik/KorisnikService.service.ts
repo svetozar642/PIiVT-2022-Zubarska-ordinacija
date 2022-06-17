@@ -4,6 +4,7 @@ import IAdapterOptions from '../../common/IAdapterOptions.interface';
 import IEditKorisnik from './dto/IEditKorisnik.dto';
 import IAddKorisnik from "./dto/IAddKorisnik.dto";
 import { rejects } from 'assert';
+import { resolve } from 'path';
 
 class KorisnikAdapterOptions implements IAdapterOptions {
     removePassword: boolean;
@@ -48,10 +49,26 @@ class KorisnikService extends BaseService<KorisnikModel, KorisnikAdapterOptions 
 
     //Metode getAll() i getById() nam se sada nalaze u BaseService klasi tako da cemo ih obrisati odavde ...
 
-    public async getByKorisnicko_ime(korisnicko_ime: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
+    public async getByKorisnicko_ime(korisnicko_ime: string, options: KorisnikAdapterOptions): Promise<KorisnikModel/*[]*/ | null>{
         
-        return this.getAllByFieldNameAnValue('korisnicko_ime', korisnicko_ime, options );
+        //return this.getAllByFieldNameAnValue('korisnicko_ime', korisnicko_ime, options );
 
+        //Drugi nacin : samo smo gore u Promise morali da obecamo da cemo dostaviti jedan KorisnikModel a ne niz  KorinsikModel[] ...
+        // (posto samo jedan krisnik moze da postoji sa nekim korisnickim imenom (unique) )
+        return new Promise((resolve, reject) => {
+            this.getAllByFieldNameAnValue("korisnicko_ime", korisnicko_ime , {removePassword:false , removeActivationCode:true})
+                .then( result => {
+                    if ( result.length === 0) {
+                        return resolve(null);
+                    }
+                    
+                    resolve(result[0]);
+                })
+                .catch ( error => {
+                    reject(error);
+                });
+
+        });
     }
 
     public async getAllByIme(ime: string, options: KorisnikAdapterOptions): Promise<KorisnikModel[]>{
