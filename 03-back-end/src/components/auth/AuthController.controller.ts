@@ -6,6 +6,7 @@ import KorisnikModel from '../korisnik/KorisnikModel.model';
 import * as jwt from "jsonwebtoken";
 import IKorisnikTokenData from './dto/IKorisnikTokenData';
 import { DevConfig } from "../../configs";
+import AuthMiddleware from '../../middlewares/AuthMiddleware';
 
 export default class AuthController {
 
@@ -122,7 +123,7 @@ export default class AuthController {
             } */
 
         //Drugi nacin kada smo implementirali univerzalnu f-ju validateTokenAs() ...
-            const tokenData = this.validateTokenAs(refreshTokenHeader, "korisnik" ,"refresh" );
+            const tokenData = AuthMiddleware.validateTokenAs(refreshTokenHeader, "korisnik" ,"refresh" );
     
             //sada nakon svih provera trebamo da generisemo novi autorizacioni token
             const authToken = jwt.sign(tokenData, DevConfig.auth.korisnik.tokens.auth.keys.private , {
@@ -149,77 +150,5 @@ export default class AuthController {
         
     }
 
-    private validateTokenAs(tokenString: string, role: "korisnik", type: "auth"|"refresh"): IKorisnikTokenData {
-        
-        if (tokenString === "") {
-            throw {
-                status: 400,
-                message: "No token specified !"
-            }
-        }
-
-        const [tokenType, token] = tokenString.trim().split(" ");
-
-        if (tokenType !== "Bearer") {
-            throw {
-                status: 401,
-                message: "Invalid token type !"
-            }
-        }
-
-        if ( typeof token !== "string" || token.length === 0) {
-            throw {
-                status: 401,
-                message: "Token not specified !"
-            }
-        }
-
-        try {
-            const tokenVerification = jwt.verify(token, DevConfig.auth[role].tokens[type].keys.public);
-
-            if ( !tokenVerification ) {
-                throw {
-                    status: 401,
-                    message: "Invalid token specified !"
-                }
-            }
-            
-            //Ovim osiguravamo da budu prosledjeni samo podaci koji nam trebaju bez dodatnih poput podataka kada je token kreiran ili kada istice
-            const originalTokenData = tokenVerification as IKorisnikTokenData;
-
-            const tokenData : IKorisnikTokenData = {
-                role: originalTokenData.role,
-                id: originalTokenData.id,
-                identity: originalTokenData.identity,
-            }
-            //-----------------------------------------------------------------------------------------
     
-            //u nastavku cemo staviti proveru role ,da bi sprecili eventualno da npr. korisnikovim refreshToken osvezi adminov authToken
-            //Ali posto je u ovoj aplikaciji uloga korisnika i admina ista obe uloge ima zubar kao korisnik sistema , ovo je nepotrebno 
-            //ali cemo napisati kao primer kako bi se implementiralo ...
-            if (tokenData.role !== role ) {
-                throw {
-                    status: 401,
-                    message: "Invalid token role !"
-                }
-            }
-    
-            return tokenData;
-
-        } catch (error) {
-            const message: string = (error?.message ?? "");
-
-            if ( message.includes("jwt expired")) {
-                throw {
-                    status: 401,
-                    message: "This token has expired !"
-                }
-            }
-
-            throw {
-                status: 500,
-                message: error?.message,
-            }
-        }
-    }
 }
