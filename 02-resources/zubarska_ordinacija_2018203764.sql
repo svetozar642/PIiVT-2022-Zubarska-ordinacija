@@ -35,10 +35,11 @@ CREATE TABLE IF NOT EXISTS `korisnik` (
   `aktivacioni_kod` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`korisnik_id`),
   UNIQUE KEY `uq_korisnik_korisnicko_ime` (`korisnicko_ime`),
+  UNIQUE KEY `uq_korisnik_jmbg` (`jmbg`) USING BTREE,
   UNIQUE KEY `uq_korisnik_aktivacioni_kod` (`aktivacioni_kod`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table zubarska_ordinacija_2018203764.korisnik: ~7 rows (approximately)
+-- Dumping data for table zubarska_ordinacija_2018203764.korisnik: ~8 rows (approximately)
 INSERT INTO `korisnik` (`korisnik_id`, `korisnicko_ime`, `lozinka_hash`, `ime`, `prezime`, `jmbg`, `email`, `created_at`, `is_active`, `aktivacioni_kod`) VALUES
 	(1, 'milica123', '504938a121efec5f4fbdbcc64ca5736e', 'Milica', 'Petrovic', '2505994410888', 'mpetrovic@gmail.com', '2022-05-31 18:11:37', 'aktivan', NULL),
 	(2, 'tamara123', 'b4bd15e18040aeed3fea89609b0b1944', 'Tamara', 'Jovanovic', '2010932410777', 'tjovanovic@gmail.com', '2022-06-04 15:54:52', 'aktivan', NULL),

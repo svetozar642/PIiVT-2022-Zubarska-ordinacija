@@ -83,6 +83,63 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"zubId\": 1,\n        \"broj\": 1,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLS1\"\n    },\n    {\n        \"zubId\": 2,\n        \"broj\": 2,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLS2\"\n    },\n    {\n        \"zubId\": 3,\n        \"broj\": 3,\n        \"vilica\": \"gornja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLO3\"\n    },\n    {\n        \"zubId\": 4,\n        \"broj\": 4,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK4\"\n    },\n    {\n        \"zubId\": 5,\n        \"broj\": 5,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK5\"\n    },\n    {\n        \"zubId\": 6,\n        \"broj\": 6,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK6\"\n    },\n    {\n        \"zubId\": 7,\n        \"broj\": 7,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK7\"\n    },\n    {\n        \"zubId\": 8,\n        \"broj\": 8,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK8\"\n    },\n    {\n        \"zubId\": 9,\n        \"broj\": 1,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDS1\"\n    },\n    {\n        \"zubId\": 10,\n        \"broj\": 2,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDS2\"\n    },\n    {\n        \"zubId\": 11,\n        \"broj\": 3,\n        \"vilica\": \"gornja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDO3\"\n    },\n    {\n        \"zubId\": 12,\n        \"broj\": 4,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK4\"\n    },\n    {\n        \"zubId\": 13,\n        \"broj\": 5,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK5\"\n    },\n    {\n        \"zubId\": 14,\n        \"broj\": 6,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK6\"\n    },\n    {\n        \"zubId\": 15,\n        \"broj\": 7,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK7\"\n    },\n    {\n        \"zubId\": 16,\n        \"broj\": 8,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK8\"\n    },\n    {\n        \"zubId\": 17,\n        \"broj\": 1,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLS1\"\n    },\n    {\n        \"zubId\": 18,\n        \"broj\": 2,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLS2\"\n    },\n    {\n        \"zubId\": 19,\n        \"broj\": 3,\n        \"vilica\": \"donja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLO3\"\n    },\n    {\n        \"zubId\": 20,\n        \"broj\": 4,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK4\"\n    },\n    {\n        \"zubId\": 21,\n        \"broj\": 5,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK5\"\n    },\n    {\n        \"zubId\": 22,\n        \"broj\": 6,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK6\"\n    },\n    {\n        \"zubId\": 23,\n        \"broj\": 7,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK7\"\n    },\n    {\n        \"zubId\": 24,\n        \"broj\": 8,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK8\"\n    },\n    {\n        \"zubId\": 25,\n        \"broj\": 1,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDS1\"\n    },\n    {\n        \"zubId\": 26,\n        \"broj\": 2,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDS2\"\n    },\n    {\n        \"zubId\": 27,\n        \"broj\": 3,\n        \"vilica\": \"donja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDO3\"\n    },\n    {\n        \"zubId\": 28,\n        \"broj\": 4,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK4\"\n    },\n    {\n        \"zubId\": 29,\n        \"broj\": 5,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK5\"\n    },\n    {\n        \"zubId\": 30,\n        \"broj\": 6,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK6\"\n    },\n    {\n        \"zubId\": 31,\n        \"broj\": 7,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK7\"\n    },\n    {\n        \"zubId\": 32,\n        \"broj\": 8,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK8\"\n    }\n]"
+						},
+						{
+							"name": "Get All Zub sa Middleware i Auth tokenom (zastita pristupa ruti)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/zub",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"zub"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2932"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b74-QOzIP9DUx28IRw4E9BPf75cyvbI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jun 2022 22:50:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"zubId\": 1,\n        \"broj\": 1,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLS1\"\n    },\n    {\n        \"zubId\": 2,\n        \"broj\": 2,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLS2\"\n    },\n    {\n        \"zubId\": 3,\n        \"broj\": 3,\n        \"vilica\": \"gornja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLO3\"\n    },\n    {\n        \"zubId\": 4,\n        \"broj\": 4,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK4\"\n    },\n    {\n        \"zubId\": 5,\n        \"broj\": 5,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK5\"\n    },\n    {\n        \"zubId\": 6,\n        \"broj\": 6,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK6\"\n    },\n    {\n        \"zubId\": 7,\n        \"broj\": 7,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK7\"\n    },\n    {\n        \"zubId\": 8,\n        \"broj\": 8,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK8\"\n    },\n    {\n        \"zubId\": 9,\n        \"broj\": 1,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDS1\"\n    },\n    {\n        \"zubId\": 10,\n        \"broj\": 2,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDS2\"\n    },\n    {\n        \"zubId\": 11,\n        \"broj\": 3,\n        \"vilica\": \"gornja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDO3\"\n    },\n    {\n        \"zubId\": 12,\n        \"broj\": 4,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK4\"\n    },\n    {\n        \"zubId\": 13,\n        \"broj\": 5,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK5\"\n    },\n    {\n        \"zubId\": 14,\n        \"broj\": 6,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK6\"\n    },\n    {\n        \"zubId\": 15,\n        \"broj\": 7,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK7\"\n    },\n    {\n        \"zubId\": 16,\n        \"broj\": 8,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK8\"\n    },\n    {\n        \"zubId\": 17,\n        \"broj\": 1,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLS1\"\n    },\n    {\n        \"zubId\": 18,\n        \"broj\": 2,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLS2\"\n    },\n    {\n        \"zubId\": 19,\n        \"broj\": 3,\n        \"vilica\": \"donja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLO3\"\n    },\n    {\n        \"zubId\": 20,\n        \"broj\": 4,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK4\"\n    },\n    {\n        \"zubId\": 21,\n        \"broj\": 5,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK5\"\n    },\n    {\n        \"zubId\": 22,\n        \"broj\": 6,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK6\"\n    },\n    {\n        \"zubId\": 23,\n        \"broj\": 7,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK7\"\n    },\n    {\n        \"zubId\": 24,\n        \"broj\": 8,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK8\"\n    },\n    {\n        \"zubId\": 25,\n        \"broj\": 1,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDS1\"\n    },\n    {\n        \"zubId\": 26,\n        \"broj\": 2,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDS2\"\n    },\n    {\n        \"zubId\": 27,\n        \"broj\": 3,\n        \"vilica\": \"donja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDO3\"\n    },\n    {\n        \"zubId\": 28,\n        \"broj\": 4,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK4\"\n    },\n    {\n        \"zubId\": 29,\n        \"broj\": 5,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK5\"\n    },\n    {\n        \"zubId\": 30,\n        \"broj\": 6,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK6\"\n    },\n    {\n        \"zubId\": 31,\n        \"broj\": 7,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK7\"\n    },\n    {\n        \"zubId\": 32,\n        \"broj\": 8,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK8\"\n    }\n]"
 						}
 					]
 				},
@@ -7507,6 +7564,378 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"racun_uslugaId\": 1,\n        \"zubId\": 5,\n        \"uslugaId\": 2,\n        \"pacijentId\": 1,\n        \"racunId\": 1\n    },\n    {\n        \"racun_uslugaId\": 7,\n        \"zubId\": 1,\n        \"uslugaId\": 2,\n        \"pacijentId\": 5,\n        \"racunId\": 1\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Korisnik = Administrator",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"korisnicko_ime\" : \"marija123\",\r\n    \"lozinka\" : \"marija123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/auth/korisnik/login",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"auth",
+										"korisnik",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"korisnicko_ime\" : \"marija123\",\r\n    \"lozinka\" : \"marija123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:10000/api/auth/korisnik/login",
+											"host": [
+												"localhost"
+											],
+											"port": "10000",
+											"path": [
+												"api",
+												"auth",
+												"korisnik",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "301"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"12d-PTixNBDh9avdTh+6rCXMG6vQk6A\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 17 Jun 2022 14:03:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"korisnik_id\": 10,\n    \"korisnicko_ime\": \"marija123\",\n    \"lozinka_hash\": \"$2b$10$k76CF5r3DiyDkhDU2n8SBuyf.TiJ3kB3JZ5klUOGNYiPQFELQMf5S\",\n    \"ime\": \"Marija\",\n    \"prezime\": \"Stankovic\",\n    \"jmbg\": \"1507997410222\",\n    \"email\": \"mstankovic@gmail.com\",\n    \"created_at\": \"2022-06-15T22:23:10.000Z\",\n    \"is_active\": \"aktivan\",\n    \"aktivacioni_kod\": null\n}"
+								},
+								{
+									"name": "Login nakon implementacije JWT tokena",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"korisnicko_ime\" : \"marija123\",\r\n    \"lozinka\" : \"marija123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:10000/api/auth/korisnik/login",
+											"host": [
+												"localhost"
+											],
+											"port": "10000",
+											"path": [
+												"api",
+												"auth",
+												"korisnik",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1056"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"420-QgErSLrNEMERF2TS3aW+RSqweb8\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 17 Jun 2022 17:22:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"authToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaW5zaWsiLCJpZCI6MTAsImlkZW50aXR5IjoibWFyaWphMTIzIiwiaWF0IjoxNjU1NDg2NTMwLCJleHAiOjE2NTU1NzI5MzAsImlzcyI6IlBJaVZUIn0.iZUSLT5_tLu2OKLSfIyV7VNqW0tdideUdcqq7l66lWp_SfyG-54YsFnrdhozrptdoDozWZHm0bcR-1UnBjqMAzqt2WfOM-vnEU1xYkdE8dQMvP34mmjR5mcZB6Nxf8fjMKG9wy0WY8z6zLmVi_dXRHEgVq9algbUsAw0Xc7T6enrVkVp3j3WkVVWqUnnS-3nvB5AJfdBZEiGjt9d91IGHM_b6kfrV15tAFExF9LZs6-v2hjhoJRZZUmEPood-G134AKBvfo26GzNQgbd0ky90CjhTw-if3Ywg3uSEI30xlpPsmLk_ThqnG9XvLpPmfVvBQGAV1HCvdoP0ff_LZ1mCQ\",\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaW5zaWsiLCJpZCI6MTAsImlkZW50aXR5IjoibWFyaWphMTIzIiwiaWF0IjoxNjU1NDg2NTMwLCJleHAiOjE2NjA2NzA1MzAsImlzcyI6IlBJaVZUIn0.ST1jmK9qolyDqkoVI7zLGRx8s3KF6mp01LrVALl9UOyb9sGylB3fBIAKniZyU9DdU_3SrTpekGVw75mdeN56haLPZ3XPIsU5Pom0mIdYgARFa5yjBn1zPxHP8T52SD5iBpOfBt-S3gKDhC6KzsAGYdMxxaxoTtcT8jXiaLVVcx6RGBFN55DxX2P6AYU0BdeqrZiVUtrhbGLbnEEcuvAtM27wtfRbJw_6I_2o3GFpouBySgHgJgoqsLU2Cfp04waELW6bBLsbPYuPi5i_9Q9QS1iX5U-754hcLTmLuEBN2LOH6Cpoi7UVgz_J2pb9kGfwCiQS5WzKIJ5Qm2gBITacyQ\"\n}"
+								},
+								{
+									"name": "Login  sa simulacijom kada istekne refreshToken (traje 30 sekundi)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"korisnicko_ime\" : \"marija123\",\r\n    \"lozinka\" : \"marija123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:10000/api/auth/korisnik/login",
+											"host": [
+												"localhost"
+											],
+											"port": "10000",
+											"path": [
+												"api",
+												"auth",
+												"korisnik",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1056"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"420-pmuGgjrcRY5hBVmp9zuYl1v357I\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 17 Jun 2022 18:04:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"authToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaW5zaWsiLCJpZCI6MTAsImlkZW50aXR5IjoibWFyaWphMTIzIiwiaWF0IjoxNjU1NDg5MDcwLCJleHAiOjE2NTU1NzU0NzAsImlzcyI6IlBJaVZUIn0.Rj4MmhpiyieMymhnqz-F_smg1DdBOnK0Wr6IZqxcKPXw9kr1ByqJdkG-wp4Zf_ZDf1HTYoTcHyYW8Nbp96TOvvbYAL3u5JOH_RfNhoJ-nRtTD8Nh1tk_lE8vUoNraSWR05tUzReNajBbSvuljIdMlVxlHsVnaBrM_O9SYBDN8m6qY-zgelar95dHLaf1Cg0kagfQuyUbIUKl69A2D8p8LHI4bCL7noAy7B_pUyqAIwEwKwRrNnSY3zAM_uzuRhqNaQ8Wuarb_4T2r8DN0eZYsaDz2Tm6WYFpAp2C7gfUqTMN2lu1XbKuhNkgDPer05GGOc4G-RXe-GxLjO15GfG7tQ\",\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaW5zaWsiLCJpZCI6MTAsImlkZW50aXR5IjoibWFyaWphMTIzIiwiaWF0IjoxNjU1NDg5MDcwLCJleHAiOjE2NTU0ODkxMDAsImlzcyI6IlBJaVZUIn0.T2juHfCyYgmVR-CwulAtqGeq6uqouZtWjMaFKpQe-ADz8lU9FVZjtLtTZQbtQPVWeBxcNLDCHWZLsKwzQWaHCu0-MTjz9m1xKStk-rWlSBfnCpkUIrpQNLH2e3us6StzJ4X_TUkeIHbuMRd3aymkXGb58LPg0YmnPdlyPFlS_d07DzYaJaWsEW1dkWij7ho0jlmAll18HLPbrckPsista7hAlW0PU92ED08WZ2Ish8Im5M9xDNFC-7iof3VkMw8wqCXXV287tSofu_0lUejtkOUmiqM1hEZ5pxN1lyM6sKhyoq6StteXwfAJUStCNSUpbSt1rCfTlrxmZnl5Aomupg\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Refresh auth token",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "Refresh auth token",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "localhost:10000/api/auth/korisnik/refresh",
+											"host": [
+												"localhost"
+											],
+											"port": "10000",
+											"path": [
+												"api",
+												"auth",
+												"korisnik",
+												"refresh"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "527"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"20f-4xUiQJRDVHUtKeO8dKE5JOMTi2w\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 17 Jun 2022 18:02:44 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"authToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaW5zaWsiLCJpZCI6MTAsImlkZW50aXR5IjoibWFyaWphMTIzIiwiaWF0IjoxNjU1NDg4OTY0LCJleHAiOjE2NTU1NzUzNjQsImlzcyI6IlBJaVZUIn0.H8KIEo9L7vxnwCrb_W9tI6uea3B0xM-DVFJr9AdNlYYaU9ZFKgDGPCXRRpPbR4Jkil03yRln2Sw91e00dPjI5cD9f7NJ85MrY3xHeBBdpVuN-4NFSBD6NWE0J9HGOOWK0VyUWMVrIN7-LxrvNsvvJxOyyRuz8cJhw2BOBXuJrbveZgTZzVfBwtpPQe1C6d84ZKgceA0--8ch5HF11N68MjklrQNnEW9XAFObNYaR1I8OhSO1GHnByegGv3FxKOKKx3A3GHL2LXjSMhUB8WqdZ-DjE71x74GlUsdL_nDwUTnYZFmnpgK9XU_nt5ZPktJRytBSOjga9B7Y8_h7nMah9Q\"\n}"
+								},
+								{
+									"name": "Refresh auth token Simulacija kada istekne refreshToken",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "localhost:10000/api/auth/korisnik/refresh",
+											"host": [
+												"localhost"
+											],
+											"port": "10000",
+											"path": [
+												"api",
+												"auth",
+												"korisnik",
+												"refresh"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "11"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"b-1/kJdMBB7ytvgRIqF1clh2iz2iI\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 17 Jun 2022 18:05:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "jwt expired"
+								}
+							]
 						}
 					]
 				}
