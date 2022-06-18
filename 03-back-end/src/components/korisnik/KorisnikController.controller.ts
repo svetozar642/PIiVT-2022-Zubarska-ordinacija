@@ -409,6 +409,13 @@ class KorisnikController{
 
         const data = req.body as IEditKorisnikDto;
 
+        //TODO: utvrdjivanje indentiteta korisnika ID iz auth tokena koji pokusava da izvrsi izmenu i ID iz rute za koji pokusavamo da izmenimo tog nekog korinsika sa tim ID
+        if ( req.authorisation?.role === "korisnik") {
+            if (req.authorisation?.id !== id ){
+                return res.status(403).send("You do not have access to edit this resource !");
+            }
+        }
+
         //provera prilikom testiranja ...
         //console.log(data);
         //console.log(id)

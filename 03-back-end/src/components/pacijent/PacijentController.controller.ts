@@ -243,6 +243,14 @@ class PacijentController{
 
         const data = req.body as IEditPacijentDto;
 
+        //TODO: utvrdjivanje indentiteta korisnika ID iz auth tokena koji pokusava da izvrsi izmenu pacijenta i ID korisnika  iz tog pacijenta kog pokusavamo da izmenimo 
+        // PS: samo korisnik koji je dodeljen nekom pacijentu moze da menja podatke o njemu      
+        if ( req.authorisation?.role === "korisnik") {
+            if (req.authorisation?.id !== data.korisnik_id ){
+                return res.status(403).send("You do not have access to edit this resource !");
+            }
+        }
+
         //provera prilikom testiranja ...
         //console.log(data);
         //console.log(id)

@@ -163,6 +163,11 @@ class UslugaController{
 
         const data = req.body as IEditUslugaDto;
 
+        //TODO: utvrdjivanje role korisnika iz auth tokena koji pokusava da izvrsi izmenu usluge     
+        if ( req.authorisation?.role === "korisnik") {
+            return res.status(403).send("You do not have access to edit this resource !");
+        }
+
         //provera prilikom testiranja ...
         //console.log(data);
         //console.log(id)
