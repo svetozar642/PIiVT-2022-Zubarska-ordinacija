@@ -6,6 +6,7 @@
         "target": "ES6",
         "sourceMap": true,
         "outDir": "./dist",
+        "allowJs": false, //ovo je resilo problem sa override-om iz tsconfig.json
         "typeRoots": [
             "@types",
             "./node_modules/@types",
@@ -13,6 +14,6 @@
     },
     "exclude": [
         "node_modules",
-        "dist"
+        "dist",
     ]
 }

@@ -48,7 +48,7 @@ INSERT INTO `korisnik` (`korisnik_id`, `korisnicko_ime`, `lozinka_hash`, `ime`, 
 	(6, 'tina123', '$2b$10$YUjNpbQWVDRBpfIZ7A/QUesGOV5tjqyV2WDVuWHrytffGxuU71tJu', 'Tina', 'Lazarevic', '1007994410555', 'tlazarevic@gmail.com', '2022-06-14 21:43:19', 'aktivan', NULL),
 	(8, 'teodora123', '$2b$10$smp3K90/oLfqq4hMrLcaa.5c8x5F55nEjU7wduFtJQZQwzwyVXzHa', 'Teodora', 'Popovic', '2207996410222', 'tpopovic@gmail.com', '2022-06-15 20:38:05', 'aktivan', '92344790-8e9f-4a1b-b2e8-7af7918e48e1'),
 	(10, 'marija123', '$2b$10$k76CF5r3DiyDkhDU2n8SBuyf.TiJ3kB3JZ5klUOGNYiPQFELQMf5S', 'Marija', 'Stankovic', '1507997410222', 'mstankovic@gmail.com', '2022-06-15 21:23:10', 'aktivan', NULL),
-	(16, 'jovana123', '$2b$10$Q14t1yQwx4/mjxx3hUnTY.Gs.PH5Syz38tCDErLno1P5O.Tx.iIb.', 'Jovana', 'Matovic', '1202999410123', 'jmatovic@gmail.com', '2022-06-16 16:44:30', 'aktivan', '7b2463db-626d-4f5f-b149-426d66cd965d');
+	(16, 'jovana123', '$2b$10$3k3b/XmKgOUgYkklM7f3auZER9.htiK35kYOQuLyyTqcR3K1LuCXe', 'Jovana', 'Matovic', '1202999410123', 'jmatovic@gmail.com', '2022-06-16 16:44:30', 'aktivan', '7b2463db-626d-4f5f-b149-426d66cd965d');
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.pacijent
 DROP TABLE IF EXISTS `pacijent`;
@@ -71,11 +71,11 @@ CREATE TABLE IF NOT EXISTS `pacijent` (
 
 -- Dumping data for table zubarska_ordinacija_2018203764.pacijent: ~5 rows (approximately)
 INSERT INTO `pacijent` (`pacijent_id`, `ime`, `prezime`, `jmbg`, `adresa`, `telefon`, `email`, `senioritet`, `status`, `korisnik_id`) VALUES
-	(1, 'Petar', 'Petkovic', '0102990510111', 'Durmitorska 12', '061123456', 'ppetkovic@gmail.com', 'ostali', 'aktivan', 1),
-	(2, 'Mika', 'Mikic', '0203999510222', 'Kumanovska 15', '062654321', 'mmikic@gmail.com', 'ostali', 'neaktivan', 1),
-	(5, 'Milica', 'Petrovic', '0304955410111', 'Ustanicka 15', '061332211', 'mpetrovic@gmail.com', 'penzioner', 'aktivan', 2),
-	(11, 'Luka', 'Jovanovic', '0505945510444', 'Mirijevski venac 15', '061443311', 'ljovanovic@gmail.com', 'penzioner', 'aktivan', 4),
-	(12, 'Katarina', 'Marjanovic', '0710008410111', 'Cerska 15', '064552211', 'kmarjanovic@gmail.com', 'dete', 'aktivan', 5);
+	(1, 'Petar', 'Petkovic', '0102990510111', 'Durmitorska 12', '061123456', 'ppetkovic@gmail.com', 'ostali', 'aktivan', 16),
+	(2, 'Mika', 'Mikic', '0203999510222', 'Kumanovska 15', '062654321', 'mmikic@gmail.com', 'ostali', 'aktivan', 16),
+	(5, 'Milica', 'Petrovic', '0304955410111', 'Ustanicka 15', '061332211', 'mpetrovic@gmail.com', 'penzioner', 'aktivan', 6),
+	(11, 'Luka', 'Jovanovic', '0505945510444', 'Mirijevski venac 15', '061443311', 'ljovanovic@gmail.com', 'penzioner', 'aktivan', 8),
+	(12, 'Katarina', 'Marjanovic', '0710008410111', 'Cerska 15', '064552211', 'kmarjanovic@gmail.com', 'dete', 'aktivan', 10);
 
 -- Dumping structure for table zubarska_ordinacija_2018203764.prijava_korisnika
 DROP TABLE IF EXISTS `prijava_korisnika`;
@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `usluga` (
 -- Dumping data for table zubarska_ordinacija_2018203764.usluga: ~10 rows (approximately)
 INSERT INTO `usluga` (`usluga_id`, `naziv`, `opis`, `sifra_usluge`, `kategorija`, `cena_pojedinacna_dete`, `cena_pojedinacna_penzioner`, `cena_pojedinacna_ostali`, `cena_paket_dete`, `cena_paket_penzioner`, `cena_paket_ostali`, `status`) VALUES
 	(1, 'vadjenje zuba', 'vadjenje zuba ', 'VZH', 'hirurska', 1500, 1800, 2000, 1000, 1200, 1500, 'aktivna'),
-	(2, 'popravka krunice', 'popravka karijesa na krunici zuba', 'PKR', 'redovna', 1700, 2000, 2500, 1200, 1500, 1700, 'aktivna'),
+	(2, 'popravka krunice', 'popravka karijesa na krunici zuba', 'PKR', 'redovna', 1750, 2000, 2500, 1200, 1500, 1700, 'aktivna'),
 	(3, 'skidanje kamenca', 'skidanje kamenca sa zuba', 'SKP', 'preventivna', 1000, 1200, 1400, 800, 900, 1000, 'aktivna'),
 	(4, 'nadogradnja zuba', 'nadogradnja polomljenog zuba', 'NZR', 'redovna', 2200, 2600, 3000, 2000, 2300, 2600, 'aktivna'),
 	(5, 'lecenje zuba', 'lecenje pokvarenog zuba pre plombiranja', 'LZR', 'redovna', 2500, 2700, 3000, 2100, 2400, 2700, 'aktivna'),
@@ -199,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `zub` (
   UNIQUE KEY `uq_zub_sifra_zuba` (`sifra_zuba`)
 ) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table zubarska_ordinacija_2018203764.zub: ~29 rows (approximately)
+-- Dumping data for table zubarska_ordinacija_2018203764.zub: ~32 rows (approximately)
 INSERT INTO `zub` (`zub_id`, `broj`, `vilica`, `tip`, `strana`, `sifra_zuba`) VALUES
 	(1, 1, 'gornja', 'sekutic', 'leva', 'GLS1'),
 	(2, 2, 'gornja', 'sekutic', 'leva', 'GLS2'),

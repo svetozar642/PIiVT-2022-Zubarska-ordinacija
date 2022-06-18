@@ -1619,11 +1619,21 @@
 				{
 					"name": "Edit Usluga By Id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaXNuaWsiLCJpZCI6MTYsImlkZW50aXR5Ijoiam92YW5hMTIzIiwiaWF0IjoxNjU1NTYxNjQ0LCJleHAiOjE2NTU2NDgwNDQsImlzcyI6IlBJaVZUIn0.pDFkVz74sifBdsVMZFf_ParCIEMFiDfWbwF9qY-phDqI7cMZtffoQmgxJHZXIL8oKMyAKiUbgd5IRWrPIANyQpN6wquwhKN3aq796HsfXs4pew53sg16t_x5EnrYK7tGKagQ-YI-fT4ZXQMSTuUI0mCrv0-Bum22CtgsYQG0QQD-Z7fZno9mH7SKtQR3tTpQxN2R3Fs6y9i0GMPLqpcNmqoWjXEKwGrEYTK7nq-GBqeNqmGqwdrdL2hvDU-fZctrXUcibaosD8CCNZysZxbnZ_YOj-yK5Ut3jjnceuDBEGlOfObA3Oer-AKTiV3tocahqi89r2MWa3g3XnMzH-eotA",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"naziv\": \"popravka krunice\",\r\n    \"opis\": \"popravka karijesa na krunici zuba\",\r\n    \"sifra_usluge\": \"PKR\",\r\n    \"kategorija\": \"redovna\",\r\n    \"cena_pojedinacna_dete\": 1700,\r\n    \"cena_pojedinacna_penzioner\": 2000,\r\n    \"cena_pojedinacna_ostali\": 2500,\r\n    \"cena_paket_dete\": 1200,\r\n    \"cena_paket_penzioner\": 1500,\r\n    \"cena_paket_ostali\": 1700,\r\n    \"status\": \"aktivna\"\r\n}",
+							"raw": "{\r\n    \"naziv\": \"popravka krunice\",\r\n    \"opis\": \"popravka karijesa na krunici zuba\",\r\n    \"sifra_usluge\": \"PKR\",\r\n    \"kategorija\": \"redovna\",\r\n    \"cena_pojedinacna_dete\": 1750,\r\n    \"cena_pojedinacna_penzioner\": 2000,\r\n    \"cena_pojedinacna_ostali\": 2500,\r\n    \"cena_paket_dete\": 1200,\r\n    \"cena_paket_penzioner\": 1500,\r\n    \"cena_paket_ostali\": 1700,\r\n    \"status\": \"aktivna\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1710,8 +1720,105 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"uslugaId\": 2,\n    \"naziv\": \"popravka krunice\",\n    \"opis\": \"popravka karijesa na krunici zuba\",\n    \"sifra_usluge\": \"PKR\",\n    \"kategorija\": \"redovna\",\n    \"cena_pojedinacna_dete\": 1700,\n    \"cena_pojedinacna_penzioner\": 2000,\n    \"cena_pojedinacna_ostali\": 2500,\n    \"cena_paket_dete\": 1200,\n    \"cena_paket_penzioner\": 1500,\n    \"cena_paket_ostali\": 1700,\n    \"status\": \"aktivna\"\n}"
+						},
+						{
+							"name": "Edit Usluga By Id sa Auth tokenom i provere role pre dozvole za izmenu usluge",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"naziv\": \"popravka krunice\",\r\n    \"opis\": \"popravka karijesa na krunici zuba\",\r\n    \"sifra_usluge\": \"PKR\",\r\n    \"kategorija\": \"redovna\",\r\n    \"cena_pojedinacna_dete\": 1750,\r\n    \"cena_pojedinacna_penzioner\": 2000,\r\n    \"cena_pojedinacna_ostali\": 2500,\r\n    \"cena_paket_dete\": 1200,\r\n    \"cena_paket_penzioner\": 1500,\r\n    \"cena_paket_ostali\": 1700,\r\n    \"status\": \"aktivna\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/usluga/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"usluga",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "317"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13d-+gyOimzyJy6oSDXMJozA0soFvhs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jun 2022 14:16:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uslugaId\": 2,\n    \"naziv\": \"popravka krunice\",\n    \"opis\": \"popravka karijesa na krunici zuba\",\n    \"sifra_usluge\": \"PKR\",\n    \"kategorija\": \"redovna\",\n    \"cena_pojedinacna_dete\": 1750,\n    \"cena_pojedinacna_penzioner\": 2000,\n    \"cena_pojedinacna_ostali\": 2500,\n    \"cena_paket_dete\": 1200,\n    \"cena_paket_penzioner\": 1500,\n    \"cena_paket_ostali\": 1700,\n    \"status\": \"aktivna\"\n}"
 						}
 					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaXNuaWsiLCJpZCI6MTYsImlkZW50aXR5Ijoiam92YW5hMTIzIiwiaWF0IjoxNjU1NTYxNTIzLCJleHAiOjE2NTU2NDc5MjMsImlzcyI6IlBJaVZUIn0.IB-1NxNDqNhrTr7qkluUpHyboihalz2WhprfQN0crEmi06vQYvtxku6kBR1djR--QY3hKt-lLSWWkRJy_c48VTYBoHUGWkLS4f0iBWM8OI_q9r2wZe8jmkUi8fnv_dvtoDiH9ZQ53vVJO3sg-OFBrlc7-sKZ_p-MuMWJVo3oi-diJk2-n3omrGcJRW_fDKCIRNw4S86j57b15Y3X_SUo3H3wZKOiE_BEgg94T6pxzm3Br7SiEUWOXi8QBBmSS7-2-qJfC--jaCrOc6BJoD_JZ7nZqT1RCfyV2FBW20JCbewHgtCozfgByWA0DuBpPGDbUceVgsgoyrwD6LmT4G4-SQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -3009,11 +3116,21 @@
 				{
 					"name": "Edit Pacijent By Id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaXNuaWsiLCJpZCI6MTYsImlkZW50aXR5Ijoiam92YW5hMTIzIiwiaWF0IjoxNjU1NTYzMTMyLCJleHAiOjE2NTU2NDk1MzIsImlzcyI6IlBJaVZUIn0.p3cpgWReYfiXDBBBVn9rjlVWPbRcrKO4q6QwOZAvvmk3LrFtMRLnYEWY5ShJH_fI5zRUuT4lB7nxaGuv61rIOmcAyZgFaGeIHQ5JZTb6jhM_0TWV97RES5yLLDIObNHx9j18rQsvwkFPzbzBR0Kcgke77HI913Wb_l6AGhunVjyBzFGRT2fHOa6_rnIFvSLJ9QWDMJ8poaklhjlcJW6Jsa8duUTzNeqrYj2dGegd5LyQNcZUSpTEz5VeNQBCMKHO1_RUebDlz5L6yuAl4Dx9gsEBwLeoVgJC2le9l5DC3Pq62J37mBQ-x5FhMU4F5TMGonRaF54UR6KpId0JVMyvXg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"Ammikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+							"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"Ammikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 16\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3167,6 +3284,341 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"pacijentId\": 2,\n    \"ime\": \"Mika\",\n    \"prezime\": \"Mikic\",\n    \"jmbg\": \"0203999510222\",\n    \"adresa\": \"Kumanovska 15\",\n    \"telefon\": \"062654321\",\n    \"email\": \"mmikic@gmail.com\",\n    \"senioritet\": \"ostali\",\n    \"status\": \"aktivan\",\n    \"korisnik_id\": 1\n}"
+						},
+						{
+							"name": "Edit Pacijent By Id Sprecavanje da korisnika sa auth tokenom jovana123 izmeni podatke pacijenta koji nije njen (pacijent_id 8)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"ime\": \"MIKA\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"Ammikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/pacijent/8",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"8"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-qMcgjRi0xu2brFVUPITKNq6Rf8E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jun 2022 14:24:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "You do not have access to edit this resource !"
+						},
+						{
+							"name": "Edit Pacijent By Id Uspesna promena podataka pacijenta sa id=2 od strane njegovog zubara sa auth tokenom jovana123",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"ime\": \"MIKA\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"Ammikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/pacijent/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "201"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c9-X7N6wrxUSe+jUoVWeNSrswzc7s0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jun 2022 14:27:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pacijentId\": 2,\n    \"ime\": \"MIKA\",\n    \"prezime\": \"Mikic\",\n    \"jmbg\": \"0203999510222\",\n    \"adresa\": \"Kumanovska 15\",\n    \"telefon\": \"062654321\",\n    \"email\": \"mmikic@gmail.com\",\n    \"senioritet\": \"ostali\",\n    \"status\": \"aktivan\",\n    \"korisnik_id\": 1\n}"
+						},
+						{
+							"name": "Edit Pacijent By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"Ammikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 16\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/pacijent/5",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"5"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-qMcgjRi0xu2brFVUPITKNq6Rf8E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jun 2022 15:17:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "You do not have access to edit this resource !"
+						},
+						{
+							"name": "Edit Pacijent By Id Ovde smo pacijentu promenili korisnik_id sa 16 na 1 , a nas auth token je korisnik_id 16 i to nam je omoguceno , ako opet pokusamo narednu izmenu nece nam biti dozvoljena izmena jer vise taj pacijent nije nama dodeljen (korinsik_id =1 ",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"ime\": \"MIKA\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"Ammikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/pacijent/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-eqnQA8zZVm5xbUjQXqKCjY6++qE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jun 2022 15:21:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pacijent_id\": 2,\n    \"ime\": \"MIKA\",\n    \"prezime\": \"Mikic\",\n    \"jmbg\": \"0203999510222\",\n    \"adresa\": \"Kumanovska 15\",\n    \"telefon\": \"062654321\",\n    \"email\": \"mmikic@gmail.com\",\n    \"senioritet\": \"ostali\",\n    \"status\": \"aktivan\",\n    \"korisnik_id\": 1\n}"
+						},
+						{
+							"name": "Edit Pacijent By Id Nije nam dozvoljena izmena jer smo u prethodnom zahtevu promenili pacijentu korisnik_id (njegovog nadleznog zubara) i mi vise nemamo pravo da menjamo tog pacijenta vec zubar sa korisnik_id =1",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"ime\": \"Mika\",\r\n        \"prezime\": \"Mikic\",\r\n        \"adresa\": \"Kumanovska 15\",\r\n        \"telefon\": \"062654321\",\r\n        \"email\": \"Ammikic@gmail.com\",\r\n        \"senioritet\": \"ostali\",\r\n        \"status\": \"aktivan\",\r\n        \"korisnik_id\": 16\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/pacijent/2",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"pacijent",
+										"2"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-qMcgjRi0xu2brFVUPITKNq6Rf8E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jun 2022 15:23:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "You do not have access to edit this resource !"
 						}
 					]
 				},
@@ -4586,11 +5038,21 @@
 				{
 					"name": "Edit Korisnik By Id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaXNuaWsiLCJpZCI6MTYsImlkZW50aXR5Ijoiam92YW5hMTIzIiwiaWF0IjoxNjU1NTYxNjQ0LCJleHAiOjE2NTU2NDgwNDQsImlzcyI6IlBJaVZUIn0.pDFkVz74sifBdsVMZFf_ParCIEMFiDfWbwF9qY-phDqI7cMZtffoQmgxJHZXIL8oKMyAKiUbgd5IRWrPIANyQpN6wquwhKN3aq796HsfXs4pew53sg16t_x5EnrYK7tGKagQ-YI-fT4ZXQMSTuUI0mCrv0-Bum22CtgsYQG0QQD-Z7fZno9mH7SKtQR3tTpQxN2R3Fs6y9i0GMPLqpcNmqoWjXEKwGrEYTK7nq-GBqeNqmGqwdrdL2hvDU-fZctrXUcibaosD8CCNZysZxbnZ_YOj-yK5Ut3jjnceuDBEGlOfObA3Oer-AKTiV3tocahqi89r2MWa3g3XnMzH-eotA",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"korisnicko_ime\" : \"tinaTinaTina\",\r\n    \"lozinka\" : \"tina123\",\r\n    \"is_active\": \"aktivan\"\r\n}",
+							"raw": "{\r\n    \"korisnicko_ime\" : \"jovana123\",\r\n    \"ime\": \"Jovana\",\r\n    \"prezime\": \"Matovic\",\r\n    \"lozinka\" : \"jovana123\",\r\n    \"is_active\": \"aktivan\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4598,7 +5060,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:10000/api/korisnik/6",
+							"raw": "localhost:10000/api/korisnik/16",
 							"host": [
 								"localhost"
 							],
@@ -4606,7 +5068,7 @@
 							"path": [
 								"api",
 								"korisnik",
-								"6"
+								"16"
 							]
 						}
 					},
@@ -4945,6 +5407,140 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"korisnik_id\": 6,\n    \"korisnicko_ime\": \"tina123\",\n    \"lozinka_hash\": null,\n    \"ime\": \"Tina\",\n    \"prezime\": \"Lazarevic\",\n    \"jmbg\": \"1007994410555\",\n    \"email\": \"tlazarevic@gmail.com\",\n    \"created_at\": \"2022-06-14T22:43:19.000Z\",\n    \"is_active\": \"aktivan\",\n    \"aktivacioni_kod\": null\n}"
+						},
+						{
+							"name": "Edit Korisnik By Id Pokusaj izmene nekog drugog korisnika (Tina) sa auth tokenom jovana123 - Sprecavanje da korisnici medjusobno menjaju podatke naloga jedni drugima",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"korisnicko_ime\" : \"tinaTinaTina\",\r\n    \"lozinka\" : \"tina123\",\r\n    \"is_active\": \"aktivan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/korisnik/6",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"korisnik",
+										"6"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-qMcgjRi0xu2brFVUPITKNq6Rf8E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jun 2022 14:18:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "You do not have access to edit this resource !"
+						},
+						{
+							"name": "Edit Korisnik By Id Uspesna izmena podataka sa auth tokenom jovana123  na nalog korisnika jovana123 -Svako svoj profil sme da menja",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"korisnicko_ime\" : \"jovana123\",\r\n    \"ime\": \"Jovana\",\r\n    \"prezime\": \"Matovic\",\r\n    \"lozinka\" : \"jovana123\",\r\n    \"is_active\": \"aktivan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:10000/api/korisnik/16",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"korisnik",
+										"16"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "239"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ef-7oQRLZM4aziQYO3/eZrMe0rOcEw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jun 2022 14:21:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"korisnik_id\": 16,\n    \"korisnicko_ime\": \"jovana123\",\n    \"lozinka_hash\": null,\n    \"ime\": \"Jovana\",\n    \"prezime\": \"Matovic\",\n    \"jmbg\": \"1202999410123\",\n    \"email\": \"jmatovic@gmail.com\",\n    \"created_at\": \"2022-06-16T17:44:30.000Z\",\n    \"is_active\": \"aktivan\",\n    \"aktivacioni_kod\": null\n}"
 						}
 					]
 				},
@@ -7864,6 +8460,74 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"authToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaW5zaWsiLCJpZCI6MTAsImlkZW50aXR5IjoibWFyaWphMTIzIiwiaWF0IjoxNjU1NDg5MDcwLCJleHAiOjE2NTU1NzU0NzAsImlzcyI6IlBJaVZUIn0.Rj4MmhpiyieMymhnqz-F_smg1DdBOnK0Wr6IZqxcKPXw9kr1ByqJdkG-wp4Zf_ZDf1HTYoTcHyYW8Nbp96TOvvbYAL3u5JOH_RfNhoJ-nRtTD8Nh1tk_lE8vUoNraSWR05tUzReNajBbSvuljIdMlVxlHsVnaBrM_O9SYBDN8m6qY-zgelar95dHLaf1Cg0kagfQuyUbIUKl69A2D8p8LHI4bCL7noAy7B_pUyqAIwEwKwRrNnSY3zAM_uzuRhqNaQ8Wuarb_4T2r8DN0eZYsaDz2Tm6WYFpAp2C7gfUqTMN2lu1XbKuhNkgDPer05GGOc4G-RXe-GxLjO15GfG7tQ\",\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaW5zaWsiLCJpZCI6MTAsImlkZW50aXR5IjoibWFyaWphMTIzIiwiaWF0IjoxNjU1NDg5MDcwLCJleHAiOjE2NTU0ODkxMDAsImlzcyI6IlBJaVZUIn0.T2juHfCyYgmVR-CwulAtqGeq6uqouZtWjMaFKpQe-ADz8lU9FVZjtLtTZQbtQPVWeBxcNLDCHWZLsKwzQWaHCu0-MTjz9m1xKStk-rWlSBfnCpkUIrpQNLH2e3us6StzJ4X_TUkeIHbuMRd3aymkXGb58LPg0YmnPdlyPFlS_d07DzYaJaWsEW1dkWij7ho0jlmAll18HLPbrckPsista7hAlW0PU92ED08WZ2Ish8Im5M9xDNFC-7iof3VkMw8wqCXXV287tSofu_0lUejtkOUmiqM1hEZ5pxN1lyM6sKhyoq6StteXwfAJUStCNSUpbSt1rCfTlrxmZnl5Aomupg\"\n}"
+								},
+								{
+									"name": "Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"korisnicko_ime\" : \"jovana123\",\r\n    \"lozinka\" : \"jovana123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:10000/api/auth/korisnik/login",
+											"host": [
+												"localhost"
+											],
+											"port": "10000",
+											"path": [
+												"api",
+												"auth",
+												"korisnik",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1056"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"420-fDSfrjj75TTPR6vEQkNKTkODYCE\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 18 Jun 2022 14:12:03 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"authToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaXNuaWsiLCJpZCI6MTYsImlkZW50aXR5Ijoiam92YW5hMTIzIiwiaWF0IjoxNjU1NTYxNTIzLCJleHAiOjE2NTU2NDc5MjMsImlzcyI6IlBJaVZUIn0.IB-1NxNDqNhrTr7qkluUpHyboihalz2WhprfQN0crEmi06vQYvtxku6kBR1djR--QY3hKt-lLSWWkRJy_c48VTYBoHUGWkLS4f0iBWM8OI_q9r2wZe8jmkUi8fnv_dvtoDiH9ZQ53vVJO3sg-OFBrlc7-sKZ_p-MuMWJVo3oi-diJk2-n3omrGcJRW_fDKCIRNw4S86j57b15Y3X_SUo3H3wZKOiE_BEgg94T6pxzm3Br7SiEUWOXi8QBBmSS7-2-qJfC--jaCrOc6BJoD_JZ7nZqT1RCfyV2FBW20JCbewHgtCozfgByWA0DuBpPGDbUceVgsgoyrwD6LmT4G4-SQ\",\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia29yaXNuaWsiLCJpZCI6MTYsImlkZW50aXR5Ijoiam92YW5hMTIzIiwiaWF0IjoxNjU1NTYxNTIzLCJleHAiOjE2NjA3NDU1MjMsImlzcyI6IlBJaVZUIn0.ZfkJiqZ69Z0bhPujqJyuZNGBDQ7gkLFkDqLh3qtX8KkiChCg8gZUMZCoc88X2Itk0djtfrGynFtVIN0zTQGBUX7f9nsytqFxgiMVfEYxjgNOnXGl6UDvCU3DKujhXy7is2z_aXZSSztnQ2f5offkgd8p4dotxojoXqQCYIhasN4XbytGnSjr_AbCa8UI2mQBLlM7jOmKrkgGjOB2BOv06pI7jJy3P-JAKL2Twh-bMyjMMGjrMMSxGTmDBaTApYtcaCDh1oXARTtM1vaGwJub5flEKqsQCCgM4gFO8p4P6aSmHy0Sh1wN6EZNUMqjnMA5ETPLFJsrACOEGmMHGhBUvg\"\n}"
 								}
 							]
 						},

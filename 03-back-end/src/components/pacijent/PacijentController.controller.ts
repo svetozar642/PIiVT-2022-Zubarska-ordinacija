@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import IAddPacijent, { AddPacijentValidator } from "./dto/IAddPacijent.dto";
 import IEditPacijentDto, { EditPacijentValidator } from "./dto/IEditPacijent.dto";
 import PacijentService, { DefaultPacijentAdapterOptions } from './PacijentService.service';
-import PacijentModel from '../../../dist/components/pacijent/PacijentModel.model';
+import PacijentModel from './PacijentModel.model';
 
 class PacijentController{
     private PacijentService: PacijentService;
