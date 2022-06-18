@@ -10,12 +10,14 @@ class ZubController{
 
     async getAll(req: Request, res: Response)/*: Promise<void> */{
 
-        if (req.authorisation?.role === "korisnik") {
+    // Test da li mozemo da pristupimo informaciji koja je rola ... (mozemo posle da uklonimo ako nam ne treba)
+    /*    if (req.authorisation?.role === "korisnik") {
             return res.send([
                 "test da li prepoznaje rolu ..."
             ]);
         }
-
+    */
+   
         //await koristimo jer je ovo asinhroni metod koji moze da vrati Promise 
         //Ovaj metod uvek kada vraca Promise vraca samo rezultat, a nikada reject tog promisa (imamo samo "resolve" a nemamo "reject")
         //const zubi = await this.ZubService.getAll();
