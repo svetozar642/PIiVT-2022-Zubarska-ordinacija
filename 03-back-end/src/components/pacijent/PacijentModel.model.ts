@@ -1,7 +1,7 @@
 import IModel from '../../common/IModel.interface';
 
 class PacijentModel implements IModel{
-    pacijentId: number;
+    pacijent_id: number;
     ime: string;
     prezime: string;
     jmbg: string;

@@ -24,15 +24,15 @@ class PacijentService extends BaseService<PacijentModel, PacijentAdapterOptions 
     protected async adaptToModel(data: any, options: PacijentAdapterOptions): Promise<PacijentModel>{
         const pacijent: PacijentModel = new PacijentModel();
 
-        pacijent.pacijentId = +data?.pacijent_id;
-        pacijent.ime        = data?.ime;
-        pacijent.prezime    = data?.prezime;
-        pacijent.jmbg       = data?.jmbg;
-        pacijent.adresa     = data?.adresa;
-        pacijent.telefon    = data?.telefon;
-        pacijent.email      = data?.email;
-        pacijent.senioritet = data?.senioritet;
-        pacijent.status     = data?.status;
+        pacijent.pacijent_id = +data?.pacijent_id;
+        pacijent.ime         = data?.ime;
+        pacijent.prezime     = data?.prezime;
+        pacijent.jmbg        = data?.jmbg;
+        pacijent.adresa      = data?.adresa;
+        pacijent.telefon     = data?.telefon;
+        pacijent.email       = data?.email;
+        pacijent.senioritet  = data?.senioritet;
+        pacijent.status      = data?.status;
 
         pacijent.korisnik_id = +data?.korisnik_id;
         

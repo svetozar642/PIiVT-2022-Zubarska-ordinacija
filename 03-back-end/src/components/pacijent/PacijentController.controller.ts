@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import IAddPacijent, { AddPacijentValidator } from "./dto/IAddPacijent.dto";
 import IEditPacijentDto, { EditPacijentValidator } from "./dto/IEditPacijent.dto";
 import PacijentService, { DefaultPacijentAdapterOptions } from './PacijentService.service';
+import PacijentModel from '../../../dist/components/pacijent/PacijentModel.model';
 
 class PacijentController{
     private PacijentService: PacijentService;
@@ -245,8 +246,43 @@ class PacijentController{
 
         //TODO: utvrdjivanje indentiteta korisnika ID iz auth tokena koji pokusava da izvrsi izmenu pacijenta i ID korisnika  iz tog pacijenta kog pokusavamo da izmenimo 
         // PS: samo korisnik koji je dodeljen nekom pacijentu moze da menja podatke o njemu      
+        
+        /*Test:*/ //console.log(req.authorisation?.role);
+        /*Test:*/ //console.log(req.authorisation?.id);
+        /*Test:*/ //console.log(data.korisnik_id);
+        
+        //Dobicemo odgovor metode getById() u obliku JSON objekta i kasnije moramo da taj rezultat adaptiramo u neki novi objekat tipa PacijentModel
+        const pacijentZaIzmenu: any = await this.PacijentService.getById(id);
+
+        //console.log(pacijentZaIzmenu); //Za potrebe testiranja...
+
+        //Adaptiranje JSON objekta pacijentZaIzmenu u objekat tipa PacijentModel , da bi mogli da pristupimo informaciji korisnik_id Pacijenta u narednom if uslovu ...
+        const pacijentZaIzmenuAdaptiranModel: PacijentModel = new PacijentModel();
+        
+        pacijentZaIzmenuAdaptiranModel.pacijent_id = +pacijentZaIzmenu?.pacijent_id;
+        pacijentZaIzmenuAdaptiranModel.ime         = pacijentZaIzmenu?.ime;
+        pacijentZaIzmenuAdaptiranModel.prezime     = pacijentZaIzmenu?.prezime;
+        pacijentZaIzmenuAdaptiranModel.jmbg        = pacijentZaIzmenu?.jmbg;
+        pacijentZaIzmenuAdaptiranModel.adresa      = pacijentZaIzmenu?.adresa;
+        pacijentZaIzmenuAdaptiranModel.telefon     = pacijentZaIzmenu?.telefon;
+        pacijentZaIzmenuAdaptiranModel.email       = pacijentZaIzmenu?.email;
+        pacijentZaIzmenuAdaptiranModel.senioritet  = pacijentZaIzmenu?.senioritet;
+        pacijentZaIzmenuAdaptiranModel.status      = pacijentZaIzmenu?.status;
+
+        pacijentZaIzmenuAdaptiranModel.korisnik_id = +pacijentZaIzmenu?.korisnik_id;
+
+        //Za potrebe testiranja
+      /*  console.log(pacijentZaIzmenuAdaptiranModel);
+        console.log(pacijentZaIzmenuAdaptiranModel.ime);
+        console.log(pacijentZaIzmenuAdaptiranModel.prezime);
+        console.log(pacijentZaIzmenuAdaptiranModel.korisnik_id);
+      */
+
         if ( req.authorisation?.role === "korisnik") {
-            if (req.authorisation?.id !== data.korisnik_id ){
+            if (req.authorisation?.id !== pacijentZaIzmenuAdaptiranModel.korisnik_id ){
+                /*Test:*/ //console.log(req.authorisation?.role);
+                /*Test:*/ //console.log(req.authorisation?.id);
+                /*Test:*/ //console.log(data.korisnik_id);
                 return res.status(403).send("You do not have access to edit this resource !");
             }
         }

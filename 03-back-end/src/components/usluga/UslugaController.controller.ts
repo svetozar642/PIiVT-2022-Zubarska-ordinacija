@@ -163,8 +163,10 @@ class UslugaController{
 
         const data = req.body as IEditUslugaDto;
 
-        //TODO: utvrdjivanje role korisnika iz auth tokena koji pokusava da izvrsi izmenu usluge     
-        if ( req.authorisation?.role === "korisnik") {
+        //TODO: utvrdjivanje role korisnika iz auth tokena koji pokusava da izvrsi izmenu usluge 
+        // (Mada ako nije u roli "korisnik" Middleware svakako ne bi dozvolio da dodje do izvrsavanja ove metode) 
+        if ( req.authorisation?.role !== "korisnik") {
+            //Test : console.log(req.authorisation?.role)
             return res.status(403).send("You do not have access to edit this resource !");
         }
 
