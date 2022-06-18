@@ -140,6 +140,63 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"zubId\": 1,\n        \"broj\": 1,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLS1\"\n    },\n    {\n        \"zubId\": 2,\n        \"broj\": 2,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLS2\"\n    },\n    {\n        \"zubId\": 3,\n        \"broj\": 3,\n        \"vilica\": \"gornja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLO3\"\n    },\n    {\n        \"zubId\": 4,\n        \"broj\": 4,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK4\"\n    },\n    {\n        \"zubId\": 5,\n        \"broj\": 5,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK5\"\n    },\n    {\n        \"zubId\": 6,\n        \"broj\": 6,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK6\"\n    },\n    {\n        \"zubId\": 7,\n        \"broj\": 7,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK7\"\n    },\n    {\n        \"zubId\": 8,\n        \"broj\": 8,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"GLK8\"\n    },\n    {\n        \"zubId\": 9,\n        \"broj\": 1,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDS1\"\n    },\n    {\n        \"zubId\": 10,\n        \"broj\": 2,\n        \"vilica\": \"gornja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDS2\"\n    },\n    {\n        \"zubId\": 11,\n        \"broj\": 3,\n        \"vilica\": \"gornja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDO3\"\n    },\n    {\n        \"zubId\": 12,\n        \"broj\": 4,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK4\"\n    },\n    {\n        \"zubId\": 13,\n        \"broj\": 5,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK5\"\n    },\n    {\n        \"zubId\": 14,\n        \"broj\": 6,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK6\"\n    },\n    {\n        \"zubId\": 15,\n        \"broj\": 7,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK7\"\n    },\n    {\n        \"zubId\": 16,\n        \"broj\": 8,\n        \"vilica\": \"gornja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"GDK8\"\n    },\n    {\n        \"zubId\": 17,\n        \"broj\": 1,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLS1\"\n    },\n    {\n        \"zubId\": 18,\n        \"broj\": 2,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLS2\"\n    },\n    {\n        \"zubId\": 19,\n        \"broj\": 3,\n        \"vilica\": \"donja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLO3\"\n    },\n    {\n        \"zubId\": 20,\n        \"broj\": 4,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK4\"\n    },\n    {\n        \"zubId\": 21,\n        \"broj\": 5,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK5\"\n    },\n    {\n        \"zubId\": 22,\n        \"broj\": 6,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK6\"\n    },\n    {\n        \"zubId\": 23,\n        \"broj\": 7,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK7\"\n    },\n    {\n        \"zubId\": 24,\n        \"broj\": 8,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"leva\",\n        \"sifra_zuba\": \"DLK8\"\n    },\n    {\n        \"zubId\": 25,\n        \"broj\": 1,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDS1\"\n    },\n    {\n        \"zubId\": 26,\n        \"broj\": 2,\n        \"vilica\": \"donja\",\n        \"tip\": \"sekutic\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDS2\"\n    },\n    {\n        \"zubId\": 27,\n        \"broj\": 3,\n        \"vilica\": \"donja\",\n        \"tip\": \"ocnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDO3\"\n    },\n    {\n        \"zubId\": 28,\n        \"broj\": 4,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK4\"\n    },\n    {\n        \"zubId\": 29,\n        \"broj\": 5,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK5\"\n    },\n    {\n        \"zubId\": 30,\n        \"broj\": 6,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK6\"\n    },\n    {\n        \"zubId\": 31,\n        \"broj\": 7,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK7\"\n    },\n    {\n        \"zubId\": 32,\n        \"broj\": 8,\n        \"vilica\": \"donja\",\n        \"tip\": \"kutnjak\",\n        \"strana\": \"desna\",\n        \"sifra_zuba\": \"DDK8\"\n    }\n]"
+						},
+						{
+							"name": "Get All Zub Test da li prepoznaje rolu nakon sto smo ugradili dodatno polje authorisation u interfejs Request iz Express u @types kako bi izvukli role",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:10000/api/zub",
+									"host": [
+										"localhost"
+									],
+									"port": "10000",
+									"path": [
+										"api",
+										"zub"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-MVmJ33P0Id6JhGjPqkg9TMPVeSs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jun 2022 00:00:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    \"test da li prepoznaje rolu ...\"\n]"
 						}
 					]
 				},

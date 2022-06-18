@@ -40,6 +40,8 @@ export default class AuthMiddleware {
                 }
             }
 
+            req.authorisation = checks[0];
+
             next();
             
         } catch (error) {
