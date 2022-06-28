@@ -18,14 +18,14 @@ export default function KorisnikLoginPage() {
                 <div className="form-group mb-3">
                     <div className="input-group">
                         <input className="form-control" type="text" placeholder="Unesi svoj email:" value={email}
-                            onChange={ e => setEmail(e.currentTarget.value)} />
+                            onChange={ e => setEmail(e.target.value)} />
                     </div>
                 </div>
 
                 <div className="form-group mb-3">
                     <div className="input-group">
                         <input className="form-control" type="password" placeholder="Unesi svoju lozinku:" value={lozinka}
-                            onChange={ e => setLozinka(e.currentTarget.value)} />
+                            onChange={ e => setLozinka(e.target.value)} />
                     </div>
                 </div>
 
