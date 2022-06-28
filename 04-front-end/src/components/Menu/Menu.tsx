@@ -1,8 +1,8 @@
-import { BrowserRouter, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 export default function Menu(){
     return (
-        <BrowserRouter>
+       
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <Link className="navbar-brand active" to="/">Pocetna</Link>
 
@@ -19,6 +19,6 @@ export default function Menu(){
                     </div>
                 </div>
             </nav>
-        </BrowserRouter>
+        
     );
 }
