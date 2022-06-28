@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { api } from '../../../api/api';
 import IPacijent from '../../../models/IPacijent.model';
 
 export default function Pacijent(){
@@ -6,6 +7,17 @@ export default function Pacijent(){
     const [errorMessage, setErrorMessage] = useState<string>("");
 
     useEffect( () => {
+        api("get","/api/pacijent","korisnik")
+            .then(apiResponse => {
+                if ( apiResponse.status === 'ok'){
+                    return setPacijenti(apiResponse.data);
+                }
+
+                throw {
+                    message: 'Unknown error while loading pacijenti ...' ,
+                }
+            })
+
         fetch("http://localhost:10000/api/pacijent")
             .then(res => res.json())
             .then(data => {

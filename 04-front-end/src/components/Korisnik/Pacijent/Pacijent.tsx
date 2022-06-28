@@ -27,7 +27,7 @@ export default function Pacijent(){
             .finally( () => {
                 setLoading(false);
             });
-    }, [params.jmbg]);
+    }, [ ]);
 
     return (
         <div>
