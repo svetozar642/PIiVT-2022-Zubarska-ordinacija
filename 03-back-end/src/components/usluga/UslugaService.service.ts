@@ -31,7 +31,7 @@ class UslugaService extends BaseService<UslugaModel, UslugaAdapterOptions>{
     protected async adaptToModel(data: any , options: IUslugaAdapterOptions = DefaultUslugaAdapterOptions): Promise<UslugaModel>{
         const usluga: UslugaModel = new UslugaModel();
 
-        usluga.uslugaId                     = +data?.usluga_id;
+        usluga.usluga_id                    = +data?.usluga_id;
         usluga.naziv                        = data?.naziv;
         usluga.opis                         = data?.opis;
         usluga.sifra_usluge                 = data?.sifra_usluge;

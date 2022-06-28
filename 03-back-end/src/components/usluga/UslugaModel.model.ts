@@ -2,7 +2,7 @@ import { TimerOptions } from "timers";
 import IModel from '../../common/IModel.interface';
 
 class UslugaModel implements IModel{
-    uslugaId: number;
+    usluga_id: number;
     naziv: string;
     opis: string;
     sifra_usluge: string;
