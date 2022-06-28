@@ -61,6 +61,7 @@ interface IConfig{
     mail: IMailConfiguration,
     auth: {
         korisnik: IAuthTokenOptions,
+        allowAllRoutesWithoutAuthTokens: boolean,
     },
     routers: IRouter[],
     
