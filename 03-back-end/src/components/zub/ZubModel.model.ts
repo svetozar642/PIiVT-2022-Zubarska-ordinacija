@@ -2,7 +2,7 @@ import { TimerOptions } from "timers";
 import IModel from '../../common/IModel.interface';
 
 class ZubModel implements IModel{
-    zubId: number;
+    zub_id: number;
     broj: number;
     vilica: Vilica;
     tip: Tip;

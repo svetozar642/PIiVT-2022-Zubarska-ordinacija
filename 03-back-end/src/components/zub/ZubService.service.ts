@@ -29,7 +29,7 @@ class ZubService extends BaseService<ZubModel, ZubAdapterOptions>{
     protected async adaptToModel(data: any , options: IZubAdapterOptions = DefaultZubAdapterOptions): Promise<ZubModel>{
         const zub: ZubModel = new ZubModel();
 
-        zub.zubId       = +data?.zub_id;
+        zub.zub_id       = +data?.zub_id;
         zub.broj        = +data?.broj;
         zub.vilica      = data?.vilica;
         zub.tip         = data?.tip;

@@ -1878,15 +1878,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "618"
+									"value": "1064"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"26a-lp0YFCkAVsm0Yzn/L8bceTipb3A\""
+									"value": "W/\"428-CBmvgbtNsHre8GwdQQlfd3AXKlw\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 12:51:14 GMT"
+									"value": "Tue, 28 Jun 2022 21:40:42 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1898,7 +1898,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    },\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 1\n    },\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnikId\": 2\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    },\n    {\n        \"pacijent_id\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    },\n    {\n        \"pacijent_id\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 6\n    },\n    {\n        \"pacijent_id\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 8\n    },\n    {\n        \"pacijent_id\": 12,\n        \"ime\": \"Katarina\",\n        \"prezime\": \"Marjanovic\",\n        \"jmbg\": \"0710008410111\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"064552211\",\n        \"email\": \"kmarjanovic@gmail.com\",\n        \"senioritet\": \"dete\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 10\n    }\n]"
 						}
 					]
 				},
@@ -1957,15 +1957,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "196"
+									"value": "203"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"c4-agHXGoBVXG7GuzvCkG6TTcZtKdc\""
+									"value": "W/\"cb-VuDxpTas8BuaxAenxVQMDHdryb0\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 12:51:32 GMT"
+									"value": "Tue, 28 Jun 2022 21:40:56 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1977,7 +1977,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"pacijentId\": 2,\n    \"ime\": \"Mika\",\n    \"prezime\": \"Mikic\",\n    \"jmbg\": \"0203999510222\",\n    \"adresa\": \"Cerska 15\",\n    \"telefon\": \"062654321\",\n    \"email\": \"mmikic@gmail.com\",\n    \"senioritet\": \"ostali\",\n    \"status\": \"aktivan\",\n    \"korisnikId\": 1\n}"
+							"body": "{\n    \"pacijent_id\": 2,\n    \"ime\": \"Mika\",\n    \"prezime\": \"Mikic\",\n    \"jmbg\": \"0203999510222\",\n    \"adresa\": \"Kumanovska 15\",\n    \"telefon\": \"062654321\",\n    \"email\": \"mmikic@gmail.com\",\n    \"senioritet\": \"ostali\",\n    \"status\": \"aktivan\",\n    \"korisnik_id\": 16\n}"
 						}
 					]
 				},
@@ -2327,11 +2327,11 @@
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"cd-nkzy/sOevprjS3+dLk43EIbbeJI\""
+									"value": "W/\"cd-XNFg1vf2FjvK57qEdQzx44dAO0c\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:10:20 GMT"
+									"value": "Tue, 28 Jun 2022 21:41:23 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2343,7 +2343,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"neaktivan\",\n        \"korisnik_id\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    }\n]"
 						}
 					]
 				},
@@ -2367,65 +2367,6 @@
 						}
 					},
 					"response": [
-						{
-							"name": "Get All By Senioritet",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:10000/api/pacijent/senioritet/penzioner",
-									"host": [
-										"localhost"
-									],
-									"port": "10000",
-									"path": [
-										"api",
-										"pacijent",
-										"senioritet",
-										"penzioner"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "433"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"1b1-dWhncU8qdnKxND6sqSjoc8uIsNY\""
-								},
-								{
-									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:10:51 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 2\n    },\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 4\n    }\n]"
-						},
 						{
 							"name": "Get All By Senioritet",
 							"originalRequest": {
@@ -2463,15 +2404,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "415"
+									"value": "417"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"19f-MLxyZl8mJa/YWeYxH7Vnj+w+uEo\""
+									"value": "W/\"1a1-gMnv+tUbKPtKngo0ZOHI6KsaFCM\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:11:00 GMT"
+									"value": "Tue, 28 Jun 2022 21:41:54 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2483,7 +2424,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 1\n    },\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"neaktivan\",\n        \"korisnik_id\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    },\n    {\n        \"pacijent_id\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    }\n]"
 						}
 					]
 				},
@@ -2544,15 +2485,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "213"
+									"value": "214"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"d5-u1QdCezzQCEKT3/q0EFWyTmNEiU\""
+									"value": "W/\"d6-jLEORg8QCP//PFxGTT4+SCr1Woc\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:11:22 GMT"
+									"value": "Tue, 28 Jun 2022 21:42:17 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2564,7 +2505,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 2\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 6\n    }\n]"
 						}
 					]
 				},
@@ -2625,15 +2566,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "211"
+									"value": "213"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"d3-cHt30uufnUSC3ebYrTQlmeZkN/w\""
+									"value": "W/\"d5-y829YVfm6k0KoYEdHPyQGyW9Xtk\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:11:38 GMT"
+									"value": "Tue, 28 Jun 2022 21:43:36 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2645,7 +2586,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    }\n]"
 						}
 					]
 				},
@@ -2706,15 +2647,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "212"
+									"value": "214"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"d4-XJdhlQf6jH+qsw30FcOflLdYQ5o\""
+									"value": "W/\"d6-2LsB+JEQgpvY1oWCv+q6XVl3llU\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:11:58 GMT"
+									"value": "Tue, 28 Jun 2022 21:43:44 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2726,7 +2667,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 12,\n        \"ime\": \"Katarina\",\n        \"prezime\": \"Marjanovic\",\n        \"jmbg\": \"0710008410111\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"064552211\",\n        \"email\": \"kmarjanovic@gmail.com\",\n        \"senioritet\": \"dete\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 5\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 12,\n        \"ime\": \"Katarina\",\n        \"prezime\": \"Marjanovic\",\n        \"jmbg\": \"0710008410111\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"064552211\",\n        \"email\": \"kmarjanovic@gmail.com\",\n        \"senioritet\": \"dete\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 10\n    }\n]"
 						}
 					]
 				},
@@ -2787,15 +2728,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "213"
+									"value": "214"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"d5-u1QdCezzQCEKT3/q0EFWyTmNEiU\""
+									"value": "W/\"d6-jLEORg8QCP//PFxGTT4+SCr1Woc\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:12:39 GMT"
+									"value": "Tue, 28 Jun 2022 21:43:52 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2807,7 +2748,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 2\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 6\n    }\n]"
 						}
 					]
 				},
@@ -2872,11 +2813,11 @@
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"cd-nkzy/sOevprjS3+dLk43EIbbeJI\""
+									"value": "W/\"cd-XNFg1vf2FjvK57qEdQzx44dAO0c\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:13:04 GMT"
+									"value": "Tue, 28 Jun 2022 21:43:59 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2888,7 +2829,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"neaktivan\",\n        \"korisnik_id\": 1\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    }\n]"
 						}
 					]
 				},
@@ -2949,15 +2890,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "854"
+									"value": "1064"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"356-hAf9rqDeJjIJiszaSqJBalHlhkk\""
+									"value": "W/\"428-CBmvgbtNsHre8GwdQQlfd3AXKlw\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:13:25 GMT"
+									"value": "Tue, 28 Jun 2022 21:44:07 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2969,7 +2910,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 1\n    },\n    {\n        \"pacijentId\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 2\n    },\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 4\n    },\n    {\n        \"pacijentId\": 12,\n        \"ime\": \"Katarina\",\n        \"prezime\": \"Marjanovic\",\n        \"jmbg\": \"0710008410111\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"064552211\",\n        \"email\": \"kmarjanovic@gmail.com\",\n        \"senioritet\": \"dete\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 5\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    },\n    {\n        \"pacijent_id\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    },\n    {\n        \"pacijent_id\": 5,\n        \"ime\": \"Milica\",\n        \"prezime\": \"Petrovic\",\n        \"jmbg\": \"0304955410111\",\n        \"adresa\": \"Ustanicka 15\",\n        \"telefon\": \"061332211\",\n        \"email\": \"mpetrovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 6\n    },\n    {\n        \"pacijent_id\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 8\n    },\n    {\n        \"pacijent_id\": 12,\n        \"ime\": \"Katarina\",\n        \"prezime\": \"Marjanovic\",\n        \"jmbg\": \"0710008410111\",\n        \"adresa\": \"Cerska 15\",\n        \"telefon\": \"064552211\",\n        \"email\": \"kmarjanovic@gmail.com\",\n        \"senioritet\": \"dete\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 10\n    }\n]"
 						}
 					]
 				},
@@ -3058,7 +2999,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:10000/api/pacijent/korisnik_id/4",
+									"raw": "localhost:10000/api/pacijent/korisnik_id/16",
 									"host": [
 										"localhost"
 									],
@@ -3067,7 +3008,7 @@
 										"api",
 										"pacijent",
 										"korisnik_id",
-										"4"
+										"16"
 									]
 								}
 							},
@@ -3089,15 +3030,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "221"
+									"value": "417"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"dd-mCE5piQPQfc3quOHSac02wGnuH4\""
+									"value": "W/\"1a1-gMnv+tUbKPtKngo0ZOHI6KsaFCM\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 13 Jun 2022 21:14:51 GMT"
+									"value": "Tue, 28 Jun 2022 21:44:36 GMT"
 								},
 								{
 									"key": "Connection",
@@ -3109,7 +3050,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"pacijentId\": 11,\n        \"ime\": \"Luka\",\n        \"prezime\": \"Jovanovic\",\n        \"jmbg\": \"0505945510444\",\n        \"adresa\": \"Mirijevski venac 15\",\n        \"telefon\": \"061443311\",\n        \"email\": \"ljovanovic@gmail.com\",\n        \"senioritet\": \"penzioner\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 4\n    }\n]"
+							"body": "[\n    {\n        \"pacijent_id\": 1,\n        \"ime\": \"Petar\",\n        \"prezime\": \"Petkovic\",\n        \"jmbg\": \"0102990510111\",\n        \"adresa\": \"Durmitorska 12\",\n        \"telefon\": \"061123456\",\n        \"email\": \"ppetkovic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    },\n    {\n        \"pacijent_id\": 2,\n        \"ime\": \"Mika\",\n        \"prezime\": \"Mikic\",\n        \"jmbg\": \"0203999510222\",\n        \"adresa\": \"Kumanovska 15\",\n        \"telefon\": \"062654321\",\n        \"email\": \"mmikic@gmail.com\",\n        \"senioritet\": \"ostali\",\n        \"status\": \"aktivan\",\n        \"korisnik_id\": 16\n    }\n]"
 						}
 					]
 				},
@@ -6548,15 +6489,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "577"
+									"value": "811"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"241-MozubdLyOm3CRE88ZjzbLGU9GcQ\""
+									"value": "W/\"32b-vZJ8NUkd19JLjgaf5APsebsRvnA\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:19:20 GMT"
+									"value": "Tue, 28 Jun 2022 21:36:05 GMT"
 								},
 								{
 									"key": "Connection",
@@ -6568,7 +6509,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racunId\": 1,\n        \"created_at\": \"2022-05-31T19:21:23.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"cena\": 2000,\n        \"pacijentId\": 1,\n        \"korisnikId\": 1\n    },\n    {\n        \"racunId\": 2,\n        \"created_at\": \"2022-05-31T19:22:27.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"cena\": 1000,\n        \"pacijentId\": 2,\n        \"korisnikId\": 1\n    },\n    {\n        \"racunId\": 3,\n        \"created_at\": \"2022-06-05T22:18:44.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"cena\": 800,\n        \"pacijentId\": 5,\n        \"korisnikId\": 2\n    },\n    {\n        \"racunId\": 4,\n        \"created_at\": \"2022-06-07T17:16:26.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"cena\": 2000,\n        \"pacijentId\": 2,\n        \"korisnikId\": 1\n    }\n]"
+							"body": "[\n    {\n        \"racun_id\": 1,\n        \"created_at\": \"2022-05-31T19:21:23.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"pacijent_id\": 1,\n        \"korisnik_id\": 1\n    },\n    {\n        \"racun_id\": 2,\n        \"created_at\": \"2022-05-31T19:22:27.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"pacijent_id\": 2,\n        \"korisnik_id\": 1\n    },\n    {\n        \"racun_id\": 3,\n        \"created_at\": \"2022-06-05T22:18:44.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"pacijent_id\": 5,\n        \"korisnik_id\": 2\n    },\n    {\n        \"racun_id\": 4,\n        \"created_at\": \"2022-06-07T17:16:26.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"pacijent_id\": 2,\n        \"korisnik_id\": 1\n    },\n    {\n        \"racun_id\": 6,\n        \"created_at\": \"2022-06-11T14:49:23.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"pacijent_id\": 11,\n        \"korisnik_id\": 4\n    },\n    {\n        \"racun_id\": 7,\n        \"created_at\": \"2022-06-11T16:19:23.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"dete\",\n        \"pacijent_id\": 12,\n        \"korisnik_id\": 5\n    }\n]"
 						}
 					]
 				},
@@ -6627,15 +6568,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "144"
+									"value": "135"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"90-EAdL7GrHBmn0F6uYBGYJ2tbc9F4\""
+									"value": "W/\"87-x0mVjUNQFuZevPLwuVxVmjWHh0Y\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:19:34 GMT"
+									"value": "Tue, 28 Jun 2022 21:36:21 GMT"
 								},
 								{
 									"key": "Connection",
@@ -6647,7 +6588,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"racunId\": 2,\n    \"created_at\": \"2022-05-31T19:22:27.000Z\",\n    \"tip_usluge\": \"pojedinacna\",\n    \"senioritet\": \"ostali\",\n    \"cena\": 1000,\n    \"pacijentId\": 2,\n    \"korisnikId\": 1\n}"
+							"body": "{\n    \"racun_id\": 2,\n    \"created_at\": \"2022-05-31T19:22:27.000Z\",\n    \"tip_usluge\": \"pojedinacna\",\n    \"senioritet\": \"ostali\",\n    \"pacijent_id\": 2,\n    \"korisnik_id\": 1\n}"
 						}
 					]
 				},
@@ -6993,15 +6934,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "142"
+									"value": "268"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"8e-mGdSV1NRiQNczlwm8bf05hGd3sE\""
+									"value": "W/\"10c-4sBvd3BPWJxfnwJ5FDAakvhZyYc\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:20:18 GMT"
+									"value": "Tue, 28 Jun 2022 21:36:39 GMT"
 								},
 								{
 									"key": "Connection",
@@ -7013,7 +6954,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racunId\": 3,\n        \"created_at\": \"2022-06-05T22:18:44.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"cena\": 800,\n        \"pacijentId\": 5,\n        \"korisnikId\": 2\n    }\n]"
+							"body": "[\n    {\n        \"racun_id\": 3,\n        \"created_at\": \"2022-06-05T22:18:44.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"pacijent_id\": 5,\n        \"korisnik_id\": 2\n    },\n    {\n        \"racun_id\": 6,\n        \"created_at\": \"2022-06-11T14:49:23.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"pacijent_id\": 11,\n        \"korisnik_id\": 4\n    }\n]"
 						}
 					]
 				},
@@ -7074,15 +7015,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "436"
+									"value": "409"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"1b4-1xm2axRI+wgD2ocBlixBEfZ/+fQ\""
+									"value": "W/\"199-0b/NKig0kmTa/q1Gm3SXBPFwUc4\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:20:24 GMT"
+									"value": "Tue, 28 Jun 2022 21:36:55 GMT"
 								},
 								{
 									"key": "Connection",
@@ -7094,7 +7035,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racunId\": 1,\n        \"created_at\": \"2022-05-31T19:21:23.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"cena\": 2000,\n        \"pacijentId\": 1,\n        \"korisnikId\": 1\n    },\n    {\n        \"racunId\": 2,\n        \"created_at\": \"2022-05-31T19:22:27.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"cena\": 1000,\n        \"pacijentId\": 2,\n        \"korisnikId\": 1\n    },\n    {\n        \"racunId\": 4,\n        \"created_at\": \"2022-06-07T17:16:26.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"cena\": 2000,\n        \"pacijentId\": 2,\n        \"korisnikId\": 1\n    }\n]"
+							"body": "[\n    {\n        \"racun_id\": 1,\n        \"created_at\": \"2022-05-31T19:21:23.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"pacijent_id\": 1,\n        \"korisnik_id\": 1\n    },\n    {\n        \"racun_id\": 2,\n        \"created_at\": \"2022-05-31T19:22:27.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"pacijent_id\": 2,\n        \"korisnik_id\": 1\n    },\n    {\n        \"racun_id\": 4,\n        \"created_at\": \"2022-06-07T17:16:26.000Z\",\n        \"tip_usluge\": \"pojedinacna\",\n        \"senioritet\": \"ostali\",\n        \"pacijent_id\": 2,\n        \"korisnik_id\": 1\n    }\n]"
 						}
 					]
 				},
@@ -7155,15 +7096,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "142"
+									"value": "134"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"8e-mGdSV1NRiQNczlwm8bf05hGd3sE\""
+									"value": "W/\"86-Mc/ONM//7VIkcx43eAZUo9Ya+h8\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:20:30 GMT"
+									"value": "Tue, 28 Jun 2022 21:37:13 GMT"
 								},
 								{
 									"key": "Connection",
@@ -7175,7 +7116,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racunId\": 3,\n        \"created_at\": \"2022-06-05T22:18:44.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"cena\": 800,\n        \"pacijentId\": 5,\n        \"korisnikId\": 2\n    }\n]"
+							"body": "[\n    {\n        \"racun_id\": 3,\n        \"created_at\": \"2022-06-05T22:18:44.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"pacijent_id\": 5,\n        \"korisnik_id\": 2\n    }\n]"
 						}
 					]
 				},
@@ -7236,15 +7177,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "142"
+									"value": "134"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"8e-mGdSV1NRiQNczlwm8bf05hGd3sE\""
+									"value": "W/\"86-Mc/ONM//7VIkcx43eAZUo9Ya+h8\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Jun 2022 16:20:37 GMT"
+									"value": "Tue, 28 Jun 2022 21:37:30 GMT"
 								},
 								{
 									"key": "Connection",
@@ -7256,7 +7197,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racunId\": 3,\n        \"created_at\": \"2022-06-05T22:18:44.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"cena\": 800,\n        \"pacijentId\": 5,\n        \"korisnikId\": 2\n    }\n]"
+							"body": "[\n    {\n        \"racun_id\": 3,\n        \"created_at\": \"2022-06-05T22:18:44.000Z\",\n        \"tip_usluge\": \"paket\",\n        \"senioritet\": \"penzioner\",\n        \"pacijent_id\": 5,\n        \"korisnik_id\": 2\n    }\n]"
 						}
 					]
 				}
@@ -7318,15 +7259,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "287"
+									"value": "464"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"11f-2+u8rLFxE9FGtq6aIhYSejPtm9E\""
+									"value": "W/\"1d0-fz7q7A3uGVMIASDNdzZ7vZ8tqdI\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 13:47:02 GMT"
+									"value": "Tue, 28 Jun 2022 21:30:01 GMT"
 								},
 								{
 									"key": "Connection",
@@ -7338,7 +7279,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racun_uslugaId\": 1,\n        \"zubId\": 5,\n        \"uslugaId\": 2,\n        \"pacijentId\": 1,\n        \"racunId\": 1\n    },\n    {\n        \"racun_uslugaId\": 2,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    },\n    {\n        \"racun_uslugaId\": 7,\n        \"zubId\": 1,\n        \"uslugaId\": 2,\n        \"pacijentId\": 5,\n        \"racunId\": 1\n    },\n    {\n        \"racun_uslugaId\": 8,\n        \"zubId\": 19,\n        \"uslugaId\": 2,\n        \"pacijentId\": 2,\n        \"racunId\": 4\n    }\n]"
+							"body": "[\n    {\n        \"racun_usluga_id\": 1,\n        \"zub_id\": 5,\n        \"usluga_id\": 2,\n        \"pacijent_id\": 1,\n        \"racun_id\": 1\n    },\n    {\n        \"racun_usluga_id\": 2,\n        \"zub_id\": 25,\n        \"usluga_id\": 3,\n        \"pacijent_id\": 2,\n        \"racun_id\": 2\n    },\n    {\n        \"racun_usluga_id\": 7,\n        \"zub_id\": 1,\n        \"usluga_id\": 2,\n        \"pacijent_id\": 5,\n        \"racun_id\": 1\n    },\n    {\n        \"racun_usluga_id\": 8,\n        \"zub_id\": 19,\n        \"usluga_id\": 2,\n        \"pacijent_id\": 2,\n        \"racun_id\": 4\n    },\n    {\n        \"racun_usluga_id\": 9,\n        \"zub_id\": 25,\n        \"usluga_id\": 3,\n        \"pacijent_id\": 11,\n        \"racun_id\": 6\n    },\n    {\n        \"racun_usluga_id\": 10,\n        \"zub_id\": 15,\n        \"usluga_id\": 4,\n        \"pacijent_id\": 12,\n        \"racun_id\": 7\n    }\n]"
 						}
 					]
 				},
@@ -7397,15 +7338,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "71"
+									"value": "76"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"47-dZW/BuH1KbZLGL60FUEnTN4MjQA\""
+									"value": "W/\"4c-u6Fh4KLZnDP50fqZbwG11hy+JNo\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 13:47:36 GMT"
+									"value": "Tue, 28 Jun 2022 21:29:38 GMT"
 								},
 								{
 									"key": "Connection",
@@ -7417,7 +7358,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"racun_uslugaId\": 2,\n    \"zubId\": 25,\n    \"uslugaId\": 3,\n    \"pacijentId\": 2,\n    \"racunId\": 2\n}"
+							"body": "{\n    \"racun_usluga_id\": 2,\n    \"zub_id\": 25,\n    \"usluga_id\": 3,\n    \"pacijent_id\": 2,\n    \"racun_id\": 2\n}"
 						}
 					]
 				},
@@ -7953,15 +7894,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "146"
+									"value": "156"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"92-NKn/Ye4fWr1BT4bk47hEwXcFegM\""
+									"value": "W/\"9c-2SLsJDKbkIm55rvpL2txpyA1sf4\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 13:55:27 GMT"
+									"value": "Tue, 28 Jun 2022 21:31:06 GMT"
 								},
 								{
 									"key": "Connection",
@@ -7973,7 +7914,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racun_uslugaId\": 2,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    },\n    {\n        \"racun_uslugaId\": 9,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 11,\n        \"racunId\": 6\n    }\n]"
+							"body": "[\n    {\n        \"racun_usluga_id\": 2,\n        \"zub_id\": 25,\n        \"usluga_id\": 3,\n        \"pacijent_id\": 2,\n        \"racun_id\": 2\n    },\n    {\n        \"racun_usluga_id\": 9,\n        \"zub_id\": 25,\n        \"usluga_id\": 3,\n        \"pacijent_id\": 11,\n        \"racun_id\": 6\n    }\n]"
 						}
 					]
 				},
@@ -8034,15 +7975,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "146"
+									"value": "156"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"92-NKn/Ye4fWr1BT4bk47hEwXcFegM\""
+									"value": "W/\"9c-2SLsJDKbkIm55rvpL2txpyA1sf4\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 13:56:11 GMT"
+									"value": "Tue, 28 Jun 2022 21:31:24 GMT"
 								},
 								{
 									"key": "Connection",
@@ -8054,7 +7995,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racun_uslugaId\": 2,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    },\n    {\n        \"racun_uslugaId\": 9,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 11,\n        \"racunId\": 6\n    }\n]"
+							"body": "[\n    {\n        \"racun_usluga_id\": 2,\n        \"zub_id\": 25,\n        \"usluga_id\": 3,\n        \"pacijent_id\": 2,\n        \"racun_id\": 2\n    },\n    {\n        \"racun_usluga_id\": 9,\n        \"zub_id\": 25,\n        \"usluga_id\": 3,\n        \"pacijent_id\": 11,\n        \"racun_id\": 6\n    }\n]"
 						}
 					]
 				},
@@ -8115,15 +8056,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "145"
+									"value": "155"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"91-6nxnzGOdp2GX/qRDFwiWzTsgm6M\""
+									"value": "W/\"9b-eZX49d00yOzB5+VZ3dVe6H/gxNs\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 13:57:33 GMT"
+									"value": "Tue, 28 Jun 2022 21:31:45 GMT"
 								},
 								{
 									"key": "Connection",
@@ -8135,7 +8076,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racun_uslugaId\": 2,\n        \"zubId\": 25,\n        \"uslugaId\": 3,\n        \"pacijentId\": 2,\n        \"racunId\": 2\n    },\n    {\n        \"racun_uslugaId\": 8,\n        \"zubId\": 19,\n        \"uslugaId\": 2,\n        \"pacijentId\": 2,\n        \"racunId\": 4\n    }\n]"
+							"body": "[\n    {\n        \"racun_usluga_id\": 2,\n        \"zub_id\": 25,\n        \"usluga_id\": 3,\n        \"pacijent_id\": 2,\n        \"racun_id\": 2\n    },\n    {\n        \"racun_usluga_id\": 8,\n        \"zub_id\": 19,\n        \"usluga_id\": 2,\n        \"pacijent_id\": 2,\n        \"racun_id\": 4\n    }\n]"
 						}
 					]
 				},
@@ -8196,15 +8137,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "143"
+									"value": "153"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"8f-T2k2QNIEScD76LGXglhRmSZi8FI\""
+									"value": "W/\"99-tDmnruRJH5kD1naHWbrppw20T60\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 11 Jun 2022 13:58:26 GMT"
+									"value": "Tue, 28 Jun 2022 21:32:01 GMT"
 								},
 								{
 									"key": "Connection",
@@ -8216,7 +8157,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"racun_uslugaId\": 1,\n        \"zubId\": 5,\n        \"uslugaId\": 2,\n        \"pacijentId\": 1,\n        \"racunId\": 1\n    },\n    {\n        \"racun_uslugaId\": 7,\n        \"zubId\": 1,\n        \"uslugaId\": 2,\n        \"pacijentId\": 5,\n        \"racunId\": 1\n    }\n]"
+							"body": "[\n    {\n        \"racun_usluga_id\": 1,\n        \"zub_id\": 5,\n        \"usluga_id\": 2,\n        \"pacijent_id\": 1,\n        \"racun_id\": 1\n    },\n    {\n        \"racun_usluga_id\": 7,\n        \"zub_id\": 1,\n        \"usluga_id\": 2,\n        \"pacijent_id\": 5,\n        \"racun_id\": 1\n    }\n]"
 						}
 					]
 				}

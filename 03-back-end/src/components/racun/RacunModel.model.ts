@@ -1,7 +1,7 @@
 import IModel from '../../common/IModel.interface';
 class RacunModel implements IModel{
    
-    racunId: number;
+    racun_id: number;
     created_at: string;
     tip_usluge: TipUsluge;
     senioritet: Senioritet;

@@ -23,7 +23,7 @@ class RacunService extends BaseService<RacunModel, RacunAdapterOptions >{
     protected async adaptToModel(data: any, options: RacunAdapterOptions): Promise<RacunModel>{
         const racun: RacunModel = new RacunModel();
 
-        racun.racunId       = +data?.racun_id;
+        racun.racun_id       = +data?.racun_id;
         racun.created_at    = data?.created_at;
 
         racun.tip_usluge    = data?.tip_usluge;
