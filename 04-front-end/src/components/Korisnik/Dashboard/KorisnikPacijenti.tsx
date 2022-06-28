@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../../../api/api";
 import IPacijent from "../../../models/IPacijent.model";
 
@@ -54,25 +55,40 @@ export default function KorisnikPacijenti(){
             {errorMessage && <p>Error: {errorMessage}</p>}
         
             {!errorMessage && 
-                <table className="table table-bordered table-striped table-hover table-sm">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>IME</th>
-                            <th>PREZIME</th>
-                            <th>JMBG</th>
-                            <th>ADRESA</th>
-                            <th>TELFON</th>
-                            <th>E-MAIL</th>
-                            <th>STATUS</th>
-                            <th>SENIORITET</th>
-                            <th>KORISNIK ID</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {pacijenti.map( pacijent => <KorisnikPacijentiRow key={"pacijent-row-"+pacijent.pacijent_id} pacijent={pacijent}/> )}
-                    </tbody>
-                </table>
+                <div>
+                    <table className="table table-bordered table-striped table-hover table-sm">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>IME</th>
+                                <th>PREZIME</th>
+                                <th>JMBG</th>
+                                <th>ADRESA</th>
+                                <th>TELFON</th>
+                                <th>E-MAIL</th>
+                                <th>STATUS</th>
+                                <th>SENIORITET</th>
+                                <th>KORISNIK ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {pacijenti.map( pacijent => <KorisnikPacijentiRow key={"pacijent-row-"+pacijent.pacijent_id} pacijent={pacijent}/> )}
+                        </tbody>
+                    </table>
+
+                    <div className="container">
+                        <div className="row ">
+                            <div className="col">
+                                <Link className="btn btn-warning btn-lg ms-0 " to="/korisnik/dashboard" >POCETNA</Link>
+                            </div>
+                            <div className="col justify-content-end">
+                                <Link className="btn btn-success btn-lg me-5 mb-3 " to="/korisnik/dashboard/pacijenti/pacijenti_dodaj" >DODAJ</Link>
+                                <Link className="btn btn-primary btn-lg me-5 mb-3" to="/korisnik/dashboard/pacijenti/pacijenti_izmeni" >IZMENI</Link>
+                                <Link className="btn btn-danger btn-lg mb-3" to="/korisnik/dashboard/pacijenti/pacijenti_deaktiviraj" >DEAKTIVIRAJ</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             }
         </div>
     );

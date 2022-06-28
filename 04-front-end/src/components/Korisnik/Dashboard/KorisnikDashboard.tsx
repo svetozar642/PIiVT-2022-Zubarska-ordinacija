@@ -5,7 +5,7 @@ export default function KorisnikDashboard(){
     return (
         <div className="card">
                 <div className="card-header">
-                    <img src="../../../resources/dentist-logo.jpg" className="img-thumbnail mx-auto " alt="zub-logo"/>
+                    <img src="../../../resources/dentist-logo.jpg" className="img-thumbnail text-center " alt="zub-logo"/>
                 </div>
                 
                 <div className="card-text ">
@@ -19,7 +19,7 @@ export default function KorisnikDashboard(){
 
                         <div className="col-12 col-md-4 p-3 d-grid gap-3 ">
                                 <Link className="btn btn-success " to="/korisnik/dashboard/nova_intervencija">NOVA INTERVENCIJA</Link> 
-                                <Link className="btn btn-danger  " to="/korisnik/dashboard/odjava">ODJAVA</Link>
+                                <Link className="btn btn-danger  " to="/auth/korinsik/prijava">ODJAVA</Link>
                         </div>
                     </div>
                 </div>

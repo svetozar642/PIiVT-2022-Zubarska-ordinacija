@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../../../api/api";
 import IUsluga from "../../../models/IUsluga.model";
 
@@ -29,7 +30,8 @@ export default function KorisnikUsluge(){
         );
     }
 
-    useEffect( () => {
+
+    const loadUsluge = () => {
         api("get","/api/usluga","korisnik")
             .then(apiResponse => {
                 if ( apiResponse.status === 'ok'){
@@ -40,15 +42,13 @@ export default function KorisnikUsluge(){
                     message: 'Unknown error while loading usluge ...' ,
                 }
             })
-
-        fetch("http://localhost:10000/api/usluga")
-            .then(res => res.json())
-            .then(data => {
-                setUsluge(data);
-            })
             .catch(error => {
                 setErrorMessage(error?.message ?? 'Unknown error while loading usluge ...');
             });
+    }
+
+    useEffect( () => {
+        loadUsluge();
     }, []);
 
     return (
@@ -56,28 +56,47 @@ export default function KorisnikUsluge(){
             {errorMessage && <p>Error: {errorMessage}</p>}
         
             {!errorMessage && 
-                <table className="table table-bordered table-striped table-hover table-sm">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>NAZIV</th>
-                            <th>OPIS</th>
-                            <th>SIFRA USLUGE</th>
-                            <th>KATEGORIJA</th>
-                            <th>Cena poj. dete</th>
-                            <th>Cena poj. penzioner</th>
-                            <th>Cena poj. ostali</th>
-                            <th>Cena paket dete</th>
-                            <th>Cena paket penzioner</th>
-                            <th>Cena paket ostali</th>
-                            <th>STATUS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {usluge.map( usluga => <KorisnikUslugeRow key={"usluga-row-"+usluga.usluga_id} usluga={usluga}/> )}
-                    </tbody>
-                </table>
+                <div>
+                    <table className="table table-bordered table-striped table-hover table-sm mt-3">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAZIV</th>
+                                <th>OPIS</th>
+                                <th>SIFRA USLUGE</th>
+                                <th>KATEGORIJA</th>
+                                <th>Cena poj. dete</th>
+                                <th>Cena poj. penzioner</th>
+                                <th>Cena poj. ostali</th>
+                                <th>Cena paket dete</th>
+                                <th>Cena paket penzioner</th>
+                                <th>Cena paket ostali</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {usluge.map( usluga => <KorisnikUslugeRow key={"usluga-row-"+usluga.usluga_id} usluga={usluga}/> )}
+                        </tbody>
+                    </table>
+
+
+                    <div className="container">
+                        <div className="row ">
+                            <div className="col">
+                                <Link className="btn btn-warning btn-lg ms-0 " to="/korisnik/dashboard" >POCETNA</Link>
+                            </div>
+                            <div className="col justify-content-end">
+                                <Link className="btn btn-success btn-lg me-5 mb-3 " to="/korisnik/dashboard/usluge/usluge_dodaj" >DODAJ</Link>
+                                <Link className="btn btn-primary btn-lg me-5 mb-3" to="/korisnik/dashboard/usluge/usluge_izmeni" >IZMENI</Link>
+                                <Link className="btn btn-danger btn-lg mb-3" to="/korisnik/dashboard/usluge/usluge_deaktiviraj" >DEAKTIVIRAJ</Link>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             }
         </div>
     );
 }
+
+

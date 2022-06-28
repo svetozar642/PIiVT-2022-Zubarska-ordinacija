@@ -3,8 +3,6 @@ import './Application.sass';
 import { Container} from 'react-bootstrap';
 import KorisnikLoginPage from '../Korisnik/KorisnikLoginPage/KorisnikLoginPage';
 import { Routes, Route} from 'react-router-dom';
-import Menu from '../Menu/Menu';
-import Pacijenti from '../Korisnik/Pacijent/Pacijenti';
 import Pacijent from '../Korisnik/Pacijent/Pacijent';
 import KorisnikDashboard from '../Korisnik/Dashboard/KorisnikDashboard';
 import KorisnikUsluge from '../Korisnik/Dashboard/KorisnikUsluge';
