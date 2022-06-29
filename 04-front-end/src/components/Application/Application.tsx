@@ -1,13 +1,14 @@
 import React from 'react';
 import './Application.sass';
 import { Container} from 'react-bootstrap';
-import KorisnikLoginPage from '../Korisnik/KorisnikLoginPage/KorisnikLoginPage';
 import { Routes, Route} from 'react-router-dom';
-import Pacijent from '../Korisnik/Pacijent/Pacijent';
+import KorisnikRegistrationPage from '../Korisnik/KorisnikRegistrationPage/KorisnikRegistrationPage';
+import KorisnikLoginPage from '../Korisnik/KorisnikLoginPage/KorisnikLoginPage';
+import KorisnikRegistrationPageSuccess from '../Korisnik/KorisnikRegistrationPage/KorisnikRegistrationPageSuccess';
+import Pacijent from '../Korisnik/Pacijent primer/Pacijent';
 import KorisnikDashboard from '../Korisnik/Dashboard/KorisnikDashboard';
 import KorisnikUsluge from '../Korisnik/Dashboard/KorisnikUsluge';
 import KorisnikPacijenti from '../Korisnik/Dashboard/KorisnikPacijenti';
-
 
 function Application() {
   return (
@@ -15,7 +16,9 @@ function Application() {
 
       <Routes>
         <Route path='/' element={ <div></div>}/>
-        <Route path='auth/korinsik/prijava' element={<KorisnikLoginPage/>} />
+        <Route path='auth/korisnik/prijava' element={<KorisnikLoginPage/>} />
+        <Route path='auth/korisnik/registracija' element={<KorisnikRegistrationPage/>} />
+        <Route path='auth/korisnik/registracija/uspesna' element={<KorisnikRegistrationPageSuccess/>} />
 
         <Route path='pacijent/jmbg/:jmbg' element={<Pacijent/>} />
 

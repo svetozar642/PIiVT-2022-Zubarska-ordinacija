@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import './KorisnikLoginPage.sass';
 
 export default function KorisnikLoginPage() {
     //ne smemo da ih kreiramo unutar nekih npr. IF-ova , moraju ovde ovako da postoje ... (pozivaju se globalno na samom pocetku)
     const [email, setEmail]     = useState<string>("");
     const [lozinka, setLozinka] = useState<string>("");
+
 
     //formiramo doLogin f-ju kao Arrow f-ju zato sto zelimo da this kontekst ostavimo i njoj dostupnim ...
     const doLogin = () => {
@@ -30,9 +33,13 @@ export default function KorisnikLoginPage() {
                 </div>
 
                 <div className="form-group">
-                    <button className="btn btn-primary px-5" onClick={ () => doLogin() }>
-                        Prijavi se
+                    <button className="btn btn-primary px-5 mt-3 mb-3 me-3 Button d-block" onClick={ () => doLogin() }>
+                        PRIJAVA
                     </button>
+
+                    <Link className="btn btn-success px-5 Button d-block" to="/auth/korisnik/registracija">
+                        REGISTRACIJA
+                    </Link>
                 </div>
             </div>
         </div>

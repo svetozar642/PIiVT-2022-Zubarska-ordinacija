@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../../api/api";
 import IUsluga from "../../../models/IUsluga.model";
+import './KorisnikUsluge.sass';
 
 interface IKorisnikUslugeRowProperties{
     usluga: IUsluga,
@@ -83,12 +84,12 @@ export default function KorisnikUsluge(){
                     <div className="container">
                         <div className="row ">
                             <div className="col">
-                                <Link className="btn btn-warning btn-lg ms-0 " to="/korisnik/dashboard" >POCETNA</Link>
+                                <Link className="btn btn-warning btn-lg ms-0 Button" to="/korisnik/dashboard" >POCETNA</Link>
                             </div>
                             <div className="col justify-content-end">
-                                <Link className="btn btn-success btn-lg me-5 mb-3 " to="/korisnik/dashboard/usluge/usluge_dodaj" >DODAJ</Link>
-                                <Link className="btn btn-primary btn-lg me-5 mb-3" to="/korisnik/dashboard/usluge/usluge_izmeni" >IZMENI</Link>
-                                <Link className="btn btn-danger btn-lg mb-3" to="/korisnik/dashboard/usluge/usluge_deaktiviraj" >DEAKTIVIRAJ</Link>
+                                <Link className="btn btn-success btn-lg me-5 mb-3 Button" to="/korisnik/dashboard/usluge/usluge_dodaj" >DODAJ</Link>
+                                <Link className="btn btn-primary btn-lg me-5 mb-3 Button" to="/korisnik/dashboard/usluge/usluge_izmeni" >IZMENI</Link>
+                                <Link className="btn btn-danger btn-lg mb-3 Button" to="/korisnik/dashboard/usluge/usluge_deaktiviraj" >DEAKTIVIRAJ</Link>
                             </div>
                         </div>
                     </div>
