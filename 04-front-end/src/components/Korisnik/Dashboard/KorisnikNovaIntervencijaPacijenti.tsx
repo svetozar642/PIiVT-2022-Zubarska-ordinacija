@@ -7,9 +7,10 @@ interface IKorisnikPacijentiRowProperties{
     pacijent: IPacijent,
 }
 
-export default function KorisnikPacijenti(){
+export default function KorisnikNovaIntervencijaPacijenti(){
     const [pacijenti, setPacijenti] = useState<IPacijent[]>([]);
     const [errorMessage, setErrorMessage] = useState<string>("");
+    const [jmbg, setJmbg] = useState<string>("");
 
     function KorisnikPacijentiRow(props: IKorisnikPacijentiRowProperties){
         return (
@@ -40,6 +41,7 @@ export default function KorisnikPacijenti(){
                 }
             })
 
+            //osnovni nacin dok nismo implementirali api() metodu ...
         fetch("http://localhost:10000/api/pacijent")
             .then(res => res.json())
             .then(data => {
@@ -78,13 +80,16 @@ export default function KorisnikPacijenti(){
 
                     <div className="container">
                         <div className="row ">
-                            <div className="col">
-                                <Link className="btn btn-warning btn-lg ms-0 Button" to="/korisnik/dashboard" >POCETNA</Link>
+
+                            <div className="col col-4">
+                                <div className="input-group input-group-sm me-5 col-5">
+                                    <span className="input-group-text input-group-sm">PACIJENT (JMBG): </span>
+                                    <textarea className="form-control form-control-sm" aria-label="With textarea" value={jmbg}></textarea>
+                                </div>
                             </div>
+
                             <div className="col justify-content-end">
-                                <Link className="btn btn-success btn-lg me-5 mb-3 Button" to="/korisnik/dashboard/pacijenti/pacijenti_dodaj" >DODAJ</Link>
-                                <Link className="btn btn-primary btn-lg me-5 mb-3 Button" to="/korisnik/dashboard/pacijenti/pacijenti_izmeni/:jmbg" >IZMENI</Link>
-                                <Link className="btn btn-danger btn-lg mb-3 Button" to="/korisnik/dashboard/pacijenti/pacijenti_deaktiviraj" >DEAKTIVIRAJ</Link>
+                                <Link className="btn btn-success btn-lg me-5 mb-3 Button float-end" to="/korisnik/dashboard/nova_intervencija" >POTVRDI</Link>
                             </div>
                         </div>
                     </div>

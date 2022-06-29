@@ -88,7 +88,7 @@ export default function KorisnikUsluge(){
                             </div>
                             <div className="col justify-content-end">
                                 <Link className="btn btn-success btn-lg me-5 mb-3 Button" to="/korisnik/dashboard/usluge/usluge_dodaj" >DODAJ</Link>
-                                <Link className="btn btn-primary btn-lg me-5 mb-3 Button" to="/korisnik/dashboard/usluge/usluge_izmeni" >IZMENI</Link>
+                                <Link className="btn btn-primary btn-lg me-5 mb-3 Button" to="/korisnik/dashboard/usluge/usluge_izmeni/:sifra_usluge" >IZMENI</Link>
                                 <Link className="btn btn-danger btn-lg mb-3 Button" to="/korisnik/dashboard/usluge/usluge_deaktiviraj" >DEAKTIVIRAJ</Link>
                             </div>
                         </div>

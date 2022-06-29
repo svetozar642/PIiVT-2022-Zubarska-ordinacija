@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import'./KorisnikRegistrationPage.sass';
 
 export default function KorisnikLoginPage() {
@@ -11,9 +11,15 @@ export default function KorisnikLoginPage() {
     const [korisnickoIme, setKorisnickoIme] = useState<string>("");
     const [jmbg, setJmbg] = useState<string>("");
 
+    const navigate = useNavigate();
+
     //formiramo doLogin f-ju kao Arrow f-ju zato sto zelimo da this kontekst ostavimo i njoj dostupnim ...
     const doRegistration = () => {
         console.log("Attempting to register account : ", email, lozinka, korisnickoIme, ime ,prezime, jmbg);
+
+        navigate("/auth/korisnik/registracija/uspesna", {
+            replace: true,
+        });
     };
 
     return (
@@ -64,11 +70,11 @@ export default function KorisnikLoginPage() {
                 </div>
 
                 <div className="form-group">
-                    <button className="btn btn-success px-5 mt-3 mb-3 me-3 Button d-block" onClick={ () => doRegistration() }>
+                    <button className="btn btn-success  mt-3 mb-3 me-3 Button d-block" onClick={ () => doRegistration() }>
                         KREIRAJ NALOG
                     </button>
 
-                    <Link className="btn btn-danger px-5 Button d-block" to="/auth/korisnik/prijava">
+                    <Link className="btn btn-danger  Button d-block" to="/auth/korisnik/prijava">
                         ODUSTANI
                     </Link>
                 </div>
