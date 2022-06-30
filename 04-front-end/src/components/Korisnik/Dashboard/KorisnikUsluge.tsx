@@ -8,6 +8,11 @@ interface IKorisnikUslugeRowProperties{
     usluga: IUsluga,
 }
 
+//**************************************************************************************************************************************************************
+//Da bi mogla ova komponeneta da izlista i prikaze sve usluge iz baze, morate otici u configs.ts fajl u okviru 03-back-end/src foldera
+// i da podesite " allowAllRoutesWithoutAuthTokens: true " kako biste oslobodili sve rute API da moze da im se pristupa bez auth tokena
+//**************************************************************************************************************************************************************
+
 export default function KorisnikUsluge(){
     const [usluge, setUsluge] = useState<IUsluga[]>([]);
     const [errorMessage, setErrorMessage] = useState<string>("");

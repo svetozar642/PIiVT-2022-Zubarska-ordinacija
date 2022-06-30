@@ -67,7 +67,7 @@ const DevConfig: IConfig = {
             }
         },
 
-        allowAllRoutesWithoutAuthTokens: true, // Samo dok traje razvoj Front-end dela , vrati na false nakon toga ...
+        allowAllRoutesWithoutAuthTokens: false, // Samo dok traje razvoj Front-end dela na (true) , vrati na (false) nakon toga ...
     },
     routers: [
         new ZubRouter(),

@@ -7,6 +7,11 @@ interface IKorisnikPacijentiRowProperties{
     pacijent: IPacijent,
 }
 
+//**************************************************************************************************************************************************************
+//Da bi mogla ova komponeneta da izlista i prikaze sve pacijente iz baze, morate otici u configs.ts fajl u okviru 03-back-end/src foldera
+// i da podesite " allowAllRoutesWithoutAuthTokens: true " kako biste oslobodili sve rute API da moze da im se pristupa bez auth tokena
+//**************************************************************************************************************************************************************
+
 export default function KorisnikPacijenti(){
     const [pacijenti, setPacijenti] = useState<IPacijent[]>([]);
     const [errorMessage, setErrorMessage] = useState<string>("");
