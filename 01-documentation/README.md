@@ -16,7 +16,9 @@ mozete ih otvoriti u obliku power point prezentacije pod nazivom " Analiza zahte
 Takođe imate i dostupan popis svih tabela i polja baze podataka i u odvojenom word dokumentu pod nazivom "Model baze podataka i popis tabela sa njihovim atributima.docx"
 
 Takođe u okviru foldera 01-documentation se nalazi folder "Figma prototip" gde se nalazi dizajn prototipa aplikacije u PDF obliku i kao sačuvana lokalni fajl figme,
-ali u okviru back-end dela imate dostupan link koji vodi direktno na Figma na internetu...
+ali imate i dostupan link koji vodi direktno na Figma ...
 
 
 U okviru foldera " 02-resources " se nalazi folder " Postman test API " u okviru koga se nalazi exportovana Postman kolekcija sa testiranim svim rutama back-end dela aplikacije . 
+
+U folderu " 02-resources " se nalazi dump baze podataka aplikacije.
