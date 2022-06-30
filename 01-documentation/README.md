@@ -17,3 +17,6 @@ Takođe imate i dostupan popis svih tabela i polja baze podataka i u odvojenom w
 
 Takođe u okviru foldera 01-documentation se nalazi folder "Figma prototip" gde se nalazi dizajn prototipa aplikacije u PDF obliku i kao sačuvana lokalni fajl figme,
 ali u okviru back-end dela imate dostupan link koji vodi direktno na Figma na internetu...
+
+
+U okviru foldera " 02-resources " se nalazi folder " Postman test API " u okviru koga se nalazi exportovana Postman kolekcija sa testiranim svim rutama back-end dela aplikacije . 
